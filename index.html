@@ -62,6 +62,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-190319-0322-TIL-local-storage-git-flow-git-fork-api" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/" class="article-date">
+  <time datetime="2019-03-24T06:02:11.000Z" itemprop="datePublished">2019-03-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/">190319-0322_TIL(local storage, git flow, git fork, api)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="3월-22일-금"><a href="#3월-22일-금" class="headerlink" title="3월 22일 (금)"></a>3월 22일 (금)</h2><ul>
+<li>쇼핑몰 상품 상세 페이지 copy 과제를 했다. 과제를 진행하던 중 div 태그를 display:inline-block으 사용하여 서로 같은 라인에 배치를 하였는데 이상하게도 윗 공간에 아무 요소도 없는데 오른쪽 div가 맨 위에 붙지 않고 제멋대로 붙었다. 고민을 거듭해도 답을 알 수가 없어 클래스 매니저님에게 물었더니 inline-block으로 묶으면 윗줄을 기준으로 붙는 것이 아니라 base-line을 기준으로 붙기 때문에 div의 height가 서로 다를 시 에는 윗줄의 붙지 않는 다고 하셨다. 해결책인 의의로 간단하였다. vertical-align 속성을 사용하여 요소를 위(top), 중간(middle), 아래(bottom)에 배치할 수 있었다.</li>
+<li>자바스크립트 변수의 <code>범위(scope)</code>와 <code>호이스팅(Hoisting</code>)`에 대해서 배웠다. 수업시간에 짧게 배운 내용이 잘 이해가 가지 않아서 자료를 검색하던 중 잘 정리된 블로그를 발견하였다. </li>
+<li><a href="http://chanlee.github.io/2013/12/10/javascript-variable-scope-and-hoisting/" target="_blank" rel="noopener">변수의 범위와 호이스팅</a> </li>
+<li>변수는 지역 범위(local scope)와 전역 범위(global scope) 둘 중 하나를 가진다.</li>
+<li>대부분의 프로그래밍언어가 <strong>블럭 수준</strong>의 범위를 가지고 있는 것과 달리 자바스크립트에서는 <strong>지역 변수</strong>가 <strong>함수 수준8</strong>의 범위를 가진다. <strong>함수 내에 정의된 변수는 지역 범위</strong>를 가지며, 해당 함수와 내부 함수에서만 접근이 가능하다.</li>
+<li>if문과 같은 <strong>블럭{} 수준</strong>에서 변수 선언 시 <strong>지역 변수가 아닌 전역 변수</strong>임을 유의해야 한다.</li>
+<li>함수 안에서 지역 변수를 선언할 때는 <strong>var</strong> 키워드를 사용한다.</li>
+<li>지역 변수는 함수 내에서 전역 변수보다 높은 우선 순위를 가진다.</li>
+<li>함수의 외부에서 선언된 모든 변수는 전역 범위를 가진다.</li>
+<li>전역 변수는 var 키워드를 사용해도 되고 사용하지 않아도 된다.</li>
+<li><strong>가급적 전역 범위에 변수를 생성하는 것을 피해야 한다.</strong></li>
+<li><strong>호이스트란</strong>, 변수의 정의가 그 범위에 따라 선언과 할당으로 분리되는 것을 의미</li>
+<li>즉, 변수가 함수 내에서 정의되었을 경우 선언이 함수의 최상위로, 함수 바깥에서 정의되었을 경우는 전역 컨텍스트의 최상위로 변경</li>
+<li>호이스트 되었을 때, 함수 선언은 변수 선언을 덮어 쓴다. 하지만, 변수에 값이 할당된 경우 반대로 변수가 함수 선언을 덮어 쓴다.</li>
+</ul>
+<h2 id="3월-21일-목"><a href="#3월-21일-목" class="headerlink" title="3월 21일 (목)"></a>3월 21일 (목)</h2><ul>
+<li>오늘은 <code>naver map api</code>를 사용하여 기본적으로 지도를 화면에 표시하고 마커를 표시하고 정보창을 표시해보았다. 네이버 api를 사용하기 위해서는 먼저<a href="https://www.ncloud.com/product/applicationService/maps" target="_blank" rel="noopener">ncloud</a> 에서 회원가입을 진행하고 이용신청을 하면된다. 그리고 실제로 사용을 위해서는 <a href="https://navermaps.github.io/maps.js.ncp/docs/" target="_blank" rel="noopener">navermaps</a>에서 Tutorials를 살펴보면 된다. 오늘 배운 것중 가장 신기했던 부분은 이전에 사용했던 다음 주소 api 와 네이버 지도 api를 연결해서 사용했던 부분이다. 다음 주소 api에서 검색한 주소 값을 받아서 네이버 지도 api에서 위도,경도 값으로 변환하여 그 위치에 마커를 찍을 수 있었다. 이런 기능은 <code>geocoder</code> 서브 모듈을 활용해야 한다. </li>
+</ul>
+<h2 id="3월-20일-수"><a href="#3월-20일-수" class="headerlink" title="3월 20일 (수)"></a>3월 20일 (수)</h2><ul>
+<li>오늘은 git 수업 날이었다. <code>git flow</code>와 <code>git fork</code>를 학습하였다. git flow는 git의 branch 기능을 좀 더 원활하고 쉽게 사용할 수 있게 만들어 버전관리를 용이하게 하는 확장 기능이고 git fork는 git을 사용하는 가장 주된 이유 중 하나인 협업을 할 수 있게 해주는 기능이다. 처음 접해보는 기능들이라 조금은 어려웠지만 그래도 팀원들과 함께 git fork를 테스트 하는 것까지 별다른 문제없이 성공하였다. <strong>git을 활용할 때는 팀원들 간의 의사소통이 정말 중요하다고 느꼈다.</strong></li>
+</ul>
+<h2 id="3월-19일-화"><a href="#3월-19일-화" class="headerlink" title="3월 19일 (화)"></a>3월 19일 (화)</h2><ul>
+<li>오늘은 <code>local_storage</code>에 대해 배웠다. server 없이도 내 컴퓨터를 활용하여 웹에 있는 값을 저장할 수 있다니…! 브라우저를 닫고 열어도 다시 그 값이 들어있었다. 매우 신기했다. 하지만 내용은 어려웠다. 한달 동안의 수업 컨셉이 빠르게 한번 익혀보자는 것이기 때문인지 <code>객체</code>나 <code>JSON</code>의 대한 설명이 거의 없었다. 잘 모를 때는 역시 인터넷 검색으로! 아직도 잘 이해되지 않는 부분들이 많지만 열심히 배우고 또 배우면 금세 이해할 수 있을 것이다!!</li>
+<li><p><a href="https://jess2.github.io/2018/06/06/JavaScript/JS-%EB%A1%9C%EC%BB%AC-%EC%8A%A4%ED%86%A0%EB%A6%AC%EC%A7%80-Local-Storage/" target="_blank" rel="noopener">localstorage</a></p>
+</li>
+<li><p><a href="https://ithub.tistory.com/54" target="_blank" rel="noopener">JSON 간단</a></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/JSON" target="_blank" rel="noopener">JSON 자세히</a></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Basics" target="_blank" rel="noopener">객체</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://progyu.github.io/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/" data-id="cjtmt4fib0001nga9ump53fb3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-git-flow-사용하기" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/24/git-flow-사용하기/" class="article-date">
@@ -162,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cjtmdbidb0004cka9ztqg2uot" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cjtmt4fis0005nga9yjl7bghj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -265,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cjtmdbid30002cka9gagofdmw" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cjtmt4fik0003nga99cyip33k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -307,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cjtmdbibr0000cka9ftsiblq6" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cjtmt4fhm0000nga996t9ktp9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -399,7 +468,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/17/First-use-of-hexo/" data-id="cjtmdbicy0001cka9uiemvzez" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/17/First-use-of-hexo/" data-id="cjtmt4fig0002nga9jkktvz6s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -437,7 +506,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/13/How-to-start-hexo/" data-id="cjtmdbid80003cka9g1tv9bro" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/13/How-to-start-hexo/" data-id="cjtmt4fio0004nga9lof9cxte" class="article-share-link">Share</a>
       
       
     </footer>
@@ -482,7 +551,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/13/hello-world/" data-id="cjtmdbidf0005cka971z2mofm" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/13/hello-world/" data-id="cjtmt4fiw0006nga9naqd462g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -523,6 +592,10 @@
       <ul>
         
           <li>
+            <a href="/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/">190319-0322_TIL(local storage, git flow, git fork, api)</a>
+          </li>
+        
+          <li>
             <a href="/2019/03/24/git-flow-사용하기/">git-flow 사용하기</a>
           </li>
         
@@ -536,10 +609,6 @@
         
           <li>
             <a href="/2019/03/17/First-use-of-hexo/">First use of hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/13/How-to-start-hexo/">How to start hexo</a>
           </li>
         
       </ul>
