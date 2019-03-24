@@ -62,6 +62,116 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-git-flow-사용하기" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/24/git-flow-사용하기/" class="article-date">
+  <time datetime="2019-03-24T02:26:54.000Z" itemprop="datePublished">2019-03-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/24/git-flow-사용하기/">git-flow 사용하기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git-flow란"><a href="#git-flow란" class="headerlink" title="git flow란 ?"></a>git flow란 ?</h2><ul>
+<li><p><code>Vincent Diessen</code>의 <code>branching model</code>을 적용하여 저장소를 관리할 수 있도록<br>해주는 확장기능</p>
+</li>
+<li><p><strong>feature - develop - release - hotfixes - master</strong> 단계로 branch를 나누어서 버전을 관리하는 전략.</p>
+</li>
+<li><p>branch 관리를 위한 확장 명령어를 제공하는 역할만 하기 때문에 기존의 git 명령어로도 이를 그대로 구현 가능</p>
+</li>
+<li><p>내 나름대로 정의를 해보면 <strong>‘branch를 사용하기 위하여 처리해야 하는 귀찮은 일련의 작업을 쉽게 처리할 수 있게 도와주는 확장 기능’</strong> </p>
+</li>
+</ul>
+<h2 id="git-flow로-만들-수-있는-branch-6종"><a href="#git-flow로-만들-수-있는-branch-6종" class="headerlink" title="git flow로 만들 수 있는 branch 6종"></a>git flow로 만들 수 있는 branch 6종</h2><ul>
+<li><strong>master</strong> : 최종 릴리즈에 사용되는 안정된 버전</li>
+<li><strong>develop</strong> : 다음 릴리즈를 위해 개발중인 최신 버전</li>
+<li><strong>feature</strong> : 특정 기능 개발을 위한 branch</li>
+<li><strong>release</strong> : 릴리즈 점검을 위한 branch</li>
+<li><strong>hotfix</strong> : 긴급 버그 픽스를 위한 branch</li>
+<li><strong>support</strong> : 버전 호환성 문제를 처리하기 위한 branch</li>
+</ul>
+<h2 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h2><ul>
+<li>git flow는 <strong>OSX, Linux, Window</strong> 환경에서 동작한다.</li>
+<li><code>git bash</code>에는 기본으로 설치가 되어있다.</li>
+<li>필자는 <code>git bash</code>를 사용. </li>
+<li><a href="https://gitforwindows.org/" target="_blank" rel="noopener">git bash 설치</a></li>
+</ul>
+<h2 id="git-flow-시작하기"><a href="#git-flow-시작하기" class="headerlink" title="git flow 시작하기"></a>git flow 시작하기</h2><ul>
+<li><p>작업을 진행할 <code>git 저장소</code>에서 다음 명령어를 통해 초기화 한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git flow init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git flow init 명령어를 사용하면 branch 이름을 입력하라는 메세지가 출력된다. 이 과정을 생략하려면 아래 명령어를 사용한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git flow init -d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>특정 기능 개발을 하기 위한 branch는 <code>feature</code>를 사용한다. <code>feature</code>에서 git flow를 시작하기 위해서는 아래 명령어를 사용한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git flow feature start &#123;branch_name&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>자동으로 해당 branch로 checkout 된다.</p>
+</li>
+<li><p>해당 branch에서 기능 개발이 완료하면 아래 명령어를 입력한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git flow feature finish &#123;branch_name&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>feature finish</code> 명령어를 실행하면 자동으로 아래의 일련의 과정들을 수행한다.</p>
+</li>
+</ul>
+<ol>
+<li><strong>develop branch로 checkout</strong></li>
+<li><strong>feature branch의 작업 내용을 develop branch에 merge</strong></li>
+<li><strong>작업이 끝난 feature branch를 삭제</strong></li>
+</ol>
+<ul>
+<li><p>만약 해당 feature branch가 존재했다는 사실을 github page에 남기고 싶으면 commit 메세지를 작성하면 된다.</p>
+</li>
+<li><p>만약 해당 branch를 merge 하지않고 삭제하고 싶다면 아래 명령어를 사용한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -D &#123;branch_name&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Release-하기"><a href="#Release-하기" class="headerlink" title="Release 하기"></a>Release 하기</h2><ul>
+<li><p>release를 하기 위해서는 아래 명령어를 사용한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git flow release start &#123;version&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>위 명령어를 실행하면 develop branch의 내용을 바탕으로 release/{version}의 이름을 갖는 새로운 branch를 하나 생성하여 checkout 한다.</p>
+</li>
+<li><p>version은 보통 <code>v0.0.1</code>형식으로 작성한다. 정식버전이 출시되면 <code>v1.0.0</code> 처럼 가장 앞의 숫자를 증가시키고 핵심 기능의 변화 등은 <code>v1.1.0</code> 작은 기능의 변화 등은 <code>v1.1.1</code>의 형식으로 작성한다.</p>
+</li>
+<li><p>release를 위한 점검이 종료되면 release를 finish 한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git flow release finish &#123;version&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>release finish 명령어를 실행하면 자동으로 아래의 일련의 과정들을 수행한다.</p>
+</li>
+</ul>
+<ol>
+<li><strong>release branch의 code를 master branch에 merge 한다.</strong></li>
+<li><strong>release의 이름으로 태그 등록</strong></li>
+<li><strong>release를 develop branch로 재병합</strong></li>
+<li><strong>release branch 삭제</strong></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cjtmdbidb0004cka9ztqg2uot" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Git-fork를-활용하여-협업하기" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/24/Git-fork를-활용하여-협업하기/" class="article-date">
@@ -155,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cjtma85rx0002f0a9adu034ia" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cjtmdbid30002cka9gagofdmw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -197,7 +307,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cjtma85ra0000f0a9vi5svn20" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cjtmdbibr0000cka9ftsiblq6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -289,7 +399,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/17/First-use-of-hexo/" data-id="cjtma85rs0001f0a9cmeh0fvc" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/17/First-use-of-hexo/" data-id="cjtmdbicy0001cka9uiemvzez" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/13/How-to-start-hexo/" data-id="cjtma85s20003f0a9snv6a2yv" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/13/How-to-start-hexo/" data-id="cjtmdbid80003cka9g1tv9bro" class="article-share-link">Share</a>
       
       
     </footer>
@@ -372,7 +482,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/13/hello-world/" data-id="cjtma85s60004f0a95z793jja" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/13/hello-world/" data-id="cjtmdbidf0005cka971z2mofm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -413,6 +523,10 @@
       <ul>
         
           <li>
+            <a href="/2019/03/24/git-flow-사용하기/">git-flow 사용하기</a>
+          </li>
+        
+          <li>
             <a href="/2019/03/24/Git-fork를-활용하여-협업하기/">Git fork를 활용하여 협업하기</a>
           </li>
         
@@ -426,10 +540,6 @@
         
           <li>
             <a href="/2019/03/13/How-to-start-hexo/">How to start hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/13/hello-world/">Hello World</a>
           </li>
         
       </ul>
