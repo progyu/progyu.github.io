@@ -62,10 +62,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-190325-TIL" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-190326-TIL-프로젝트-2일차" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/03/26/190325-TIL/" class="article-date">
-  <time datetime="2019-03-25T15:08:52.000Z" itemprop="datePublished">2019-03-26</time>
+    <a href="/2019/03/27/190326-TIL-프로젝트-2일차/" class="article-date">
+  <time datetime="2019-03-26T15:38:04.000Z" itemprop="datePublished">2019-03-27</time>
 </a>
     
   </div>
@@ -76,7 +76,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/26/190325-TIL/">190325_TIL</a>
+      <a class="article-title" href="/2019/03/27/190326-TIL-프로젝트-2일차/">190326_TIL(프로젝트 2일차)</a>
     </h1>
   
 
@@ -84,14 +84,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="3월-25일-월"><a href="#3월-25일-월" class="headerlink" title="3월 25일 (월)"></a>3월 25일 (월)</h2><ul>
-<li><strong>오늘은 프로젝트 첫째날</strong>이다. 앞으로 5일 동안 프로젝트가 진행된다. 팀원들과 프로젝트 주제를 선정하기 위하여 많은 의견을 나누었다. 게임 홍보 페이지, 크롬 웹 익스텐션, 패럴렉스, 불꽃놀이 축제 홍보 페이지 등등 많은 아이디어가 나왔다. <strong>많은 고민을 거듭한 끝에 그동안 배운 내용들을 복습하기 가장 좋은 주제로 선정하였다. 주제는 바로 naver에서 출시한 브라우저인 whale이다.</strong> whale의 디자인과 기능을 벤치마킹하기로 했다. 역할 분담은 인원에 맞춰서 총 세 파트로 구성하였다. <strong>첫번째 파트</strong>는 to-do-list, 현재 시각과 날씨 정보 표기 그리고 화면 테마 변경, 두번째 파트는 다이어리, 디데이 마지막 파트는 공통으로 들어가는 요소인 사이드바에 계산기 , 환율, 음악검색 api 등의 기능을 구현하는 것이다. <strong>나는 첫번째 파트를 맡게 되었다.</strong> <code>git flow</code>로 작업할 <code>feature branch</code>를 생성하고 작은 기능 단위인 <strong>날씨 api 기능</strong>을 진행하였다. 먼저 어떤 api를 사용할지 검색을 하였다. 네이버, 다음, 구글과 같은 곳에서는 날씨 api를 제공하지 않았다. 상당히 많은 시간을 검색한 끝에 <a href="https://openweathermap.org/api" target="_blank" rel="noopener">openweathermap</a>이라는 해외사이트에서 제공하는 api를 사용하기로 했다. 홈페이지와 다른 사람의 개인 <a href="https://namjackson.tistory.com/27" target="_blank" rel="noopener">블로그</a>를 참고하였다. <code>ajax</code>를 이용하여 <code>JSON</code> 형식의 데이터를 전송 받았다. 디자인적으로 예쁜 날씨 아이콘을 사용하기 위하여 <a href="https://erikflowers.github.io/weather-icons/" target="_blank" rel="noopener">아이콘</a>을 사용하였다. 위 사이트에서 다운을 받아 css 폴더와 font 폴더를 작업 중인 폴더에 복사하고 <code>html</code> 파일에 링크를 걸어 사용하였다. <code>jquery</code>로 아이콘과 날씨 데이터를 <code>html</code>에 매핑하고 css를 이용하여 디자인 작업을 진행하였다. 작은 공간에 많은 데이터를 넣고 정렬하는 것이 쉽지 않았다. 머리 속으로 생각하고 실제로 그려보면서 어떻게 정렬할지 시뮬레이션 하고 코딩하였다. 결과적으로는 예쁜 디자인의 날씨 데이터를 보여주는 기능을 만들어서 매우 뿌듯했다.</li>
+        <h2 id="3월-26일-화"><a href="#3월-26일-화" class="headerlink" title="3월 26일 (화)"></a>3월 26일 (화)</h2><ul>
+<li><p>어제 날씨 api를 이용하여 만든 기능은 온도, 습도, 구름량 등 많은 데이터를 알려주지만 데이터를 가져올 때 내가 위치를 지정해주어야만 했다. ##예) 서울의 날씨 데이터, 런던의 날씨 데이터## 이 정도 기능에 만족할 수는 없었고 내가 지금 현재 위치한 장소에 날씨 데이터를 받아오고 싶었다. 어떻게 기능을 구현할 수 있을지 생각해보니 이전 수업에서 자바스크립트로 내가 현재 위치한 위도와 경도 값을 얻어오는 것을 했던 기억이 떠올랐다. 그래서 어제 이용한 <a href="https://openweathermap.org/api" target="_blank" rel="noopener">openweathermap</a> 사이트에서 위도와 경도 값으로 위치를 찾아서 날씨 데이터를 넘겨주는 기능을 제공해주는지 찾아봤다.  doc에서 찾아보다가 <strong>By geographic coordinates</strong> 라는 항목에서 제공을 해준다는 것을 알아내었다. API를 불러오는 Example은 <code>api.openweathermap.org/data/2.5/weather?lat=35&amp;lon=139</code> 이러하다. 이제 자바스크립트로 작성을 해야하는데 막막했다. 결국 검색을 통하여 해결책을 찾아냈다.<a href="https://academy.nomadcoders.co/courses/435558/lectures/6689808" target="_blank" rel="noopener">노마드코더</a> 해결책은 바로 이것이다. 동영상으로 학습하며 결국 해내었다. 날씨 기능 완료! 날씨 기능을 완료하고 to-do-list 작업을 진행하였다. 먼저 이전에 팀원들과 논의하여 사용할 컨텐츠들을 화면에 어디에 배치할지 좋을지 생각하고 그 다음 html, css 작업을 진행하였다. 우리 팀이 만들어내야할 결과물은 carousel 안에 컨텐츠를 집어넣어서 마치 여러 페이지가 있는 것처럼 보이게 하는 것이 핵심이었다. Bootstrap을 활용하면 carousel을 쉽게 만들 수 있지만 내가 원하는 대로 커스터마이징 하기 어렵다고 판단하여 html,css,javascript 만으로 구성된 carousel을 만들고 싶었다. 하지만 프로젝트 기간이 짧고 쉽게 만들 수 있다고 판단이 되지 않아서 검색을 하여 결국 찾아내었다.<a href="https://www.w3schools.com/howto/howto_js_slideshow.asp" target="_blank" rel="noopener">w3schools</a> 유명한 사이트인 w3schools에서 찾았다. 이 사이트 how to 탭에는 유용한 정보들이 많이 있다. 그 중 내가 마음에 드는 몇 가지를 소개하겠다.<a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_full_page" target="_blank" rel="noopener">Full page</a>, <a href="https://www.w3schools.com/howto/howto_js_toggle_password.asp" target="_blank" rel="noopener">Toggle password visibility</a>, <a href="https://www.w3schools.com/howto/howto_js_form_steps.asp" target="_blank" rel="noopener">Multi Step Form</a>, <a href="https://www.w3schools.com/howto/howto_css_team.asp" target="_blank" rel="noopener">Meet the team page</a></p>
+</li>
+<li><p>오늘 프로젝트를 진행하며 느꼈던 점 과 새롭게 알게된 점</p>
+</li>
 </ul>
+<ol>
+<li><code>Bootstrap</code> 이나 <code>material design lite</code> 같은 프레임워크를 중간에 사용하면 기존에 코드에 영향을 미칠 수 있다.</li>
+<li><code>input</code> 태그 같은 <code>inline</code> 요소를 <code>display:block;</code> 로 지정해도 <code>text-align:center</code>가 적용되지 않는다. <code>input</code> 태그를 중앙에 배열하기 위하여 나는 <code>input</code> 태그를 <code>div</code>로 감싼 <code>text-align:center</code>를 적용하였다.</li>
+<li><code>visibility:hidden</code> 속성을 이용하여 태그들의 배치나 정렬을 도울 수 있다.</li>
+<li><code>git</code>은 팀원이 <code>fork</code>를 떠서 같은 파일을 서로 각기 작업했을 때 시너지가 좋다.</li>
+<li><code>develop branch</code>에서 <code>feature branch</code>를 딴 순간 <code>develop branch</code>에 있는 내용이 새로 딴 <code>feature branch</code>에 복제되어 넘어간다.</li>
+<li>어느 한 <code>branch</code>에서 작업을 하던 중 <code>git bash</code>를 꺼도 다음에 다시 <code>git bash</code>를 켜고 같은 경로로 들어가면 마지막에 위치해있던 <code>branch</code>로 되어있다.  </li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/26/190325-TIL/" data-id="cjtoiebtl00019oa98b82i4ku" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/27/190326-TIL-프로젝트-2일차/" data-id="cjtpzk4f20000aoa93ffqifwz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/" data-id="cjtoiebt500009oa9beoyckan" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/" data-id="cjtpzk4g30002aoa96nuscfya" class="article-share-link">Share</a>
       
       
     </footer>
@@ -270,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cjtoiebu500069oa9ui7nhzg5" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cjtpzk4gi0005aoa9q13n13qs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +384,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cjtoiebtu00039oa94aijqhrt" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cjtpzk4gm0006aoa9ujulcxgs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -415,7 +426,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cjtoiebu200059oa9jw7tovcg" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cjtpzk4fw0001aoa9oonevv8u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -507,7 +518,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/17/First-use-of-hexo/" data-id="cjtoiebtq00029oa9u5hmedty" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/17/First-use-of-hexo/" data-id="cjtpzk4ge0004aoa9udt1caqv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -545,7 +556,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/13/How-to-start-hexo/" data-id="cjtoiebty00049oa9mkuy2skx" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/13/How-to-start-hexo/" data-id="cjtpzk4g80003aoa9jyv9e9ni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -590,7 +601,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/13/hello-world/" data-id="cjtoiebu800079oa9yjalcmyu" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/13/hello-world/" data-id="cjtpzk4gs0007aoa99270i3wl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -631,7 +642,7 @@
       <ul>
         
           <li>
-            <a href="/2019/03/26/190325-TIL/">190325_TIL</a>
+            <a href="/2019/03/27/190326-TIL-프로젝트-2일차/">190326_TIL(프로젝트 2일차)</a>
           </li>
         
           <li>
