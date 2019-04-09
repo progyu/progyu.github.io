@@ -62,6 +62,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/" class="article-date">
+  <time datetime="2019-04-09T12:24:27.000Z" itemprop="datePublished">2019-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/">190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="4월-9일-화"><a href="#4월-9일-화" class="headerlink" title="4월 9일 (화)"></a>4월 9일 (화)</h2><ul>
+<li>오늘은 탭메뉴를 <code>float</code> , <code>position</code> 속성 등을 사용하여 다양하게 구현해보았다. html 이나 css 보다는 탭메뉴를 동적으로 만들기 위한 방법을 정리해보고자 한다.</li>
+</ul>
+<ol>
+<li>동적인 탭메뉴를 만들기 위한 <strong>class</strong>를 처음에 보여질 탭메뉴 태그의 작성한다. </li>
+<li>위에서 만든 class에 <code>display:block;</code> 스타일을 입힌다.</li>
+<li>나머지 첫화면에 표시하지 않을 탭메뉴 내용들은 <code>display:none;</code>으로 숨김 처리한다. </li>
+<li>자바스크립트를 이용하여 class를 동적으로 생성하고 삭제한다. </li>
+</ol>
+<h3 id="기타-배운-내용들-정리"><a href="#기타-배운-내용들-정리" class="headerlink" title="기타 배운 내용들 정리"></a>기타 배운 내용들 정리</h3><ul>
+<li><p>Whiite-space: nowrap;<br>부모 영역을 벗어나더라도 한줄로 나오게 한다. 즉, wrap 하지 않게 한다.</p>
+</li>
+<li><p>.on() method를 사용하면 하나의 이벤트 핸들러에 여러 개의 이벤트를 동시에 연결할 수 있다. <a href="http://www.devkuma.com/books/pages/232" target="_blank" rel="noopener">참고자료</a></p>
+</li>
+<li><p>한 <code>선택자</code>에 여러 요소가 있으면 <code>유사배열</code> 형식으로 값을 반환한다.<br>예를들면 아래와 같이 여러 li 태그들의 class로 적용되어 있는(가정) .menu-item은 li태그를 <code>유사배열</code> 형식으로 반환한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ var item = $(&apos;.menu-item&apos;);</span><br><span class="line">$ console.log(item); // 유사배열 값 반환.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>유사배열</code>은 아직 많은 부분이 이해가 가지 않는다. 앞으로 더욱 많은 배움을 통해 알아가자! <a href="https://www.zerocho.com/category/JavaScript/post/5af6f9e707d77a001bb579d2" target="_blank" rel="noopener">유사배열 참고자료</a></p>
+</li>
+<li><p>일반적인 <code>&lt;script&gt;</code> 실행은 인라인 코드의 경우 즉시 해석되고 실행되지만 그렇지 않은 경우는 <strong>해당 js 파일을 가져올 때까지 HTML 문서의 구문 분석을 중단</strong>한다.</p>
+</li>
+<li><p><code>async</code>속성이 추가된 경우의 실행은 HTML 구문 분석과 병행하여 스크립트를 가져온 후 <strong>스크립트가 준비 될 때마다 즉시 실행이 가능</strong>하다. 실행 순서가 다운로드 완료 시점의 결정되므로 사용에 주의해야 한다.</p>
+</li>
+<li><p><code>defer</code> 속성이 추가된 경우의 실행은 HTML 구문분석이 실행되는 동안 스크립트 파일을 다운로드 할 수 있다. 그러나 <strong>HTML 구문 분석이 완료 되어야 스크립트가 실행</strong>된다. 호출된 순서대로 실행된다.</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://progyu.github.io/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/" data-id="cju9x97i20006m8a9bj66wn1h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-190408-TIL-float-clearfix" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/09/190408-TIL-float-clearfix/" class="article-date">
@@ -95,7 +157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/04/09/190408-TIL-float-clearfix/" data-id="cju9qn6810003ica9gwtckgr3" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/04/09/190408-TIL-float-clearfix/" data-id="cju9x97i70008m8a9t3p6yrar" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/" data-id="cju9qn6880005ica9dl6r3l36" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/" data-id="cju9x97hy0005m8a9vbqku4ns" class="article-share-link">Share</a>
       
       
     </footer>
@@ -221,7 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/31/190327-0330-TIL-프로젝트-개발-프로젝트-단계-특강/" data-id="cju9qn6830004ica9w4bazsm3" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/31/190327-0330-TIL-프로젝트-개발-프로젝트-단계-특강/" data-id="cju9x97hu0004m8a9vffz27zf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -271,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/27/190326-TIL-프로젝트-2일차/" data-id="cju9qn68e0007ica9u8y960vh" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/27/190326-TIL-프로젝트-2일차/" data-id="cju9x97hq0003m8a958hg29n7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -310,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/26/190325-TIL/" data-id="cju9qn67t0001ica93fkoaski" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/26/190325-TIL/" data-id="cju9x97hm0002m8a9ljzwhrdo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -379,7 +441,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/" data-id="cju9qn67b0000ica9ucsabza5" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/" data-id="cju9x97gw0000m8a91c1e9wsu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -489,7 +551,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cju9qn68k0009ica9kq8njyjy" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cju9x97io000bm8a9g519c7xt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -592,7 +654,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cju9qn68h0008ica9hzh4qykm" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cju9x97ia0009m8a9i2hzwsid" class="article-share-link">Share</a>
       
       
     </footer>
@@ -634,99 +696,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cju9qn67y0002ica96zo84jpx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-First-use-of-hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/17/First-use-of-hexo/" class="article-date">
-  <time datetime="2019-03-17T14:43:37.000Z" itemprop="datePublished">2019-03-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/17/First-use-of-hexo/">First use of hexo</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Hexo를-이용하여-gitblog-글-작성하기"><a href="#Hexo를-이용하여-gitblog-글-작성하기" class="headerlink" title="Hexo를 이용하여 gitblog 글 작성하기"></a>Hexo를 이용하여 gitblog 글 작성하기</h1><h2 id="git-repository-생성하기"><a href="#git-repository-생성하기" class="headerlink" title="git repository 생성하기"></a>git repository 생성하기</h2><ul>
-<li>자신의 <strong><code>[github name]</code>.github.io</strong> 로 repository를 생성한다.</li>
-</ul>
-<h2 id="node-설치하기"><a href="#node-설치하기" class="headerlink" title="node 설치하기"></a>node 설치하기</h2><ul>
-<li>Hexo를 이용하기 위해서는<br><a href="https://nodejs.org/ko/" target="_blank" rel="noopener">node</a> 설치가 필요합니다.</li>
-</ul>
-<h2 id="Hexo-설치하기"><a href="#Hexo-설치하기" class="headerlink" title="Hexo 설치하기"></a>Hexo 설치하기</h2><ul>
-<li>Hexo는 아래 명령어를 사용하여 설치한다.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h2 id="웹사이트-초기화하기"><a href="#웹사이트-초기화하기" class="headerlink" title="웹사이트 초기화하기"></a>웹사이트 초기화하기</h2><ul>
-<li>Hexo를 초기화 하기 위해 아래 명령어를 사용한다.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<h2 id="새-글-생성하기"><a href="#새-글-생성하기" class="headerlink" title="새 글 생성하기"></a>새 글 생성하기</h2><ul>
-<li>새 글(article)을 생성한다. <code>layout</code>이 준비되어 있지 않다면, <code>_config.yml</code>에 정의된 <code>default_layout</code>을 사용. </li>
-<li>만약 <code>title</code>에 공백이 포함된다면 따옴표로 감싸주어야 한다.</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="글-작성하기"><a href="#글-작성하기" class="headerlink" title="글 작성하기"></a>글 작성하기</h2><ul>
-<li>위에서 생성한 새 글은 <code>.md</code> 파일 형식으로 생성된다. </li>
-<li>새로 생성한 <code>.md</code> 파일은<br><code>[프로젝트 폴더]/source/_posts/&lt;title&gt;.md</code> 이 경로에 있다.</li>
-<li>에디터를 이용하여 <code>Markdown</code> 형식으로 작성하면 된다.</li>
-</ul>
-<h2 id="정적-파일-생성하기"><a href="#정적-파일-생성하기" class="headerlink" title="정적 파일 생성하기"></a>정적 파일 생성하기</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate [파일명]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>github 블로그는 <code>html</code> 파일형식으로 올라가야 한다. 따라서, Hexo로 제작된 <code>.md</code> 파일을 <code>generate</code> 커맨드를 사용하여 변환해주어야 한다.</li>
-<li><code>generate</code>를 하기 위해서는 작성한 <code>.md</code> 파일이 있는 경로<br><code>([프로젝트 폴더]/source/_posts/)</code>로 이동하여야 한다.</li>
-</ul>
-<h2 id="server로-미리-확인하기"><a href="#server로-미리-확인하기" class="headerlink" title="server로 미리 확인하기"></a>server로 미리 확인하기</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<ul>
-<li>로컬 서버를 구동시킨다. </li>
-<li>기본적으로 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 를 사용.</li>
-</ul>
-<h2 id="git에-deploy-하기"><a href="#git에-deploy-하기" class="headerlink" title="git에 deploy 하기"></a>git에 deploy 하기</h2><ul>
-<li><p>hexo-deployer-git을 설치한다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>_cofig.yml</code> 파일에서 url을 수정한다.</p>
-</li>
-</ul>
-<p><code>http://자신의 [github name].github.io</code> 로 url을 수정 한다.</p>
-<ul>
-<li><code>_cofig.yml</code> 파일 가장 밑에 작성.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 자신의 [repository url]</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="웹사이트를-deploy-하기"><a href="#웹사이트를-deploy-하기" class="headerlink" title="웹사이트를 deploy 하기"></a>웹사이트를 deploy 하기</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<h2 id="첫-번째-이후-github-블로그-작성"><a href="#첫-번째-이후-github-블로그-작성" class="headerlink" title="첫 번째 이후 github 블로그 작성"></a>첫 번째 이후 github 블로그 작성</h2><ul>
-<li><strong>new, generate, server, deploy</strong>  4개의 명령어만 사용하면 된다.</li>
-</ul>
-<h2 id="느낀점"><a href="#느낀점" class="headerlink" title="느낀점"></a>느낀점</h2><ul>
-<li><p>Hexo를 처음 이용하여 생소하고 어려웠지만 익숙해지면 편리하게 github 블로그를 관리할 수 있을 것 같다.</p>
-</li>
-<li><p>Markdown 문법 공부에 많은 도움이 될 것 같다.</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/17/First-use-of-hexo/" data-id="cju9qn68b0006ica9o5sdumgg" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cju9x97hg0001m8a96y5470be" class="article-share-link">Share</a>
       
       
     </footer>
@@ -772,6 +742,10 @@
       <ul>
         
           <li>
+            <a href="/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/">190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer)</a>
+          </li>
+        
+          <li>
             <a href="/2019/04/09/190408-TIL-float-clearfix/">190408_TIL(Float, Clearfix)</a>
           </li>
         
@@ -785,10 +759,6 @@
         
           <li>
             <a href="/2019/03/27/190326-TIL-프로젝트-2일차/">190326_TIL(프로젝트 2일차)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/26/190325-TIL/">190325_TIL</a>
           </li>
         
       </ul>

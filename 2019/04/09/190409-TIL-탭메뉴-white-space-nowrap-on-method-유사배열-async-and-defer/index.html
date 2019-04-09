@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="4월 9일 (화) 오늘은 탭메뉴를 float , position 속성 등을 사용하여 다양하게 구현해보았다. html 이나 css 보다는 탭메뉴를 동적으로 만들기 위한 방법을 정리해보고자 한다.   동적인 탭메뉴를 만들기 위한 class를 처음에 보여질 탭메뉴 태그의 작성한다.  위에서 만든 class에 display:block; 스타일을 입힌다. 나머지 첫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer)">
+<meta property="og:url" content="http://progyu.github.io/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="4월 9일 (화) 오늘은 탭메뉴를 float , position 속성 등을 사용하여 다양하게 구현해보았다. html 이나 css 보다는 탭메뉴를 동적으로 만들기 위한 방법을 정리해보고자 한다.   동적인 탭메뉴를 만들기 위한 class를 처음에 보여질 탭메뉴 태그의 작성한다.  위에서 만든 class에 display:block; 스타일을 입힌다. 나머지 첫">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-09T15:17:35.228Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer)">
+<meta name="twitter:description" content="4월 9일 (화) 오늘은 탭메뉴를 float , position 속성 등을 사용하여 다양하게 구현해보았다. html 이나 css 보다는 탭메뉴를 동적으로 만들기 위한 방법을 정리해보고자 한다.   동적인 탭메뉴를 만들기 위한 class를 처음에 보여질 탭메뉴 태그의 작성한다.  위에서 만든 class에 display:block; 스타일을 입힌다. 나머지 첫">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://progyu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/" class="article-date">
+  <time datetime="2019-04-09T12:24:27.000Z" itemprop="datePublished">2019-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="4월-9일-화"><a href="#4월-9일-화" class="headerlink" title="4월 9일 (화)"></a>4월 9일 (화)</h2><ul>
+<li>오늘은 탭메뉴를 <code>float</code> , <code>position</code> 속성 등을 사용하여 다양하게 구현해보았다. html 이나 css 보다는 탭메뉴를 동적으로 만들기 위한 방법을 정리해보고자 한다.</li>
+</ul>
+<ol>
+<li>동적인 탭메뉴를 만들기 위한 <strong>class</strong>를 처음에 보여질 탭메뉴 태그의 작성한다. </li>
+<li>위에서 만든 class에 <code>display:block;</code> 스타일을 입힌다.</li>
+<li>나머지 첫화면에 표시하지 않을 탭메뉴 내용들은 <code>display:none;</code>으로 숨김 처리한다. </li>
+<li>자바스크립트를 이용하여 class를 동적으로 생성하고 삭제한다. </li>
+</ol>
+<h3 id="기타-배운-내용들-정리"><a href="#기타-배운-내용들-정리" class="headerlink" title="기타 배운 내용들 정리"></a>기타 배운 내용들 정리</h3><ul>
+<li><p>Whiite-space: nowrap;<br>부모 영역을 벗어나더라도 한줄로 나오게 한다. 즉, wrap 하지 않게 한다.</p>
+</li>
+<li><p>.on() method를 사용하면 하나의 이벤트 핸들러에 여러 개의 이벤트를 동시에 연결할 수 있다. <a href="http://www.devkuma.com/books/pages/232" target="_blank" rel="noopener">참고자료</a></p>
+</li>
+<li><p>한 <code>선택자</code>에 여러 요소가 있으면 <code>유사배열</code> 형식으로 값을 반환한다.<br>예를들면 아래와 같이 여러 li 태그들의 class로 적용되어 있는(가정) .menu-item은 li태그를 <code>유사배열</code> 형식으로 반환한다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ var item = $(&apos;.menu-item&apos;);</span><br><span class="line">$ console.log(item); // 유사배열 값 반환.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>유사배열</code>은 아직 많은 부분이 이해가 가지 않는다. 앞으로 더욱 많은 배움을 통해 알아가자! <a href="https://www.zerocho.com/category/JavaScript/post/5af6f9e707d77a001bb579d2" target="_blank" rel="noopener">유사배열 참고자료</a></p>
+</li>
+<li><p>일반적인 <code>&lt;script&gt;</code> 실행은 인라인 코드의 경우 즉시 해석되고 실행되지만 그렇지 않은 경우는 <strong>해당 js 파일을 가져올 때까지 HTML 문서의 구문 분석을 중단</strong>한다.</p>
+</li>
+<li><p><code>async</code>속성이 추가된 경우의 실행은 HTML 구문 분석과 병행하여 스크립트를 가져온 후 <strong>스크립트가 준비 될 때마다 즉시 실행이 가능</strong>하다. 실행 순서가 다운로드 완료 시점의 결정되므로 사용에 주의해야 한다.</p>
+</li>
+<li><p><code>defer</code> 속성이 추가된 경우의 실행은 HTML 구문분석이 실행되는 동안 스크립트 파일을 다운로드 할 수 있다. 그러나 <strong>HTML 구문 분석이 완료 되어야 스크립트가 실행</strong>된다. 호출된 순서대로 실행된다.</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://progyu.github.io/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/" data-id="cju9x97i20006m8a9bj66wn1h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/09/190408-TIL-float-clearfix/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">190408_TIL(Float, Clearfix)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/">190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/09/190408-TIL-float-clearfix/">190408_TIL(Float, Clearfix)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/">190331-0401_TIL(프로젝트 보완, box-sizing 속성, box model, flex box)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/31/190327-0330-TIL-프로젝트-개발-프로젝트-단계-특강/">190327-0330_TIL(프로젝트, 개발 프로젝트 단계 특강)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/27/190326-TIL-프로젝트-2일차/">190326_TIL(프로젝트 2일차)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
