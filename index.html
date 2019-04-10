@@ -62,6 +62,71 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-190410-TIL-line-웹페이지-header-css-fontello" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/11/190410-TIL-line-웹페이지-header-css-fontello/" class="article-date">
+  <time datetime="2019-04-10T15:57:57.000Z" itemprop="datePublished">2019-04-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/11/190410-TIL-line-웹페이지-header-css-fontello/">190410_TIL(LINE 웹페이지 header html,css, fontello)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="4월-10일-수"><a href="#4월-10일-수" class="headerlink" title="4월 10일 (수)"></a>4월 10일 (수)</h2><ul>
+<li>오늘은 과제로 <a href="https://linepluscorp.com/" target="_blank" rel="noopener">LINE Plus Coporation </a>의 header 부분의 <code>HTML markup</code> 과 <code>CSS</code> 작업을 하였다. 코딩에 들어가기에 앞서 아래 사진과 같이 <strong>수작업</strong>으로 설계를 해보았다. 수작업으로 설계를 해보니 꼼꼼한 작업을 할 수 있다는 장점이 있지만 시간이 많이 소요되어서 지루하게 느껴지는 단점이 있다. 다음 설계는 <a href="https://ovenapp.io/" target="_blank" rel="noopener">카카오 오븐</a>과 같은 툴을 사용해 볼 생각이다.</li>
+</ul>
+<p><img src="/images/header_html_markup.jpg" alt="html_markup" width="300px" height="500px"></p>
+<p><img src="/images/header_css.jpg" alt="css" width="750px" height="500px"></p>
+<ul>
+<li>LINE css 작업을 진행하면서 <a href="http://fontello.com/" target="_blank" rel="noopener">fontello</a>로 아이콘을 넣어봤다.기존의 아이콘을 사용할 때는 <code>i태그</code>를 사용하거나 <code>image</code> 파일을 사용하는 방식이었는데 <strong>fontello</strong>는 <code>class</code>를 html 요소의 추가하는 방식으로 아이콘을 사용할 수 있어 간편했다. 사용방법은 비교적 어렵지 않고 아래와 같이 사용하면 된다.</li>
+</ul>
+<ol>
+<li><p><a href="http://fontello.com/" target="_blank" rel="noopener">fontello</a>사이트의 접속 후 원하는 아이콘을 클릭하고 우측 상단에 있는 <code>Download webfont</code> 버튼을 클릭한다.</p>
+</li>
+<li><p>압축을 풀고 <code>font</code> 폴더와 <code>fontello.css</code> 파일을 현재 작업중인 폴더로 복사한다.</p>
+</li>
+<li><p><code>fontello.css</code>에서 설정을 변경한다.</p>
+</li>
+</ol>
+<ul>
+<li><p>먼저 font 폴더의 경로가 잘 설정되어 있는지 확인한다.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ src: url('../font/fontello.eot?63304039');</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>fontello</code>는 가상요소를 이용하여 html요소의 앞 뒤에 배치한다. before를 after로 변경할 수 있다.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ [class^="icon-"]:before, [class*=" icon-"]:before</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>fontello.css</code>의 가장 하단에 아이콘 클래스와 가상요소가 정의되어 있다. 새로운 아이콘을 사용하고 싶을 때는 이 부분만 넣어주면 된다.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .icon-cog-alt:before &#123; content: '\e800'; &#125; /* '' */</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>:before 가상요소 앞에 있는 <code>class</code>를 html 요소의 <code>class</code>의 넣어주기만 하면 아이콘을 사용할 수 있다.</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://progyu.github.io/2019/04/11/190410-TIL-line-웹페이지-header-css-fontello/" data-id="cjubeno1y00095wa90djre1es" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/" class="article-date">
@@ -114,7 +179,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/" data-id="cju9x97i20006m8a9bj66wn1h" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/" data-id="cjubeno1t00075wa9qezomwld" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/04/09/190408-TIL-float-clearfix/" data-id="cju9x97i70008m8a9t3p6yrar" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/04/09/190408-TIL-float-clearfix/" data-id="cjubeno1q00065wa9wm7ph47z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -214,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/" data-id="cju9x97hy0005m8a9vbqku4ns" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/" data-id="cjubeno1o00055wa9iyd3k13w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -283,7 +348,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/31/190327-0330-TIL-프로젝트-개발-프로젝트-단계-특강/" data-id="cju9x97hu0004m8a9vffz27zf" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/31/190327-0330-TIL-프로젝트-개발-프로젝트-단계-특강/" data-id="cjubeno1m00045wa94p642jjm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -333,7 +398,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/27/190326-TIL-프로젝트-2일차/" data-id="cju9x97hq0003m8a958hg29n7" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/27/190326-TIL-프로젝트-2일차/" data-id="cjubeno1j00035wa9nj0gqccp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -372,7 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/26/190325-TIL/" data-id="cju9x97hm0002m8a9ljzwhrdo" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/26/190325-TIL/" data-id="cjubeno1g00025wa90vwo788f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -441,7 +506,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/" data-id="cju9x97gw0000m8a91c1e9wsu" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/190319-0322-TIL-local-storage-git-flow-git-fork-api/" data-id="cjubeno1d00015wa94rregq88" class="article-share-link">Share</a>
       
       
     </footer>
@@ -551,7 +616,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cju9x97io000bm8a9g519c7xt" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/git-flow-사용하기/" data-id="cjubeno2g000d5wa9autp2mcy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -654,49 +719,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cju9x97ia0009m8a9i2hzwsid" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-190318-TIL" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/18/190318-TIL/" class="article-date">
-  <time datetime="2019-03-18T11:05:46.000Z" itemprop="datePublished">2019-03-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/190318-TIL/">190318_TIL</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="3월-18일-월"><a href="#3월-18일-월" class="headerlink" title="3월 18일 (월)"></a>3월 18일 (월)</h1><ul>
-<li><p>수업 시작하자마자 CSS만을 활용하여 메뉴를 생성하는 과제를 했다.<br>매번 <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>을 이용하여 쉽게 만들다가<br>CSS만 활용하여 만들려고 하니 많이 어려웠다.<br>강사님이 <a href="https://github.com/Baepeu/frontend_school_1901/tree/master/src/week03" target="_blank" rel="noopener">github</a>에 올려주신 자료로 복습해야겠다.</p>
-</li>
-<li><p><a href="http://postcode.map.daum.net/guide" target="_blank" rel="noopener">다음 우편번호 서비스 api</a>을 활용하여 회원가입 폼을 만들고 공백과 정규표현식을 활용하여 validation(유효성)검사까지 진행하였다. <a href="http://postcode.map.daum.net/guide" target="_blank" rel="noopener">다음 우편번호 서비스 api</a>는 사용방법이 간단하며, 웹페이지에도 친절하게 설명이 되어있다. <code>data</code> 라는 객체에 사용자가 선택한 주소 정보를 담고 있다.<br>따라서, 입력한 주소의 우편번호 값을 가져오고 싶으면  <code>data.postcode</code> 와 같은 형식으로 값을 받아올 수 있다.</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://progyu.github.io/2019/03/18/190318-TIL/" data-id="cju9x97hg0001m8a96y5470be" class="article-share-link">Share</a>
+      <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="cjubeno28000b5wa9km23y3ao" class="article-share-link">Share</a>
       
       
     </footer>
@@ -742,6 +765,10 @@
       <ul>
         
           <li>
+            <a href="/2019/04/11/190410-TIL-line-웹페이지-header-css-fontello/">190410_TIL(LINE 웹페이지 header html,css, fontello)</a>
+          </li>
+        
+          <li>
             <a href="/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/">190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer)</a>
           </li>
         
@@ -755,10 +782,6 @@
         
           <li>
             <a href="/2019/03/31/190327-0330-TIL-프로젝트-개발-프로젝트-단계-특강/">190327-0330_TIL(프로젝트, 개발 프로젝트 단계 특강)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/27/190326-TIL-프로젝트-2일차/">190326_TIL(프로젝트 2일차)</a>
           </li>
         
       </ul>
