@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://progyu.github.io/2019/04/09/190408-TIL-float-clearfix/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="4월 8일 (월) 수업시간에 float 만을 활용하여 layout을 잡는 연습을 하였다. float 란 일반적인 흐름(normal flow)를 벗어나 부모 요소의 왼쪽이나 오른쪽에 배치하는 것이다. float로 요소를 배치하는 것은 상당히 까다로운 일인데 그 이유는 다른 요소의 배치에 영향을 미치기 때문이다. float가 배치에 영향을 미치는 것을 해제하기">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-04-09T12:05:28.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190408_TIL(Float, Clearfix)">
@@ -69,13 +69,17 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">GitHub</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
                                         
                                     
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
                                 </li>
                             
                         </ul>
@@ -83,7 +87,7 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -104,8 +108,8 @@
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'categories',
-            TAGS: 'etiquetes',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -131,7 +135,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sense categoria
+    uncategorized
     </h1>
 </div>
 
@@ -179,7 +183,7 @@
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/09/190408-TIL-float-clearfix/" data-id="cjudxc7ex0006woa92dvasqse" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://progyu.github.io/2019/04/09/190408-TIL-float-clearfix/" data-id="cjudxnmrz000638a92k2bpu14" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -282,7 +286,7 @@
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>seguir:</p>
+        <p>follow:</p>
         <ul class="social-links">
             
                 
@@ -308,7 +312,7 @@
 <nav id="article-nav">
     
         <a href="/2019/04/09/190409-TIL-탭메뉴-white-space-nowrap-on-method-유사배열-async-and-defer/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
+        <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
             190409_TIL(탭메뉴,white-space:nowrap, .on() method, 유사배열,async and defer)
@@ -319,7 +323,7 @@
     
     
         <a href="/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
+        <strong class="article-nav-caption">older</strong>
         <p class="article-nav-title">190331-0401_TIL(프로젝트 보완, box-sizing 속성, box model, flex box)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -394,7 +398,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">arxius</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">10</span></li></ul>
         </div>
@@ -404,7 +408,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">etiquetes</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -414,7 +418,7 @@
             
                 
     <div class="widget-wrap widget-float">
-        <h3 class="widget-title">etiqueta cloud</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/hexo-theme/" style="font-size: 10px;">hexo theme</a>
         </div>

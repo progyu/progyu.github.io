@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://progyu.github.io/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="3월 31일 (일) 오늘은 프로젝트에서 아직 부족한 점을 보완하기 위해서 오후 시간을 비워뒀다. 총 세 가지의 보완사항이 있었는데 첫번째는 to-do 입력 시 input 창 안이 공백이어도 입력이 되는 문제를 보완해야 하는 사항이었다. 이 문제는 간단하기 때문에 가장 먼저 처리하기로 했다. 조건문에 input 창 안이 공백이면 alert 창을 띄움으로써 해">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-04-01T12:01:07.065Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190331-0401_TIL(프로젝트 보완, box-sizing 속성, box model, flex box)">
@@ -69,13 +69,17 @@
                         <ul id="main-nav">
                             
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/">Inici</a>
+                                    <a class="main-nav-list-link" href="/">GitHub</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
                                         
                                     
                                 <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/about/index.html">Quant a</a>
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
                                 </li>
                             
                         </ul>
@@ -83,7 +87,7 @@
                             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Cercar">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -104,8 +108,8 @@
         TRANSLATION: {
             POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'categories',
-            TAGS: 'etiquetes',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -131,7 +135,7 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    Sense categoria
+    uncategorized
     </h1>
 </div>
 
@@ -193,7 +197,7 @@
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/" data-id="cjudxc7eu0005woa9nldbnywe" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://progyu.github.io/2019/04/01/190331-0401-TIL-프로젝트보완-box-sizing 속성-box-model-flex-box/" data-id="cjudxnmrw000538a91kkv6o0e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -296,7 +300,7 @@
                     <aside id="sidebar">
     <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
     <div class="sidebar-top">
-        <p>seguir:</p>
+        <p>follow:</p>
         <ul class="social-links">
             
                 
@@ -322,7 +326,7 @@
 <nav id="article-nav">
     
         <a href="/2019/04/09/190408-TIL-float-clearfix/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">més nou</strong>
+        <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
             190408_TIL(Float, Clearfix)
@@ -333,7 +337,7 @@
     
     
         <a href="/2019/03/31/190327-0330-TIL-프로젝트-개발-프로젝트-단계-특강/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">antic</strong>
+        <strong class="article-nav-caption">older</strong>
         <p class="article-nav-title">190327-0330_TIL(프로젝트, 개발 프로젝트 단계 특강)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
@@ -408,7 +412,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">arxius</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">10</span></li></ul>
         </div>
@@ -418,7 +422,7 @@
             
                 
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">etiquetes</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li></ul>
         </div>
@@ -428,7 +432,7 @@
             
                 
     <div class="widget-wrap widget-float">
-        <h3 class="widget-title">etiqueta cloud</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
             <a href="/tags/hexo-theme/" style="font-size: 10px;">hexo theme</a>
         </div>
