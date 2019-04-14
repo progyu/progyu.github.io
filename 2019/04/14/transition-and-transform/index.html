@@ -12,17 +12,17 @@
     
         <meta name="keywords" content>
     
-    <meta name="description" content="Transition(이전)과 Transform(변형) 이해하기">
+    <meta name="description" content="Transition(이전)과 Transform(변형) 이해하기 Trasition(전이) 요소 박스에 지정된 속성이 점진적으로 변환하는 기능을 의미한다. 이 기능을 이용하면 속성이 변화하는 과정을 통해 애니메이션 효과가 적용되어 동적인 느낌을 줄 수 있다.  transition property 속성 요소에 지정된 속성을 변환하고자 할 때 사용하는 속성. 속성">
 <meta property="og:type" content="article">
 <meta property="og:title" content="transition and transform">
 <meta property="og:url" content="http://progyu.github.io/2019/04/14/transition-and-transform/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Transition(이전)과 Transform(변형) 이해하기">
+<meta property="og:description" content="Transition(이전)과 Transform(변형) 이해하기 Trasition(전이) 요소 박스에 지정된 속성이 점진적으로 변환하는 기능을 의미한다. 이 기능을 이용하면 속성이 변화하는 과정을 통해 애니메이션 효과가 적용되어 동적인 느낌을 줄 수 있다.  transition property 속성 요소에 지정된 속성을 변환하고자 할 때 사용하는 속성. 속성">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-13T15:25:42.653Z">
+<meta property="og:updated_time" content="2019-04-14T14:47:48.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="transition and transform">
-<meta name="twitter:description" content="Transition(이전)과 Transform(변형) 이해하기">
+<meta name="twitter:description" content="Transition(이전)과 Transform(변형) 이해하기 Trasition(전이) 요소 박스에 지정된 속성이 점진적으로 변환하는 기능을 의미한다. 이 기능을 이용하면 속성이 변화하는 과정을 통해 애니메이션 효과가 적용되어 동적인 느낌을 줄 수 있다.  transition property 속성 요소에 지정된 속성을 변환하고자 할 때 사용하는 속성. 속성">
     
 
     
@@ -166,6 +166,63 @@
         
         <div class="article-entry" itemprop="articleBody">
             <h2 id="Transition-이전-과-Transform-변형-이해하기"><a href="#Transition-이전-과-Transform-변형-이해하기" class="headerlink" title="Transition(이전)과 Transform(변형) 이해하기"></a>Transition(이전)과 Transform(변형) 이해하기</h2><iframe scrolling="no" width="100%" height="300" src="//jsfiddle.net/Ltb3fg6a/embedded/html,css,result/light" frameborder="0" allowfullscreen></iframe>
+<h3 id="Trasition-전이"><a href="#Trasition-전이" class="headerlink" title="Trasition(전이)"></a>Trasition(전이)</h3><ul>
+<li>요소 박스에 지정된 속성이 점진적으로 변환하는 기능을 의미한다. 이 기능을 이용하면 속성이 변화하는 과정을 통해 <strong>애니메이션 효과</strong>가 적용되어 동적인 느낌을 줄 수 있다.</li>
+</ul>
+<h4 id="transition-property-속성"><a href="#transition-property-속성" class="headerlink" title="transition property 속성"></a>transition property 속성</h4><ul>
+<li>요소에 지정된 속성을 변환하고자 할 때 사용하는 속성. <strong>속성 값으로 특정 CSS 속성을 지정</strong>하면 해당 속성만 변환되고, <strong>all을 지정할 경우</strong> 요소에 지정된 모든 속성이 변환된다. </li>
+<li>위 코드에서는 all을 지정하였다.  위 코드의 주석처리 된 부분이 all을 지정하였을 떄와 같은 결과 값을 가진다.</li>
+</ul>
+<h4 id="transition–duration-속성"><a href="#transition–duration-속성" class="headerlink" title="transition–duration 속성"></a>transition–duration 속성</h4><ul>
+<li><strong>변환이 진행되는 시간</strong>을 지정하는 속성. 시간은 초 단위(s)로 지정</li>
+<li>위 코드에서는 2s로 지정하였다. 2초 동안 지정한 변환을 수행한다.</li>
+</ul>
+<h4 id="transition–delay-속성"><a href="#transition–delay-속성" class="headerlink" title="transition–delay 속성"></a>transition–delay 속성</h4><ul>
+<li>transition-delay는 <strong>변환이 진행되기 전 지연되는 시간</strong>을 지정하는 속성. transition-duration 속성과 마찬가지로 지연 시간은 초 단위(s)로 지정. 이때 지연되는 시간은 <strong>진행 시간(transition-duration)에 포함되지 않는다.</strong></li>
+<li>위 코드에서는 따로 지정을 하지 않았으나 ease-in 뒤에 2s 같은 초단위 값을 입력하면 된다.</li>
+</ul>
+<h4 id="transition–timing–function-속성"><a href="#transition–timing–function-속성" class="headerlink" title="transition–timing–function 속성"></a>transition–timing–function 속성</h4><ul>
+<li>transition-timing-function은 속성이 변환될 때 진행 속도의 형태를 지정하는 속성.</li>
+<li>위 코드에서는 ease-in을 사용하였다. ease-in은 후반부로 갈수록 변환 시 진행 속도가 증가되는 형태이다.</li>
+</ul>
+<h4 id="transition-속성"><a href="#transition-속성" class="headerlink" title="transition 속성"></a>transition 속성</h4><ul>
+<li>transition은 transition 관련 속성 값들을 <strong>일괄 적용하는 대표 속성</strong>으로, transition 속성 값은 <strong>공백</strong>으로 구분하여 선언한다. </li>
+<li>위 코드에서는 대표속성인 transition 속성을 사용하여 일괄 적용하였다.</li>
+</ul>
+<hr>
+<h3 id="Transform-변형"><a href="#Transform-변형" class="headerlink" title="Transform(변형)"></a>Transform(변형)</h3><ul>
+<li>transform 관련 속성을 사용하면 요소 박스의 크기 변형 및 회전, 기울임 등을 지정할 수 있다. </li>
+<li>또한 평면상의 2차원 변형뿐만 아니라 3차원 변형도 가능. 이번 포스트에서는 2차원 변형에 대해서만 다룰 예정이다.</li>
+</ul>
+<h4 id="transform-속성"><a href="#transform-속성" class="headerlink" title="transform 속성"></a>transform 속성</h4><ul>
+<li>transform은 요소 박스를 변형하는 속성으로,  변형 형태별로 함수 타입의 속성 값을 지정한다. 이때 속성 값을 공란으로 구분하여 복수의 속성 값을 지정할 수 있다.</li>
+</ul>
+<h4 id="translate"><a href="#translate" class="headerlink" title="translate()"></a>translate()</h4><ul>
+<li><p>translate( ) 함수는 HTML 요소 박스를 평면상에서 수평 이동하는 기능이다.  . translate( )로 이동된 요소는 다른 요소의 배치에 영향을 끼치지 않는다.</p>
+</li>
+<li><p>위 코드에서는 x축 좌표로 150px 이동하는 translateX(150px) 함수가 사용되었다.</p>
+</li>
+<li><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123; <span class="attribute">transform </span>: <span class="built_in">scale</span>(0.5, 0.5) ; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>위와 같이 사용할 수도 있다.</p>
+</li>
+</ul>
+<h4 id="scale"><a href="#scale" class="headerlink" title="scale()"></a>scale()</h4><ul>
+<li><p>scale( ) 함수는 HTML 요소 박스의 크기를 변형하는 기능이다. scale( ) 함수 역시 변경된 요소의 크기가 다른 요소 배치에 영향을 끼치지 않는다.</p>
+</li>
+<li><p>위 코드에서는 본래 요소 박스 크기의 반만큼 작아지는 함수가 사용되었다.</p>
+</li>
+</ul>
+<h4 id="rotate-angle"><a href="#rotate-angle" class="headerlink" title="rotate(angle)"></a>rotate(angle)</h4><ul>
+<li>rotate( ) 함수는 HTML 요소 박스를 평면상에서 회전하는 기능으로, 함수의 값으로 회전 각도(deg)를 지정할 수 있다.이 때 회전 각도가 양수 값일 경우에는 시계 방향으로 회전하고, 음수 값일 경우에는 반 시계 방향으로 회전한다. rotate( ) 함수 역시 박스가 회전되어 요소의 표시 영역이 변경되더라도 다른 요소의 배치에는 영향을 끼치지 않는다.</li>
+<li>위 코드의 <code>rotate(1turn)</code> 과 같이 사용 가능하다.  </li>
+</ul>
+<h4 id="skew"><a href="#skew" class="headerlink" title="skew"></a>skew</h4><ul>
+<li><p>skew( ) HTML 요소 박스의 기울임을 지정하는 기능이다. rotate( ) 함수와 마찬가지로 함수 값에 기울기의 각도(deg)를 지정할 수 있다. 박스가 회전되어 요소의 표시 영역이 변경되더라도 다른 요소의 배치에는 영향을 끼치지 않습니다.</p>
+</li>
+<li><p>위 코드에서는 사용되지 않았다.</p>
+</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -173,7 +230,7 @@
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/14/transition-and-transform/" data-id="cjufnkwkk000xf8a96v4odxuk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/04/14/transition-and-transform/" data-id="cjuh1o399000qaoa9eo666j7l" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -252,8 +309,12 @@
         "dateModified": "2019-04-14",
         "url": "http://progyu.github.io/2019/04/14/transition-and-transform/",
         "description": "Transition(이전)과 Transform(변형) 이해하기
-"
-        "wordCount": 15
+Trasition(전이)
+요소 박스에 지정된 속성이 점진적으로 변환하는 기능을 의미한다. 이 기능을 이용하면 속성이 변화하는 과정을 통해 애니메이션 효과가 적용되어 동적인 느낌을 줄 수 있다.
+
+transition property 속성
+요소에 지정된 속성을 변환하고자 할 때 사용하는 속성. 속성"
+        "wordCount": 452
     }
 </script>
 
