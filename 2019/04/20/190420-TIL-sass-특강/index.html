@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="4월 20일(토)Sass 특강 패스트캠퍼스에서 제공하는 주말 하루 특강을 들었다. 짧은 시간이었기  때문에 깊은 내용을 듣지는 못하고 기초적인 내용 위주로 Sass를 맛(?)봤다. 다른 프로그래밍 언어들과는 많이 다른 css를 여타 프로그래밍 언어들과 비슷하게 사용할 수 있는 점이 새로웠다. 여지껏 알던 css가 아닌 낯선 느낌이었다.  css를 사용하면서">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-20T15:52:00.154Z">
+<meta property="og:updated_time" content="2019-04-20T16:02:44.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190420_TIL(Sass 특강)">
 <meta name="twitter:description" content="4월 20일(토)Sass 특강 패스트캠퍼스에서 제공하는 주말 하루 특강을 들었다. 짧은 시간이었기  때문에 깊은 내용을 듣지는 못하고 기초적인 내용 위주로 Sass를 맛(?)봤다. 다른 프로그래밍 언어들과는 많이 다른 css를 여타 프로그래밍 언어들과 비슷하게 사용할 수 있는 점이 새로웠다. 여지껏 알던 css가 아닌 낯선 느낌이었다.  css를 사용하면서">
@@ -182,7 +182,7 @@
 <li>Mixin 기능의 특징은 프로그래밍 언어의 함수처럼 <code>parameter(매개변수)</code>를 사용하여 <code>argument(전달인자)</code>를 받을 수 있다는 것이다.</li>
 <li>MIxin의 사용법은 자주 사용할 스타일 코드 그룹을 <code>@mixin</code>으로 선언하고 사용할 스타일 코드 그룹 내에서 <code>@include</code>를 사용하여 <code>@mixin</code>으로 선언한 코드 그룹을 불러들이는 것이다.</li>
 </ul>
-<h3 id="예시코드"><a href="#예시코드" class="headerlink" title="예시코드"></a>예시코드</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> boldtext($size, $color) &#123;</span><br><span class="line">    <span class="selector-tag">font</span>: &#123;</span><br><span class="line">        <span class="attribute">family</span>: <span class="string">'Malgun Gothic'</span> sans-serif;</span><br><span class="line">        <span class="attribute">weight</span>: bold;</span><br><span class="line">        <span class="attribute">size</span>: $size;</span><br><span class="line">    &#125;</span><br><span class="line">    color: $color;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//순서가 바뀌어도 전달인자를 지정해주면 동작한다.</span><br><span class="line"><span class="selector-class">.boxsample</span> &#123;</span><br><span class="line">    @include boldtext($color:green, $size:50px);</span><br><span class="line">&#125;</span><br><span class="line">//.boxsample &#123;</span><br><span class="line">//    @include boldtext(25px, green);</span><br><span class="line">//&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="예시코드"><a href="#예시코드" class="headerlink" title="예시코드"></a>예시코드</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@mixin boldtext($size, $color) &#123;</span><br><span class="line">    font: &#123;</span><br><span class="line">        family: 'Malgun Gothic' sans-serif;</span><br><span class="line">        weight: bold;</span><br><span class="line">        size: $size;</span><br><span class="line">    &#125;</span><br><span class="line">    color: $color;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//순서가 바뀌어도 전달인자를 지정해주면 동작한다.</span><br><span class="line">.boxsample &#123;</span><br><span class="line">    @include boldtext($color:green, $size:50px);</span><br><span class="line">&#125;</span><br><span class="line">//.boxsample &#123;</span><br><span class="line">//    @include boldtext(25px, green);</span><br><span class="line">//&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h3><ul>
 <li><a href="https://poiemaweb.com/sass-basics" target="_blank" rel="noopener">poiemaweb</a></li>
 <li><a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank" rel="noopener">Sass-documentation</a></li>
@@ -195,7 +195,7 @@
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/20/190420-TIL-Sass-특강/" data-id="cjupouloc000wesa9qv7d4f0r" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/04/20/190420-TIL-Sass-특강/" data-id="cjupoyswg000wj4a9gsn4glpf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -278,7 +278,7 @@
 짧은 시간이었기  때문에 깊은 내용을 듣지는 못하고 기초적인 내용 위주로 Sass를 맛(?)봤다.
 다른 프로그래밍 언어들과는 많이 다른 css를 여타 프로그래밍 언어들과 비슷하게 사용할 수 있는 점이 새로웠다. 여지껏 알던 css가 아닌 낯선 느낌이었다. 
 css를 사용하면서"
-        "wordCount": 318
+        "wordCount": 312
     }
 </script>
 
