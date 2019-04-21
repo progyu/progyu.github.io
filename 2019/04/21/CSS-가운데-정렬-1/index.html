@@ -12,18 +12,18 @@
     
         <meta name="keywords" content>
     
-    <meta name="description" content="오른쪽에 있는 요구르트색(?) 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다. parents가 block 요소이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 parents가 소유한 공간이다. block 요소는 한 줄에 하나씩만 배치된다.">
+    <meta name="description" content="주황색 박스를 제외한 오른쪽 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다. 주황색 박스가 block 요소(div)이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 주황색 박스가 소유한 공간이다. block 요소는 한 줄에 하나씩 블럭이 쌓이듯 배치된다.    text-align: center">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS-가운데 정렬(1)-margin auto">
 <meta property="og:url" content="http://progyu.github.io/2019/04/21/CSS-가운데-정렬-1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="오른쪽에 있는 요구르트색(?) 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다. parents가 block 요소이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 parents가 소유한 공간이다. block 요소는 한 줄에 하나씩만 배치된다.">
+<meta property="og:description" content="주황색 박스를 제외한 오른쪽 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다. 주황색 박스가 block 요소(div)이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 주황색 박스가 소유한 공간이다. block 요소는 한 줄에 하나씩 블럭이 쌓이듯 배치된다.    text-align: center">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://user-images.githubusercontent.com/48173714/56466015-7762de80-6445-11e9-94a7-df3fffae9c96.png">
-<meta property="og:updated_time" content="2019-04-21T07:58:06.042Z">
+<meta property="og:updated_time" content="2019-04-21T11:19:15.458Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS-가운데 정렬(1)-margin auto">
-<meta name="twitter:description" content="오른쪽에 있는 요구르트색(?) 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다. parents가 block 요소이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 parents가 소유한 공간이다. block 요소는 한 줄에 하나씩만 배치된다.">
+<meta name="twitter:description" content="주황색 박스를 제외한 오른쪽 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다. 주황색 박스가 block 요소(div)이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 주황색 박스가 소유한 공간이다. block 요소는 한 줄에 하나씩 블럭이 쌓이듯 배치된다.    text-align: center">
 <meta name="twitter:image" content="https://user-images.githubusercontent.com/48173714/56466015-7762de80-6445-11e9-94a7-df3fffae9c96.png">
     
 
@@ -169,11 +169,18 @@
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://user-images.githubusercontent.com/48173714/56466015-7762de80-6445-11e9-94a7-df3fffae9c96.png" alt="image"></p>
 <ul>
-<li>오른쪽에 있는 요구르트색(?) 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다.</li>
-<li>parents가 block 요소이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 parents가 소유한 공간이다.</li>
-<li>block 요소는 한 줄에 하나씩만 배치된다.</li>
+<li>주황색 박스를 제외한 오른쪽 공간이 <code>auto</code> 값으로 설정할 수 있는 <code>margin</code>의 <strong>최대 영역</strong>을 의미한다.</li>
+<li>주황색 박스가 <strong>block 요소</strong>(div)이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 <strong>주황색 박스가 소유한 공간</strong>이다.</li>
+<li>block 요소는 한 줄에 하나씩 블럭이 쌓이듯 배치된다.</li>
 </ul>
 <iframe scrolling="no" width="100%" height="300" src="//jsfiddle.net/32nxtwsj/embedded/html,css,result/light" frameborder="0" allowfullscreen></iframe>
+<ul>
+<li><p><strong>text-align: center;</strong></p>
+<ul>
+<li>block 요소 안에 있는 <strong>inline 요소</strong>를 가운데 정렬 시킨다.</li>
+</ul>
+</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -181,7 +188,7 @@
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/21/CSS-가운데-정렬-1/" data-id="cjuqn3iee000ypwa9d79j8sql" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/04/21/CSS-가운데-정렬-1/" data-id="cjuqu7ni0000u5sa9foezwy6j" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -261,13 +268,14 @@
         "url": "http://progyu.github.io/2019/04/21/CSS-가운데-정렬-1/",
         "description": "
 
-오른쪽에 있는 요구르트색(?) 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다.
-parents가 block 요소이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 parents가 소유한 공간이다.
-block 요소는 한 줄에 하나씩만 배치된다.
+주황색 박스를 제외한 오른쪽 공간이 auto 값으로 설정할 수 있는 margin의 최대 영역을 의미한다.
+주황색 박스가 block 요소(div)이기 때문에 한 줄 전체 영역을 소유한다. 그러므로 오른쪽 공간은 쓰지 않은 것뿐 주황색 박스가 소유한 공간이다.
+block 요소는 한 줄에 하나씩 블럭이 쌓이듯 배치된다.
 
 
-"
-        "wordCount": 43
+
+text-align: center"
+        "wordCount": 57
     }
 </script>
 
