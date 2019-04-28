@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="progyu 개발 블로그">
 <meta property="og:description" content="오늘은 책에서 도움이 될만한 내용과 지난주 강사님이 해주신 말씀 중 도움이 될만한 내용을 가볍게 정리해 보려한다. 재귀코드 읽는 방법 기저 조건이 무엇인지 찾는다. 기저 조건을 다룬다는 가정하에 함수를 분석한다. 기저 조건 바로 전 조건을 다룬다는 가정하에 함수를 분석한다. 한 번에 한 조건씩 올라가면서 계속 분석한다.  예시 코드(피보나치 수)123456">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-28T14:38:21.973Z">
+<meta property="og:updated_time" content="2019-04-28T14:45:19.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190428_TIL(재귀코드 읽는 방법, 새로운 언어 공부법, 기타 내용)">
 <meta name="twitter:description" content="오늘은 책에서 도움이 될만한 내용과 지난주 강사님이 해주신 말씀 중 도움이 될만한 내용을 가볍게 정리해 보려한다. 재귀코드 읽는 방법 기저 조건이 무엇인지 찾는다. 기저 조건을 다룬다는 가정하에 함수를 분석한다. 기저 조건 바로 전 조건을 다룬다는 가정하에 함수를 분석한다. 한 번에 한 조건씩 올라가면서 계속 분석한다.  예시 코드(피보나치 수)123456">
@@ -181,16 +181,16 @@
 <h3 id="예시-코드-피보나치-수"><a href="#예시-코드-피보나치-수" class="headerlink" title="예시 코드(피보나치 수)"></a>예시 코드(피보나치 수)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">elif</span> n==<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> fibonacci(n<span class="number">-1</span>)+fibonacci(n<span class="number">-2</span>)</span><br><span class="line"></span><br><span class="line">print(fibonacci(<span class="number">4</span>))</span><br></pre></td></tr></table></figure>
 <p>위 재귀코드에 재귀코드 읽는 방법을 적용해보자.</p>
 <ol>
-<li><p>기저조건이 무엇인지 찾기</p>
+<li><p><strong>기저조건이 무엇인지 찾기</strong></p>
 <p>함수가 자기 자신을 호출하지 않는 조건인 다음 코드가 기저조건이다.</p>
 </li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"><span class="keyword">elif</span> n==<span class="number">2</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<p>​    n이 1 또는 2일  때가 기저 조건이다.</p>
+<p>​    n이 <code>1</code> 또는 <code>2</code>일  때가 기저 조건이다.</p>
 <ol start="2">
-<li><p>기저 조건을 다룬다는 가정하에 함수 분석하기</p>
-<p>이제 기저 조건인 fibonacci(1) 과 fibonacci(2)를 처리한다. </p>
-<p>fibonacci(1) 과 fibonacci(2)을 호출하면 모두 기저 조건이므로 재귀가 일어나지 않고 단순히 if문을 실행하여 0과 1을 반환한다.</p>
+<li><p><strong>기저 조건을 다룬다는 가정하에 함수 분석하기</strong></p>
+<p>이제 기저 조건인 <strong>fibonacci(1)</strong> 과 <strong>fibonacci(2)</strong>를 처리한다. </p>
+<p><strong>fibonacci(1)</strong> 과 <strong>fibonacci(2)</strong>을 호출하면 모두 기저 조건이므로 재귀가 일어나지 않고 단순히 if문을 실행하여 <code>0</code>과 <code>1</code>을 반환한다.</p>
 </li>
 </ol>
 <ul>
@@ -198,19 +198,20 @@
 <li>fibonacci(2) returns 1</li>
 </ul>
 <ol start="3">
-<li><p>기저 조건 바로 <strong>전</strong> 조건을 다룬다는 가정하에 함수 분석하기</p>
-<p>기저 조건 바로 전 조건은 바로 fibonacci(3) 이다.</p>
-<p>fibonacci(3)을 호출하면 fibonacci(2)+fibonacci(1)를 반환한다.</p>
-<p>이전 분석에서 fibonacci(1) 과 fibonacci(2)가 각각 0 과 1을 반환하는 것을 확인했다.</p>
-<p>따라서, fibonacci(3)은 0 + 1, 즉 1을 반환한다. </p>
+<li><p><strong>기저 조건 바로 전 조건을 다룬다는 가정하에 함수 분석하기</strong></p>
+<p>기저 조건 바로 전 조건은 바로 <strong>fibonacci(3)</strong> 이다.</p>
+<p>fibonacci(3)을 호출하면 <strong>fibonacci(2)+fibonacci(1)</strong>를 반환한다.</p>
+<p>이전 분석에서 fibonacci(1) 과 fibonacci(2)가 각각 <code>0</code> 과 <code>1</code>을 반환하는 것을 확인했다.</p>
+<p>따라서, fibonacci(3)은 <code>0 + 1</code>, 즉 <code>1</code>을 반환한다. </p>
 </li>
 </ol>
 <ol start="4">
-<li><p>한 번에 한 조건씩 올라가면서 계속 분석하기</p>
-<p>fibonacci(4)를 호출하면, fibonacci(3)+fibonacci(2), 즉 2를 반환하고</p>
-<p>마찬가지로 fibonacci(5)를 호출하면 fibonacci(4)+fibonacci(3)이 되어 3을 반환한다.</p>
+<li><p><strong>한 번에 한 조건씩 올라가면서 계속 분석하기</strong></p>
+<p><strong>fibonacci(4)</strong>를 호출하면, fibonacci(3)+fibonacci(2), 즉 2를 반환하고</p>
+<p>마찬가지로 <strong>fibonacci(5)</strong>를 호출하면 fibonacci(4)+fibonacci(3)이 되어 3을 반환한다.</p>
 </li>
 </ol>
+<p><br></p>
 <h2 id="새로운-언어-공부-방법"><a href="#새로운-언어-공부-방법" class="headerlink" title="새로운 언어 공부 방법"></a>새로운 언어 공부 방법</h2><ol>
 <li>자료형</li>
 <li>연산자</li>
@@ -229,6 +230,7 @@
 </ul>
 </li>
 </ol>
+<p><br></p>
 <h3 id="기타내용"><a href="#기타내용" class="headerlink" title="기타내용"></a>기타내용</h3><p>정리하지는 못하였지만 알아두면 좋을 내용들</p>
 <ul>
 <li><a href="https://whatisthenext.tistory.com/103" target="_blank" rel="noopener">아스키 코드와 유니코드</a></li>
@@ -248,7 +250,7 @@
 <li><a href="https://itholic.github.io/python-namespace/" target="_blank" rel="noopener">namespace(이름공간)</a></li>
 </ul>
 <h3 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h3><ul>
-<li><p><a href="https://ko.wikipedia.org/wiki/%ED%81%B4%EB%9E%98%EC%8A%A4_(%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99" target="_blank" rel="noopener">class</a>&gt;)</p>
+<li><p><a href="http://blog.naver.com/PostView.nhn?blogId=netrance&amp;logNo=110095765191" target="_blank" rel="noopener">class</a></p>
 </li>
 <li><p><a href="https://victorydntmd.tistory.com/117" target="_blank" rel="noopener">OOP</a></p>
 </li>
@@ -265,7 +267,7 @@
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/28/190428-TIL-재귀코드-읽는-방법-새로운-언어-공부법/" data-id="cjv11hbkm0016s8a9cxlmqpy0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/04/28/190428-TIL-재귀코드-읽는-방법-새로운-언어-공부법/" data-id="cjv11q54p001er4a92fumnf9t" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
