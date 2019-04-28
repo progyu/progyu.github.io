@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="컴퓨터공학기초">
     
-    <meta name="description" content="스택과 큐 제약을 갖는 배열 임시 데이터를 처리할 수 있는 간결한 도구  데이터를 순서대로 처리할 수 있으며 필요 없으면 버릴 수 있다.  배열과 연결리스트, 파이썬의 리스트 등으로 구현할 수 있다.  스택(Stack)스택의 세 가지 제약 데이터는 스택의 끝에만 삽입할 수 있다. 데이터는 스택의 끝에서만 읽을 수 있다. 데이터는 스택의 끝에서만 삭제할 수">
+    <meta name="description" content="스택과 큐 제약을 갖는 배열 임시 데이터를 처리할 수 있는 간결한 도구  데이터를 순서대로 처리할 수 있으며 필요 없으면 버릴 수 있다.  배열과 연결리스트, 파이썬의 리스트 등으로 구현할 수 있다.   스택(Stack)스택의 세 가지 제약 데이터는 스택의 끝에만 삽입할 수 있다.  데이터는 스택의 끝에서만 읽을 수 있다.  데이터는 스택의 끝에서만 삭제할">
 <meta name="keywords" content="컴퓨터공학기초">
 <meta property="og:type" content="article">
 <meta property="og:title" content="190426_TIL(Stack and Queue)">
 <meta property="og:url" content="http://progyu.github.io/2019/04/26/190426-TIL-Stack-and-Queue/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
-<meta property="og:description" content="스택과 큐 제약을 갖는 배열 임시 데이터를 처리할 수 있는 간결한 도구  데이터를 순서대로 처리할 수 있으며 필요 없으면 버릴 수 있다.  배열과 연결리스트, 파이썬의 리스트 등으로 구현할 수 있다.  스택(Stack)스택의 세 가지 제약 데이터는 스택의 끝에만 삽입할 수 있다. 데이터는 스택의 끝에서만 읽을 수 있다. 데이터는 스택의 끝에서만 삭제할 수">
+<meta property="og:description" content="스택과 큐 제약을 갖는 배열 임시 데이터를 처리할 수 있는 간결한 도구  데이터를 순서대로 처리할 수 있으며 필요 없으면 버릴 수 있다.  배열과 연결리스트, 파이썬의 리스트 등으로 구현할 수 있다.   스택(Stack)스택의 세 가지 제약 데이터는 스택의 끝에만 삽입할 수 있다.  데이터는 스택의 끝에서만 읽을 수 있다.  데이터는 스택의 끝에서만 삭제할">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-27T11:20:16.120Z">
+<meta property="og:updated_time" content="2019-04-27T11:29:14.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190426_TIL(Stack and Queue)">
-<meta name="twitter:description" content="스택과 큐 제약을 갖는 배열 임시 데이터를 처리할 수 있는 간결한 도구  데이터를 순서대로 처리할 수 있으며 필요 없으면 버릴 수 있다.  배열과 연결리스트, 파이썬의 리스트 등으로 구현할 수 있다.  스택(Stack)스택의 세 가지 제약 데이터는 스택의 끝에만 삽입할 수 있다. 데이터는 스택의 끝에서만 읽을 수 있다. 데이터는 스택의 끝에서만 삭제할 수">
+<meta name="twitter:description" content="스택과 큐 제약을 갖는 배열 임시 데이터를 처리할 수 있는 간결한 도구  데이터를 순서대로 처리할 수 있으며 필요 없으면 버릴 수 있다.  배열과 연결리스트, 파이썬의 리스트 등으로 구현할 수 있다.   스택(Stack)스택의 세 가지 제약 데이터는 스택의 끝에만 삽입할 수 있다.  데이터는 스택의 끝에서만 읽을 수 있다.  데이터는 스택의 끝에서만 삭제할">
     
 
     
@@ -179,10 +179,14 @@
 </li>
 <li>배열과 연결리스트, 파이썬의 리스트 등으로 구현할 수 있다.</li>
 </ul>
+<p><br></p>
 <h2 id="스택-Stack"><a href="#스택-Stack" class="headerlink" title="스택(Stack)"></a>스택(Stack)</h2><h4 id="스택의-세-가지-제약"><a href="#스택의-세-가지-제약" class="headerlink" title="스택의 세 가지 제약"></a>스택의 세 가지 제약</h4><ul>
-<li>데이터는 스택의 <strong>끝</strong>에만 삽입할 수 있다.</li>
-<li>데이터는 스택의 <strong>끝</strong>에서만 읽을 수 있다.</li>
-<li>데이터는 스택의 <strong>끝</strong>에서만 삭제할 수 있다.</li>
+<li><p>데이터는 스택의 <strong>끝</strong>에만 삽입할 수 있다.</p>
+</li>
+<li><p>데이터는 스택의 <strong>끝</strong>에서만 읽을 수 있다.</p>
+</li>
+<li><p>데이터는 스택의 <strong>끝</strong>에서만 삭제할 수 있다.</p>
+</li>
 </ul>
 <h4 id="스택-쉽게-이해하기"><a href="#스택-쉽게-이해하기" class="headerlink" title="스택 쉽게 이해하기"></a>스택 쉽게 이해하기</h4><ul>
 <li>접시 더미<ul>
@@ -207,6 +211,7 @@
 </ul>
 </li>
 </ul>
+<p><br>  </p>
 <h2 id="큐-Queue"><a href="#큐-Queue" class="headerlink" title="큐(Queue)"></a>큐(Queue)</h2><h4 id="큐의-세-가지-제약"><a href="#큐의-세-가지-제약" class="headerlink" title="큐의 세 가지 제약"></a>큐의 세 가지 제약</h4><ul>
 <li>데이터는 큐의 <strong>끝</strong>에만 삽입할 수 있다 (스택과 동일)</li>
 <li>데이터는 큐의 <strong>앞</strong>에서만 읽을 수 있다. (스택과  정반대)</li>
@@ -224,6 +229,7 @@
 <li>큐 삽입은 put, add, enqueue 등으로 부른다.</li>
 <li>큐 삭제는 get, dequeue 등으로 부른다.</li>
 </ul>
+<p><br></p>
 <h2 id="스택-두개를-이용하여-큐-구현하기"><a href="#스택-두개를-이용하여-큐-구현하기" class="headerlink" title="스택 두개를 이용하여 큐 구현하기"></a>스택 두개를 이용하여 큐 구현하기</h2><ul>
 <li><code>LIFO(&quot;Last In, First Out&quot;)</code>  –&gt;  <code>FIFO(&quot;First In, First Out&quot;)</code></li>
 <li><code>class</code>를 이용하여 구현 </li>
@@ -237,8 +243,6 @@
 </li>
 <li><p><a href="https://ko.wikipedia.org/wiki/%EC%8A%A4%ED%83%9D" target="_blank" rel="noopener">위키백과 스택</a></p>
 </li>
-<li><p><a href="https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0" target="_blank" rel="noopener">위키백과 큐</a>)</p>
-</li>
 </ul>
 <h3 id="참고도서"><a href="#참고도서" class="headerlink" title="참고도서"></a>참고도서</h3><ul>
 <li>누구나 자료구조와 알고리즘</li>
@@ -250,7 +254,7 @@
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/26/190426-TIL-Stack-and-Queue/" data-id="cjuzez6z000134ga99wbtfia6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/04/26/190426-TIL-Stack-and-Queue/" data-id="cjv11hblq001ks8a9tr30ng9i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -336,11 +340,14 @@
 
 배열과 연결리스트, 파이썬의 리스트 등으로 구현할 수 있다.
 
+
 스택(Stack)스택의 세 가지 제약
 데이터는 스택의 끝에만 삽입할 수 있다.
+
 데이터는 스택의 끝에서만 읽을 수 있다.
-데이터는 스택의 끝에서만 삭제할 수 "
-        "wordCount": 1141
+
+데이터는 스택의 끝에서만 삭제할"
+        "wordCount": 1139
     }
 </script>
 
@@ -388,6 +395,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2019/04/28/190428-TIL-재귀코드-읽는-방법-새로운-언어-공부법/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            190428_TIL(재귀코드 읽는 방법, 새로운 언어 공부법, 기타 내용)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/04/25/190425-TIL-insertion-sort/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -409,6 +426,15 @@
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a></p>
+                            <p class="item-title"><a href="/2019/04/28/190428-TIL-재귀코드-읽는-방법-새로운-언어-공부법/" class="title">190428_TIL(재귀코드 읽는 방법, 새로운 언어 공부법, 기타 내용)</a></p>
+                            <p class="item-date"><time datetime="2019-04-28T13:16:55.000Z" itemprop="datePublished">2019-04-28</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -446,15 +472,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a></p>
-                            <p class="item-title"><a href="/2019/04/22/190422-TIL-first-class-function/" class="title">190422_TIL(first class function)</a></p>
-                            <p class="item-date"><time datetime="2019-04-22T09:58:11.000Z" itemprop="datePublished">2019-04-22</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -464,7 +481,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">23</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -474,7 +491,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">10</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">10</span></li></ul>
         </div>
     </div>
 
@@ -484,7 +501,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">6</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
         </div>
     </div>
 
