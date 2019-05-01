@@ -6,7 +6,7 @@
     
 
     
-    <title>190429_TIL(JavaScript 와 ECMAScript의 차이, web API란?) | progyu 개발 블로그</title>
+    <title>190429_TIL(JavaScript 와 ECMAScript의 차이, API란?) | progyu 개발 블로그</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -15,14 +15,14 @@
     <meta name="description" content="JavaScript와 ECMAScript의 차이 JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편화와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  표준화된 자바스크립트에 대한 필요성이 대두되었다.  1997년 비영리 표준화 기구인 ECMA 인터내셔널이 자바스크립트 초판(ECMAScr">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="190429_TIL(JavaScript 와 ECMAScript의 차이, web API란?)">
+<meta property="og:title" content="190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)">
 <meta property="og:url" content="http://progyu.github.io/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
 <meta property="og:description" content="JavaScript와 ECMAScript의 차이 JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편화와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  표준화된 자바스크립트에 대한 필요성이 대두되었다.  1997년 비영리 표준화 기구인 ECMA 인터내셔널이 자바스크립트 초판(ECMAScr">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-29T12:40:48.819Z">
+<meta property="og:updated_time" content="2019-05-01T09:29:12.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="190429_TIL(JavaScript 와 ECMAScript의 차이, web API란?)">
+<meta name="twitter:title" content="190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)">
 <meta name="twitter:description" content="JavaScript와 ECMAScript의 차이 JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편화와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  표준화된 자바스크립트에 대한 필요성이 대두되었다.  1997년 비영리 표준화 기구인 ECMA 인터내셔널이 자바스크립트 초판(ECMAScr">
     
 
@@ -156,7 +156,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        190429_TIL(JavaScript 와 ECMAScript의 차이, web API란?)
+        190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)
         </h1>
     
 
@@ -198,8 +198,37 @@ ga('send', 'pageview');
 <ul>
 <li>클라이언트 사이드 Web API는 ECMAScript와는 별도로 <a href="https://www.w3.org/" target="_blank" rel="noopener">World Wide Web Consortium (W3C)</a>에서 별도의 명세로 관리하고 있다. </li>
 </ul>
+<h2 id="API란"><a href="#API란" class="headerlink" title="API란?"></a>API란?</h2><h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><ul>
+<li><strong>API(Application Programming Interface, 응용 프로그래밍 인터페이스)</strong>는 응용프로그램에서 사용할 수 있도록, 운영 체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 <strong>인터페이스</strong>를 뜻합니다.</li>
+</ul>
+<h4 id="※-인터페이스"><a href="#※-인터페이스" class="headerlink" title="※ 인터페이스"></a>※ 인터페이스</h4><ul>
+<li>어떤 기계 장치 간의 정보를 교환하기 위한 수단이나, 방법</li>
+<li>예) TV 와 리모콘은 서로 통신을 하기 위해서 <strong>정의된 규격</strong>에 의해 어떤 신호를 보낼 수 있도록 만들어진 장치이며, 이러한 <strong>신호를 서로 주고 받기 위한 방법</strong>을 인터페이스라고 한다.</li>
+</ul>
+<h4 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h4><ul>
+<li>분산 하이퍼미디어 시스템(예: 웹)을 위한 <strong>아키텍쳐 스타일</strong> </li>
+<li>REST는 REpresentational State Transfer라는 용어의 약자로서 2000년도에 로이 필딩 (Roy Fielding)의 박사학위 논문에서 최초로 소개되었습니다.</li>
+<li>REST의 <strong>uniform interface</strong>를 지원하는 것은 쉽지 않기 때문에, 많은 서비스가 REST에서 바라는 것을 <strong>모두 지원하지 않고 API를 만들게 된다.</strong></li>
+</ul>
+<h4 id="REST-API"><a href="#REST-API" class="headerlink" title="REST API"></a>REST API</h4><ul>
+<li><strong>REST형식</strong>의 API</li>
+<li><strong>핵심 컨텐츠 및 기능을 외부 사이트에서 활용할 수 있도록 제공되는 인터페이스입니다.</strong></li>
+<li><p>HTTP프로토콜로 제공하는 API</p>
+</li>
+<li><p>클라이언트의 종류가 웹 브라우저, 안드로이드 앱, iOS 앱 등 다양해지면서 이러한 클라이언트들에게 정보를 제공하는 방식을 하나로 <strong>일원화시키는 방식 중에 대표적인 방식이 HTTP 프로토콜로 API를 제공하는 것</strong></p>
+</li>
+</ul>
+<h4 id="Web-API"><a href="#Web-API" class="headerlink" title="Web API"></a>Web API</h4><ul>
+<li><p>REST에서 몇가지 규칙을 지키지 않을 경우 Web API 혹은 HTTP API라고 부르기도 한다.</p>
+</li>
+<li><p>web 위에서 동작한다</p>
+</li>
+</ul>
 <h3 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h3><p><a href="https://poiemaweb.com/js-introduction" target="_blank" rel="noopener">자바스크립트란?</a></p>
 <p><a href="https://wormwlrm.github.io/2018/10/03/What-is-the-difference-between-javascript-and-ecmascript.html" target="_blank" rel="noopener">JavaScript와 ECMAScript의 차이</a></p>
+<p><a href="https://steemit.com/kr/@yahweh87/it-api" target="_blank" rel="noopener">API란 무엇인가?</a></p>
+<p><a href="https://www.edwith.org/boostcourse-web/lecture/16740" target="_blank" rel="noopener">REST API란?</a></p>
+<p><a href="https://www.youtube.com/watch?v=RP_f5dMoHFc" target="_blank" rel="noopener">그런 Rest API로 괜찮은가?</a></p>
 
         </div>
         <footer class="article-footer">
@@ -207,7 +236,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/" data-id="cjv2clst70015h0a9ub1ykkv1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/" data-id="cjv50rnro0019j0a9ln9d7bxq" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -277,17 +306,17 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "Lee Gyuha"
         },
-        "headline": "190429_TIL(JavaScript 와 ECMAScript의 차이, web API란?)",
+        "headline": "190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)",
         "image": "http://progyu.github.io",
         "keywords": "javascript",
         "genre": "",
         "datePublished": "2019-04-29",
         "dateCreated": "2019-04-29",
-        "dateModified": "2019-04-29",
+        "dateModified": "2019-05-01",
         "url": "http://progyu.github.io/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/",
         "description": "JavaScript와 ECMAScript의 차이
 JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편화와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  표준화된 자바스크립트에 대한 필요성이 대두되었다.  1997년 비영리 표준화 기구인 ECMA 인터내셔널이 자바스크립트 초판(ECMAScr"
-        "wordCount": 140
+        "wordCount": 330
     }
 </script>
 
@@ -361,7 +390,7 @@ JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편�
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/" class="title">190429_TIL(JavaScript 와 ECMAScript의 차이, web API란?)</a></p>
+                            <p class="item-title"><a href="/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/" class="title">190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)</a></p>
                             <p class="item-date"><time datetime="2019-04-29T12:32:54.000Z" itemprop="datePublished">2019-04-29</time></p>
                         </div>
                     </li>
