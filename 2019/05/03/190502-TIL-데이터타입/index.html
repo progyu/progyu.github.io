@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="progyu 개발 블로그">
 <meta property="og:description" content="데이터 타입데이터 타입에 의한 값의 해석 데이터 타입(Data Type)은 값의 종류를 말한다. 자바스크립트의 모든 값은 데이터 타입을 갖는다.  컴퓨터는 숫자, 텍스트, 이미지, 동영상 등의 모든 데이터를 2진수로 처리한다. 예를 들어 2진수 0100 0001를 숫자로 해석하면 65이지만 문자로 해석하면 ‘A’이다 컴퓨터는 메모리 공간의 주소에서 읽어 들">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-03T12:47:14.070Z">
+<meta property="og:updated_time" content="2019-05-05T07:50:29.986Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190502_TIL(데이터타입)">
 <meta name="twitter:description" content="데이터 타입데이터 타입에 의한 값의 해석 데이터 타입(Data Type)은 값의 종류를 말한다. 자바스크립트의 모든 값은 데이터 타입을 갖는다.  컴퓨터는 숫자, 텍스트, 이미지, 동영상 등의 모든 데이터를 2진수로 처리한다. 예를 들어 2진수 0100 0001를 숫자로 해석하면 65이지만 문자로 해석하면 ‘A’이다 컴퓨터는 메모리 공간의 주소에서 읽어 들">
@@ -250,9 +250,13 @@ ga('send', 'pageview');
 </li>
 <li><p>문자열 인터폴레이션은 ${ … }으로 표현식을 감싼다. 문자열 인터폴레이션 내의 표현식은 문자열로 강제 타입 변환된다.</p>
 </li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> template = <span class="string">`템플릿 리터럴은 '작은따옴표(single quotes)'과 "큰따옴표(double quotes)"를 혼용할 수 있다.`</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// HTML을 다룰 시 굉장히 편하다.</span></span><br><span class="line"><span class="keyword">const</span> template = <span class="string">`&lt;ul class="nav-items"&gt;</span></span><br><span class="line"><span class="string">  &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">  &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">  &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">  &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">&lt;/ul&gt;`</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 인터폴레이션, 평가한 다음에 문자열화 한다.</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`1 + 1 = <span class="subst">$&#123;<span class="number">1</span> + <span class="number">1</span>&#125;</span>`</span>); <span class="comment">// 1 + 1 = 2</span></span><br></pre></td></tr></table></figure></li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> template = <span class="string">`템플릿 리터럴은 '작은따옴표(single quotes)'과 "큰따옴표(double quotes)"를 혼용할 수 있다.`</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// HTML을 다룰 시 굉장히 편하다.</span></span><br><span class="line"><span class="keyword">const</span> template = <span class="string">`&lt;ul class="nav-items"&gt;</span></span><br><span class="line"><span class="string">  &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">  &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">  &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">  &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">&lt;/ul&gt;`</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 인터폴레이션, 평가한 다음에 문자열화 한다.</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`1 + 1 = <span class="subst">$&#123;<span class="number">1</span> + <span class="number">1</span>&#125;</span>`</span>); <span class="comment">// 1 + 1 = 2</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
+</ul>
+<h3 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h3><ul>
+<li><a href="https://poiemaweb.com/js-data-type-variable" target="_blank" rel="noopener">poiemaweb</a></li>
 </ul>
 
         </div>
@@ -261,7 +265,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://progyu.github.io/2019/05/03/190502-TIL-데이터타입/" data-id="cjv9kcdba001snca9gcy2uws0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/05/03/190502-TIL-데이터타입/" data-id="cjvamzsxr001rhsa9x8me1hu8" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -337,13 +341,13 @@ ga('send', 'pageview');
         "genre": "",
         "datePublished": "2019-05-03",
         "dateCreated": "2019-05-03",
-        "dateModified": "2019-05-03",
+        "dateModified": "2019-05-05",
         "url": "http://progyu.github.io/2019/05/03/190502-TIL-데이터타입/",
         "description": "데이터 타입데이터 타입에 의한 값의 해석
 데이터 타입(Data Type)은 값의 종류를 말한다. 자바스크립트의 모든 값은 데이터 타입을 갖는다. 
 컴퓨터는 숫자, 텍스트, 이미지, 동영상 등의 모든 데이터를 2진수로 처리한다. 예를 들어 2진수 0100 0001를 숫자로 해석하면 65이지만 문자로 해석하면 ‘A’이다
 컴퓨터는 메모리 공간의 주소에서 읽어 들"
-        "wordCount": 480
+        "wordCount": 487
     }
 </script>
 
@@ -497,7 +501,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
         </div>
     </div>
 
