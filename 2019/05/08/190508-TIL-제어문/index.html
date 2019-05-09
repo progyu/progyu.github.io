@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="javascript">
     
-    <meta name="description" content="7. 제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0">
+    <meta name="description" content="제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0개 이">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="190508_TIL(제어문)">
 <meta property="og:url" content="http://progyu.github.io/2019/05/08/190508-TIL-제어문/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
-<meta property="og:description" content="7. 제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0">
+<meta property="og:description" content="제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0개 이">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-09T04:29:15.492Z">
+<meta property="og:updated_time" content="2019-05-09T04:34:58.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190508_TIL(제어문)">
-<meta name="twitter:description" content="7. 제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0">
+<meta name="twitter:description" content="제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0개 이">
     
 
     
@@ -183,7 +183,7 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="7-제어문"><a href="#7-제어문" class="headerlink" title="7. 제어문"></a>7. 제어문</h1><ul>
+            <h1 id="제어문"><a href="#제어문" class="headerlink" title="제어문"></a>제어문</h1><ul>
 <li>제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다.</li>
 <li>일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. <strong>제어문은 코드의 실행 순서를 인위적으로 제어</strong>할 수 있다.</li>
 </ul>
@@ -229,6 +229,10 @@ ga('send', 'pageview');
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i, j;</span><br><span class="line"></span><br><span class="line">loop1:</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;      <span class="comment">//첫번째 for문은 "loop1" 레이블</span></span><br><span class="line">   loop2:</span><br><span class="line">   <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;   <span class="comment">//두번째 for문은 "loop2" 레이블</span></span><br><span class="line">      <span class="keyword">if</span> (i === <span class="number">1</span> &amp;&amp; j === <span class="number">1</span>) &#123;</span><br><span class="line">         <span class="keyword">continue</span> loop1;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'i = '</span> + i + <span class="string">', j = '</span> + j);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="5-contionue문"><a href="#5-contionue문" class="headerlink" title="5. contionue문"></a>5. contionue문</h2><p>continue 문은 반복문의 코드 블록 실행을 현 지점에서 중단하고 <strong>반복문의 증감식으로 이동</strong>한다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// continue 문을 사용하면 if 문 밖에 코드를 작성할 수 있다.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i= <span class="number">0</span>; i &lt; string.length; i++) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (string[i] !== search) <span class="keyword">continue</span>;</span><br><span class="line">    </span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h3><ul>
+<li><a href="https://poiemaweb.com/js-control-flow" target="_blank" rel="noopener">poiemaweb</a></li>
+</ul>
+
         </div>
         <footer class="article-footer">
             
@@ -313,12 +317,12 @@ ga('send', 'pageview');
         "dateCreated": "2019-05-08",
         "dateModified": "2019-05-09",
         "url": "http://progyu.github.io/2019/05/08/190508-TIL-제어문/",
-        "description": "7. 제어문
+        "description": "제어문
 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다.
 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.
 
-1. 블록문블록문(Block statement/Compound statement)는 0"
-        "wordCount": 741
+1. 블록문블록문(Block statement/Compound statement)는 0개 이"
+        "wordCount": 746
     }
 </script>
 
