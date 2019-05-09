@@ -10,16 +10,20 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content>
+        <meta name="keywords" content="javascript">
     
-    <meta property="og:type" content="article">
+    <meta name="description" content="7. 제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
 <meta property="og:title" content="190508_TIL(제어문)">
 <meta property="og:url" content="http://progyu.github.io/2019/05/08/190508-TIL-제어문/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
+<meta property="og:description" content="7. 제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-08T12:28:28.737Z">
+<meta property="og:updated_time" content="2019-05-09T04:29:15.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190508_TIL(제어문)">
+<meta name="twitter:description" content="7. 제어문 제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.  1. 블록문블록문(Block statement/Compound statement)는 0">
     
 
     
@@ -140,7 +144,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <a class="page-title-link" href="/categories/TIL/">TIL</a>
     </h1>
 </div>
 
@@ -170,11 +174,61 @@ ga('send', 'pageview');
 		
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/javascript/">javascript</a>
+    </div>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            
+            <h1 id="7-제어문"><a href="#7-제어문" class="headerlink" title="7. 제어문"></a>7. 제어문</h1><ul>
+<li>제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다.</li>
+<li>일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. <strong>제어문은 코드의 실행 순서를 인위적으로 제어</strong>할 수 있다.</li>
+</ul>
+<h2 id="1-블록문"><a href="#1-블록문" class="headerlink" title="1. 블록문"></a>1. 블록문</h2><p>블록문(Block statement/Compound statement)는 <strong>0개 이상</strong>의 문을 중괄호롤 묶은 것으로 코드 블록 또는 블록이라고 부르기도 한다. 자바스크립트는 <strong>블록문을 하나의 실행 단위로 취급한다.</strong> </p>
+<h2 id="2-조건문"><a href="#2-조건문" class="headerlink" title="2. 조건문"></a>2. 조건문</h2><p>조건문(conditional statement)은 주어진 <strong>조건식(conditional expression)의 평가 결과</strong>에 따라 코드 블럭(블록문)의 실행을 결정한다. </p>
+<p>조건식은 불리언 값으로 평가될 수 있는 표현식이다.</p>
+<p>자바스크립트는 2가지의 조건문 if…else 문과 switch 문을 제공한다.</p>
+<h3 id="2-1-if…else-문"><a href="#2-1-if…else-문" class="headerlink" title="2.1. if…else 문"></a>2.1. if…else 문</h3><p>만약 조건식의 평가 결과가 불리언 값이 아니면 <strong>불리언 값으로 강제 변환</strong>되어 논리적 참, 거짓을 구별한다.</p>
+<p>대부분의 if…else 문은 삼항 조건 연산자로 바꿔 쓸 수 있다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 0은 false로 취급된다.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> kind = num ? (num &gt; <span class="number">0</span> ? <span class="string">'양수'</span> : <span class="string">'음수'</span>): <span class="string">'영'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(kind);</span><br></pre></td></tr></table></figure>
+<p><code>num &gt; 0 ? &#39;양수&#39; : &#39;음수&#39;</code>는 표현식이므로 다른 표현식의 일부가 될 수 있다.</p>
+<p>삼항 조건 연산자 표현식은 값처럼 사용할 수 있으나 if…else 문은 값처럼 사용할 수 없다는 차이가 있다.</p>
+<h3 id="2-2-switch-문"><a href="#2-2-switch-문" class="headerlink" title="2.2. switch 문"></a>2.2. switch 문</h3><p>switch문은 주어진 <strong>표현식을 평가</strong>하여 그 값과 <strong>일치하는 표현식을 갖는 case문으로 실행 순서를 이동시킨다.</strong></p>
+<p><strong>switch 문의 표현식은 불리언 값보다는 문자열, 숫자 값인 경우가 많다.</strong></p>
+<p> switch 문은 논리적 참, 거짓보다는 <strong>다양한 상황(case)</strong>에 따라 실행할 코드 블록을 결정할 때 사용한다.</p>
+<p> break 문을 사용하지 않아 switch 문을 탈출하지 않고 연이어 case문과 default문을 실행하는 것을 폴스루(fall through)라 한다.</p>
+<p>break 키워드로 구성된 break 문은 코드 블록에서 탈출하는 역할을 한다. </p>
+<p>break 문을 생략한 폴스루(fall through)가 유용한 경우도 있다.</p>
+<ul>
+<li>윤년인 판별해서 2월의 일수를 계산하는 예제</li>
+</ul>
+<h2 id="3-반복문"><a href="#3-반복문" class="headerlink" title="3. 반복문"></a>3. 반복문</h2><p>반복문(Loop statement)은 주어진 조건식의 평가 결과가 참인 경우 코드 블럭을 실행한다. 그 후 <strong>조건식을 다시 검사</strong>하여 여전히 참인 경우 코드 블록을 다시 실행한다. 이는 <strong>조건식이 거짓일 때까지 반복</strong>된다.</p>
+<h3 id="3-1-for문"><a href="#3-1-for문" class="headerlink" title="3.1. for문"></a>3.1. for문</h3><p>for문은 조건식이 <strong>거짓으로 판별될 때까지</strong> 코드 블록을 반복 실행한다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(변수 선언문 또는 할당문; 조건식; 증감식) &#123;</span><br><span class="line">  조건식이 참인 경우 반복 실행될 문;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>for문의 실행</p>
+<ul>
+<li>변수 선언문은 단, 한번만 실행된다.</li>
+<li>조건식의 평가 결과가 true이면 코드 블록을 실행하고, false이면 for문의 실행이 종료된다.</li>
+</ul>
+<h3 id="3-2-while문"><a href="#3-2-while문" class="headerlink" title="3.2. while문"></a>3.2. while문</h3><p>while 문은 주어진 조건식의 평가 결과가 참이면 코드 블록을 계속해서 반복 실행한다. <strong>조건문의 평가 결과가 거짓이 되면 실행을 종료</strong>한다. 만약 조건식의 평가 결과가 <strong>불리언 값이 아니면 불리언 값으로 강제 변환</strong>되어 논리적 참, 거짓을 구별한다</p>
+<p>조건식의 평가 결과가 <strong>언제나 참이면 무한루프</strong>가 된다.</p>
+<h2 id="3-3-do…while문"><a href="#3-3-do…while문" class="headerlink" title="3.3. do…while문"></a>3.3. do…while문</h2><p>do…while 문은 <strong>코드 블록을 먼저 실행하고 조건식을 평가</strong>한다. 따라서 코드 블록은 <strong>무조건 한번 이상 실행</strong>된다.</p>
+<h2 id="4-break문"><a href="#4-break문" class="headerlink" title="4. break문"></a>4. break문</h2><p>레이블 문, 반복문(for, for…in, for…of, while, do…while) 또는 switch 문의 코드 블록을 탈출한다</p>
+<p>중첩된 for문의 내부 for문에서 break 문을 실행하면 내부 for문을 탈출하여 외부 for문으로 진입한다. 내부 for문이 아닌 외부 for문을 탈출하려면 레이블문을 사용한다.</p>
+<p>※ 레이블 문</p>
+<ul>
+<li>반복문에 레이블을 붙이고, break나 continue 구문을 사용해 반복문의 어느 위치에서 작업을 멈추고 어느 위치에서 다시 수행할지를 알려줄 수 있다.</li>
+<li>레이블문은 프로그램의 <strong>실행 순서를 제어</strong>하기 위해 사용한다. </li>
+<li><strong>switch문의 case문과 default 문도 레이블 문이다.</strong></li>
+<li>break는 모든 레이블 구문에서 사용될 수 있으며, continue는 반복 레이블 구문에서만 사용할 수 있다.</li>
+<li>중첩된 for문을 외부로 탈출할 때 유용하지만 그 외의 경우 레이블 문은 일반적으로 권장하지 않는다.(가독성이 나빠지고 오류 발생 가능성이 높아진다.)</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i, j;</span><br><span class="line"></span><br><span class="line">loop1:</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;      <span class="comment">//첫번째 for문은 "loop1" 레이블</span></span><br><span class="line">   loop2:</span><br><span class="line">   <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;   <span class="comment">//두번째 for문은 "loop2" 레이블</span></span><br><span class="line">      <span class="keyword">if</span> (i === <span class="number">1</span> &amp;&amp; j === <span class="number">1</span>) &#123;</span><br><span class="line">         <span class="keyword">continue</span> loop1;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'i = '</span> + i + <span class="string">', j = '</span> + j);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5-contionue문"><a href="#5-contionue문" class="headerlink" title="5. contionue문"></a>5. contionue문</h2><p>continue 문은 반복문의 코드 블록 실행을 현 지점에서 중단하고 <strong>반복문의 증감식으로 이동</strong>한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// continue 문을 사용하면 if 문 밖에 코드를 작성할 수 있다.</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i= <span class="number">0</span>; i &lt; string.length; i++) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (string[i] !== search) <span class="keyword">continue</span>;</span><br><span class="line">    </span><br><span class="line">    count++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
         <footer class="article-footer">
             
@@ -253,14 +307,18 @@ ga('send', 'pageview');
         },
         "headline": "190508_TIL(제어문)",
         "image": "http://progyu.github.io",
-        "keywords": "",
-        "genre": "",
+        "keywords": "javascript",
+        "genre": "TIL",
         "datePublished": "2019-05-08",
         "dateCreated": "2019-05-08",
-        "dateModified": "2019-05-08",
+        "dateModified": "2019-05-09",
         "url": "http://progyu.github.io/2019/05/08/190508-TIL-제어문/",
-        "description": ""
-        "wordCount": 1
+        "description": "7. 제어문
+제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다.
+일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문은 코드의 실행 순서를 인위적으로 제어할 수 있다.
+
+1. 블록문블록문(Block statement/Compound statement)는 0"
+        "wordCount": 741
     }
 </script>
 
@@ -333,7 +391,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a></p>
                             <p class="item-title"><a href="/2019/05/08/190508-TIL-제어문/" class="title">190508_TIL(제어문)</a></p>
                             <p class="item-date"><time datetime="2019-05-08T12:28:28.000Z" itemprop="datePublished">2019-05-08</time></p>
                         </div>
@@ -384,7 +442,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithms/">Algorithms</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">28</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithms/">Algorithms</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -404,7 +462,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms/">algorithms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms/">algorithms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
         </div>
     </div>
 
