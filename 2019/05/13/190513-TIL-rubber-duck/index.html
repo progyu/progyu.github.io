@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="progyu 개발 블로그">
 <meta property="og:description" content="var 키워드로 선언한 변수의 문제점 같은 스코프 내에서 중복 선언이 허용된다.  블록 레벨 스코프를 지원하지 않는다.(함수 레벨 스코프) 변수 호이스팅     전역 변수의 문제점 암묵적 결합 모든 코드가 전역 변수를 참조하고 변경할 수 있다. 코드의 가독성이 나빠지고 의도치 않게 상태가 변경될 수 있는 위험성도 높아진다.   긴 생명 주기 전역 변수의">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-13T11:56:34.346Z">
+<meta property="og:updated_time" content="2019-05-14T08:01:52.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="190513_TIL(rubber-duck)">
 <meta name="twitter:description" content="var 키워드로 선언한 변수의 문제점 같은 스코프 내에서 중복 선언이 허용된다.  블록 레벨 스코프를 지원하지 않는다.(함수 레벨 스코프) 변수 호이스팅     전역 변수의 문제점 암묵적 결합 모든 코드가 전역 변수를 참조하고 변경할 수 있다. 코드의 가독성이 나빠지고 의도치 않게 상태가 변경될 수 있는 위험성도 높아진다.   긴 생명 주기 전역 변수의">
@@ -216,6 +216,24 @@ ga('send', 'pageview');
 </ul>
 </li>
 </ul>
+<ul>
+<li><p><strong>var, let , const 키워드의 차이점</strong></p>
+<ul>
+<li><code>var</code> 키워드는 선언과 초기화(undefined를 변수에 할당) 가 동시에 이루어진다. (런타임 <strong>전</strong>) –&gt; 변수 호이스팅</li>
+<li><code>let</code> 과 <code>const</code> 키워드는 런타임 전 선언되고 런타임에 초기화 된다. –&gt; 마치 변수 호이스팅이 일어나지 않는 것처럼 보인다.</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(varTest); <span class="comment">// undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> varTest = <span class="string">'test1'</span>; </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(letTest); <span class="comment">// Uncaught ReferenceError: Cannot access 'letTest' before initialization</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> letTest = <span class="string">'test2'</span>; </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(constTest); <span class="comment">// Uncaught ReferenceError: Cannot access 'letTest' before initialization</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> constTest = <span class="string">'test3'</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>var</code> 키워드와 <code>let</code> 키워드는 재할당이 가능하지만 <code>const</code> 키워드는 <strong>재할당이 불가능</strong>하다. </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> age = <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">age = <span class="number">30</span>; <span class="comment">// Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><code>const</code> 키워드는 반드시 선언과 할당을 <strong>하나의 문</strong>에 하여야 한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name; <span class="comment">// Uncaught SyntaxError: Missing initializer in const declaration</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> name = <span class="string">'Lee'</span>; <span class="comment">// (o)</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
         </div>
         <footer class="article-footer">
@@ -299,7 +317,7 @@ ga('send', 'pageview');
         "genre": "TIL",
         "datePublished": "2019-05-13",
         "dateCreated": "2019-05-13",
-        "dateModified": "2019-05-13",
+        "dateModified": "2019-05-14",
         "url": "http://progyu.github.io/2019/05/13/190513-TIL-rubber-duck/",
         "description": "
 var 키워드로 선언한 변수의 문제점
@@ -318,7 +336,7 @@ var 키워드로 선언한 변수의 문제점
 
 긴 생명 주기
 전역 변수의 "
-        "wordCount": 95
+        "wordCount": 270
     }
 </script>
 
