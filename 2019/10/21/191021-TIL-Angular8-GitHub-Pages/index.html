@@ -10,21 +10,22 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content>
+        <meta name="keywords" content="Angular">
     
     <meta name="description" content="Angular8 GitHub Pages지난 해커톤 당시 만든 CloneTrello 프로젝트를 GitHub에서 제공하는 정적 페이지에 빌드하기 위해서 구글 신(?)의 힘을 빌리기 위하여 파워 검색을 하였다. 검색 중 아래와 같은 멋진 npm 모듈을 발견! angular-cli-ghpages step1과 step2는 이미 되어있기 때문에 바로 12// step">
+<meta name="keywords" content="Angular">
 <meta property="og:type" content="article">
 <meta property="og:title" content="191021_TIL(Angular8 GitHub Pages)">
 <meta property="og:url" content="http://progyu.github.io/2019/10/21/191021-TIL-Angular8-GitHub-Pages/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
 <meta property="og:description" content="Angular8 GitHub Pages지난 해커톤 당시 만든 CloneTrello 프로젝트를 GitHub에서 제공하는 정적 페이지에 빌드하기 위해서 구글 신(?)의 힘을 빌리기 위하여 파워 검색을 하였다. 검색 중 아래와 같은 멋진 npm 모듈을 발견! angular-cli-ghpages step1과 step2는 이미 되어있기 때문에 바로 12// step">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://progyu.github.io/2019/10/21/191021-TIL-Angular8-GitHub-Pages/images/deploy-404-console.png">
-<meta property="og:updated_time" content="2019-10-21T10:15:21.200Z">
+<meta property="og:image" content="http://progyu.github.io/images/deploy-404-console.png">
+<meta property="og:updated_time" content="2019-10-21T10:51:44.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="191021_TIL(Angular8 GitHub Pages)">
 <meta name="twitter:description" content="Angular8 GitHub Pages지난 해커톤 당시 만든 CloneTrello 프로젝트를 GitHub에서 제공하는 정적 페이지에 빌드하기 위해서 구글 신(?)의 힘을 빌리기 위하여 파워 검색을 하였다. 검색 중 아래와 같은 멋진 npm 모듈을 발견! angular-cli-ghpages step1과 step2는 이미 되어있기 때문에 바로 12// step">
-<meta name="twitter:image" content="http://progyu.github.io/2019/10/21/191021-TIL-Angular8-GitHub-Pages/images/deploy-404-console.png">
+<meta name="twitter:image" content="http://progyu.github.io/images/deploy-404-console.png">
     
 
     
@@ -145,7 +146,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <a class="page-title-link" href="/categories/TIL/">TIL</a>
     </h1>
 </div>
 
@@ -175,6 +176,11 @@ ga('send', 'pageview');
 		
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Angular/">Angular</a>
+    </div>
+
             </div>
         
         
@@ -188,16 +194,34 @@ ga('send', 'pageview');
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng deploy</span><br></pre></td></tr></table></figure>
 <p>쉽다쉬워~</p>
 <p>stpe5에 설명되어있는 주소 형식을 토대로 접속을 하였지만…</p>
-<p>아무 것도 보이지 않는 화면만이…</p>
-<p><img src="./images/deploy-404-console.png" alt="개발자 도구 콘솔 404error"> </p>
+<p>아무 것도 보이지 않는 화면과 404 error만이…</p>
+<p><img src="/images/deploy-404-console.png" alt="개발자 도구 콘솔 404error"> </p>
+<p>바로 Network 탭으로 가서 확인!</p>
+<p><img src="/images/deploy-404-network.png" alt="개발자 도구 네트워크탭 404error"> </p>
+<p>확인해보니 GET 요청을 하는 URL 주소가 이상했다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//progyu.github.io/CloneTrelloAngularWeb/main-es2015.8c7624774e16167cc0dd.js</span></span><br></pre></td></tr></table></figure>
+<p>위와 같이 나의 repository  이름이 포함된 요청을 해야했지만 아래와 같이 나의 github 루트로 요청을 보내고 있었다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//progyu.github.io/main-es2015.8c7624774e16167cc0dd.js</span></span><br></pre></td></tr></table></figure>
+<p>어디서 부터 잘못된 것일까…</p>
+<p>다시 처음으로 돌아가서 <a href="https://www.npmjs.com/package/angular-cli-ghpages" target="_blank" rel="noopener">angular-cli-ghpages</a> 문서를 읽어보았다.</p>
+<p>쭉 읽어 내려가던 중 관련있어보이는 옵션 하나를 발견하였다.</p>
+<p>–base-href</p>
+<p>ng deploy를 하면 생성되는 dist 폴더에 index.html에  있는<code>&lt;base href=&quot;/&quot;&gt;</code> 태그는 그대로 유지된다고 한다.  정확한 의미를 모르겠어서 dist 폴더에 index.html을 확인하여 보았다. 설명대로 <code>&lt;base href=&quot;/&quot;&gt;</code> 가 그대로 유지된채 있었다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ng deploy</span><br><span class="line"></span><br><span class="line">// index.html</span><br><span class="line"></span><br><span class="line">&lt;base href=&quot;/&quot;&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ng deploy --base-href=/CloneTrelloAngularWeb</span><br><span class="line"></span><br><span class="line">// index.html</span><br><span class="line"></span><br><span class="line">&lt;base href=&quot;C:/Program Files/Git/CloneTrelloAngularWeb/&quot;&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :gh-pages</span><br></pre></td></tr></table></figure>
-<p>자동으로 생성되는 gh-pages branch와 dist 파일을 삭제하고 다시 도전!</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ng deploy --base-href=&quot;https://progyu.github.io/CloneTrelloAngularWeb/&quot;</span><br><span class="line"></span><br><span class="line">// index.html</span><br><span class="line"></span><br><span class="line">&lt;base href=&quot;https://progyu.github.io/CloneTrelloAngularWeb/&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p><a href="[결과물 링크](https://progyu.github.io/CloneTrelloAngularWeb/#">결과물 링크</a>)</p>
-<p>실행환경</p>
-<p>ng version</p>
+<p>음…?</p>
+<p>다시 문서를 읽어가던 중 중요한 힌트를 드디어 발견하였다. “빌드중인 애플리케이션의 기본 URL을 지정합니다.”</p>
+<p>오!  base 태그에 href속성이 기본URL을 지정하는것이었다. </p>
+<p>dist 폴더를 생성하고 자동으로 생성되는 gh-pages branch를 아래 명령어로 삭제</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :gh-pages</span><br></pre></td></tr></table></figure>
+<p>그리고 아래와 같이 명령어를 수정 후 입력하였다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng deploy --base-href=<span class="string">"https://progyu.github.io/CloneTrelloAngularWeb/"</span></span><br></pre></td></tr></table></figure>
+<p>dist폴더에 index.html을 확인하여보니 아래와 같이 내가 원하는대로 설정이 되었다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ng deploy --base-href=<span class="string">"https://progyu.github.io/CloneTrelloAngularWeb/"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// index.html</span></span><br><span class="line"></span><br><span class="line">&lt;base href=<span class="string">"https://progyu.github.io/CloneTrelloAngularWeb/"</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>기도하는 마음으로 재접속…!</p>
+<p>잘 된다!!!</p>
+<p><a href="https://progyu.github.io/CloneTrelloAngularWeb/#">결과물 링크</a></p>
+<p><strong>실행환경</strong></p>
+<p><img src="/images/angular-excution-environment.png" alt="Angular 실행환경"> </p>
 
         </div>
         <footer class="article-footer">
@@ -205,7 +229,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://progyu.github.io/2019/10/21/191021-TIL-Angular8-GitHub-Pages/" data-id="ck209kzmw002aiwa9amw9fmrn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/10/21/191021-TIL-Angular8-GitHub-Pages/" data-id="ck20awmhg002i2oa9fbc2dstm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -276,9 +300,9 @@ ga('send', 'pageview');
             "name": "Lee Gyuha"
         },
         "headline": "191021_TIL(Angular8 GitHub Pages)",
-        "image": "http://progyu.github.io./images/deploy-404-console.png",
-        "keywords": "",
-        "genre": "",
+        "image": "http://progyu.github.io/images/deploy-404-console.png",
+        "keywords": "Angular",
+        "genre": "TIL",
         "datePublished": "2019-10-21",
         "dateCreated": "2019-10-21",
         "dateModified": "2019-10-21",
@@ -287,7 +311,7 @@ ga('send', 'pageview');
 angular-cli-ghpages
 step1과 step2는 이미 되어있기 때문에 바로
 12// step"
-        "wordCount": 161
+        "wordCount": 288
     }
 </script>
 
@@ -360,7 +384,7 @@ step1과 step2는 이미 되어있기 때문에 바로
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a></p>
                             <p class="item-title"><a href="/2019/10/21/191021-TIL-Angular8-GitHub-Pages/" class="title">191021_TIL(Angular8 GitHub Pages)</a></p>
                             <p class="item-date"><time datetime="2019-10-21T10:05:01.000Z" itemprop="datePublished">2019-10-21</time></p>
                         </div>
@@ -411,7 +435,7 @@ step1과 step2는 이미 되어있기 때문에 바로
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithms/">Algorithms</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Structures/">Data-Structures</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">38</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/JavaScript/">JavaScript</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithms/">Algorithms</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Structures/">Data-Structures</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">39</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/JavaScript/">JavaScript</a><span class="category-list-count">3</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -431,7 +455,7 @@ step1과 step2는 이미 되어있기 때문에 바로
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structures/">Data-Structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hackathon/">Hackathon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms/">algorithms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackertone/">hackertone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structures/">Data-Structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hackathon/">Hackathon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms/">algorithms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackertone/">hackertone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -441,7 +465,7 @@ step1과 step2는 이미 되어있기 때문에 바로
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Data-Structures/" style="font-size: 10px;">Data-Structures</a> <a href="/tags/Hackathon/" style="font-size: 10px;">Hackathon</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/TIL/" style="font-size: 13.33px;">TIL</a> <a href="/tags/algorithms/" style="font-size: 10px;">algorithms</a> <a href="/tags/hackertone/" style="font-size: 10px;">hackertone</a> <a href="/tags/hexo-theme/" style="font-size: 10px;">hexo theme</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/컴퓨터공학기초/" style="font-size: 16.67px;">컴퓨터공학기초</a>
+            <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Data-Structures/" style="font-size: 10px;">Data-Structures</a> <a href="/tags/Hackathon/" style="font-size: 10px;">Hackathon</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/TIL/" style="font-size: 13.33px;">TIL</a> <a href="/tags/algorithms/" style="font-size: 10px;">algorithms</a> <a href="/tags/hackertone/" style="font-size: 10px;">hackertone</a> <a href="/tags/hexo-theme/" style="font-size: 10px;">hexo theme</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/컴퓨터공학기초/" style="font-size: 16.67px;">컴퓨터공학기초</a>
         </div>
     </div>
 
