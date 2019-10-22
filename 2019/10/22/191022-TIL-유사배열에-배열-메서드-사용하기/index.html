@@ -6,23 +6,24 @@
     
 
     
-    <title>Git fork를 활용하여 협업하기 | progyu 개발 블로그</title>
+    <title>191022_TIL(유사배열에 배열 메서드 사용하기) | progyu 개발 블로그</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content>
+        <meta name="keywords" content="JavaScript">
     
-    <meta name="description" content="이 포스트는 실제 협업 사례가 아닌 수업 내용을 토대로 하여 git fork 기능을 테스트 해본 경험임을 알려드립니다.  Pm 파트 Pm이 새로운 repository를 생성한다. Pm이 clone을 하여 문서를 생성한다. 생성한 git 문서 경로롤 이동한다. develop branch를 하나 생성한다. (사실 git flow를 활용하여 작은 기능 단위를">
+    <meta name="description" content="유사배열에 배열 메서드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git fork를 활용하여 협업하기">
-<meta property="og:url" content="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/index.html">
+<meta property="og:title" content="191022_TIL(유사배열에 배열 메서드 사용하기)">
+<meta property="og:url" content="http://progyu.github.io/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
-<meta property="og:description" content="이 포스트는 실제 협업 사례가 아닌 수업 내용을 토대로 하여 git fork 기능을 테스트 해본 경험임을 알려드립니다.  Pm 파트 Pm이 새로운 repository를 생성한다. Pm이 clone을 하여 문서를 생성한다. 생성한 git 문서 경로롤 이동한다. develop branch를 하나 생성한다. (사실 git flow를 활용하여 작은 기능 단위를">
+<meta property="og:description" content="유사배열에 배열 메서드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-12T15:24:24.592Z">
+<meta property="og:updated_time" content="2019-10-22T16:00:06.302Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git fork를 활용하여 협업하기">
-<meta name="twitter:description" content="이 포스트는 실제 협업 사례가 아닌 수업 내용을 토대로 하여 git fork 기능을 테스트 해본 경험임을 알려드립니다.  Pm 파트 Pm이 새로운 repository를 생성한다. Pm이 clone을 하여 문서를 생성한다. 생성한 git 문서 경로롤 이동한다. develop branch를 하나 생성한다. (사실 git flow를 활용하여 작은 기능 단위를">
+<meta name="twitter:title" content="191022_TIL(유사배열에 배열 메서드 사용하기)">
+<meta name="twitter:description" content="유사배열에 배열 메서드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
     
 
     
@@ -143,19 +144,19 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Git/">Git</a>
+    <a class="page-title-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Web/JavaScript/">JavaScript</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-Git-fork를-활용하여-협업하기" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-191022-TIL-유사배열에-배열-메서드-사용하기" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Git fork를 활용하여 협업하기
+        191022_TIL(유사배열에 배열 메서드 사용하기)
         </h1>
     
 
@@ -165,85 +166,52 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/03/24/Git-fork를-활용하여-협업하기/" class="article-date">
-            <time datetime="2019-03-24T01:28:03.000Z" itemprop="datePublished">2019-03-24</time>
+        <a href="/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/" class="article-date">
+            <time datetime="2019-10-22T14:05:25.000Z" itemprop="datePublished">2019-10-22</time>
         </a>
     </div>
 
 		
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+    </div>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <ul>
-<li>이 포스트는 실제 협업 사례가 아닌 수업 내용을 토대로 하여 git fork 기능을 테스트 해본 경험임을 알려드립니다.</li>
-</ul>
-<h2 id="Pm-파트"><a href="#Pm-파트" class="headerlink" title="Pm 파트"></a>Pm 파트</h2><ul>
-<li>Pm이 새로운 repository를 생성한다.</li>
-<li>Pm이 clone을 하여 문서를 생성한다.</li>
-<li>생성한 git 문서 경로롤 이동한다.</li>
-<li>develop branch를 하나 생성한다. (사실 git flow를 활용하여 작은 기능 단위를 작업하는 feature branch에서 작업해야함.)</li>
-<li><p>develop branch 로 checkout 한다.</p>
+            <h1 id="유사배열에-배열-메서드-사용하기"><a href="#유사배열에-배열-메서드-사용하기" class="headerlink" title="유사배열에 배열 메서드 사용하기"></a>유사배열에 배열 메서드 사용하기</h1><p>포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> imgList = <span class="built_in">document</span>.querySelectorAll(<span class="string">'img'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> imgAlt = imgList.map(<span class="function">(<span class="params">&#123; alt &#125;</span>) =&gt;</span> alt);</span><br></pre></td></tr></table></figure>
+<p>다음과 같은 에러가 발생하였다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Uncaught <span class="built_in">TypeError</span>: imgList.map is not a <span class="function"><span class="keyword">function</span></span></span><br></pre></td></tr></table></figure>
+<p>왜 이런 에러가 발생했는지 잠시 생각해보니</p>
+<p>너무나도 당연한 것이었다.</p>
+<p>NodeList는 배열이 아닌 유사 배열 객체이기 때문에 배열 메서드인 map을 사용할 수 없었던 것이다.</p>
+<p>그렇다면 배열인지 유사배열인지 어떻게 알 수 있을까?</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> imgList = <span class="built_in">document</span>.querySelectorAll(<span class="string">'img'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(array)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(imgList)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(array)); <span class="comment">// object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(imgList)); <span class="comment">// object</span></span><br></pre></td></tr></table></figure>
+<p>typeof 메서드를 사용하면 배열과 유사배열 모두 object로 나오기 때문에 구별을 할 수 없다. 하지만 </p>
+<p>Array.isArray 메서드를 사용하면 배열일 때만 true를 return 해주기 때문에 쉽게 구별할 수 있다.</p>
+<p>배열과 유사배열을 구분해야 하는 이유는 위에서 언급했다시피 유사배열에 map같은 배열 메서드를 사용하면 에러가 발생하기 때문이다.</p>
+<p>하지만, 사실 유사배열에도 배열 메서드를 사용할 수 있는 방법이 있다. 내가 아는 방법은 총 3가지이다.</p>
+<ol>
+<li><strong>Array객체의 프로토타입에서 해당 배열 메서드를 빌려서 사용하는 방법(call, apply)</strong></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.map.call(imgList, img =&gt; <span class="built_in">console</span>.log(img));</span><br><span class="line">[].map.call(imgList, img =&gt; <span class="built_in">console</span>.log(img));</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p><strong>Array.from() 메서드 사용</strong></p>
+<p>Array.from() 메서드는 유사 배열 객체나 반복 가능한 객체(iterable object)를 얕게 복사하여 새로운 Array 객체를 만든다.</p>
 </li>
-<li><p>파일을 생성하고 작성한 후 add, commit, push를 진행한다.</p>
-</li>
-</ul>
-<h2 id="실제-코드를-작성하는-개발자-파트"><a href="#실제-코드를-작성하는-개발자-파트" class="headerlink" title="실제 코드를 작성하는 개발자 파트"></a>실제 코드를 작성하는 개발자 파트</h2><ul>
-<li>pm의 repository에서 fork 한다.</li>
-<li>fork를 하면 pm과 같은 이름의 fork된 repository로 이동하고 닉네임 옆에 포크 아이콘이 표시된다.</li>
-<li><p>clone or download 버튼을 클릭하여 pm의 repository 주소를 복사하고 작업할 폴더에 clone 한다.</p>
-</li>
-<li><p>다음 명령어를 통해 pm의 branch 까지 전부 확인할 수 있다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>다음 명령어를 통해 원본 repository를 로컬 git repository의 원력 등록한다.</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &#123;repository_nickname&#125; &#123;pm의 git_url&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>develop branch를 생성한다.</p>
-</li>
-<li><p>develop branch로 checkout 한다.</p>
-</li>
-<li><p>다음 명령어 원본 repository를 full한다.</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull &#123;repository_nickname&#125; &#123;branch_name&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>pull을 실행하면, 원본 repository의 내용을 가져와 자동으로 병합 작업을 실행한다.<br>단순히 원본 repository의 내용을 확인만하고 로컬 repository와 병합하고 싶지 않은 경우 다음 명령어를 실행한다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch &#123;repository_nickname&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>그 후 병합하고 싶은 경우에는 다음 명령어를 실행한다.</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &#123;respository_nickname&#125;/&#123;branch_name&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>원본 repository에 있는 파일을 작업하고 add, commit, push 한다.</p>
-</li>
-<li><p>push를 할 때는 자신의 branch에서 push 한다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin &#123;branch_name&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>push를 하면 개발자가 fork한 github page에 compare &amp; pull request 버튼이 활성화 된다.</p>
-</li>
-<li><p>버튼을 클릭하고 메세지를 작성한 후 pm의 repository의 branch와 자신의 repository를 비교하여 자신이 보내는 위치의 branch와 보내려고 하는 branch를 확인한 후 create pull request 버튼을 클릭한다.</p>
-</li>
-</ul>
-<h2 id="다시-pm-파트"><a href="#다시-pm-파트" class="headerlink" title="다시 pm 파트"></a>다시 pm 파트</h2><ul>
-<li><p>github 페이지 repository를 확인하면 pull requests 탭에 숫자 1이 생겼을 것이다.</p>
-</li>
-<li><p>pull requests 탭을 클릭하면 개발자 commit 메세지를 확인할 수 있고 클릭을 하면 merge를 할 수 있는 화면이 나온다.</p>
-</li>
-<li><p>이 화면에서 pm은 merge를 할지 말지 결정할 수 있고 개발자와 대화를 나눌 수도 있다.</p>
-</li>
-<li><p>merge 버튼을 클릭하고 confirm merge 버튼을 재차 클릭하면 merge가 완료 되었다는 화면이 나타난다.</p>
-</li>
-<li><p>다른 화면으로 이동하면 pull requests 탭에 숫자 1이 사라진 것을 확인할 수 있다.</p>
-</li>
-<li><p>code 탭으로 이동하여 develop branch를 선택하고 파일을 확인해보면 개발자가 작업한 내용이 pm의 repository에 잘 merge 된 것을 확인할 수 있다.</p>
-</li>
-</ul>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.from(imgList).forEach(<span class="function">(<span class="params">img</span>) =&gt;</span> <span class="built_in">console</span>.log(img));</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>Spread 연산자를 사용하여 배열 안에서 풀어주는 방법</strong></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...imgList].map(<span class="function"><span class="params">img</span> =&gt;</span> <span class="built_in">console</span>.log(img));</span><br></pre></td></tr></table></figure>
+<h2 id="참고-자료"><a href="#참고-자료" class="headerlink" title="참고 자료"></a>참고 자료</h2><p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from" target="_blank" rel="noopener">MDN-Array.from</a></p>
+<p><a href="https://www.zerocho.com/category/JavaScript/post/5af6f9e707d77a001bb579d2" target="_blank" rel="noopener">제로초-배열과 유사배열</a></p>
 
         </div>
         <footer class="article-footer">
@@ -251,7 +219,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/" data-id="ck2217e7j0031mga9tunyzzp4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/" data-id="ck2217e0c0023mga9has9ioz1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -321,23 +289,17 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "Lee Gyuha"
         },
-        "headline": "Git fork를 활용하여 협업하기",
+        "headline": "191022_TIL(유사배열에 배열 메서드 사용하기)",
         "image": "http://progyu.github.io",
-        "keywords": "",
-        "genre": "Git",
-        "datePublished": "2019-03-24",
-        "dateCreated": "2019-03-24",
-        "dateModified": "2019-04-13",
-        "url": "http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/",
-        "description": "
-이 포스트는 실제 협업 사례가 아닌 수업 내용을 토대로 하여 git fork 기능을 테스트 해본 경험임을 알려드립니다.
-
-Pm 파트
-Pm이 새로운 repository를 생성한다.
-Pm이 clone을 하여 문서를 생성한다.
-생성한 git 문서 경로롤 이동한다.
-develop branch를 하나 생성한다. (사실 git flow를 활용하여 작은 기능 단위를 "
-        "wordCount": 348
+        "keywords": "JavaScript",
+        "genre": "Web JavaScript",
+        "datePublished": "2019-10-22",
+        "dateCreated": "2019-10-22",
+        "dateModified": "2019-10-23",
+        "url": "http://progyu.github.io/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/",
+        "description": "유사배열에 배열 메서드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다.
+123const imgList = document.querySelectorAll('img');const imgAlt "
+        "wordCount": 299
     }
 </script>
 
@@ -385,20 +347,10 @@ develop branch를 하나 생성한다. (사실 git flow를 활용하여 작은 �
         
 <nav id="article-nav">
     
-        <a href="/2019/03/24/git-flow-사용하기/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            git-flow 사용하기
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/03/18/190318-TIL/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/10/21/191021-TIL-Angular8-GitHub-Pages/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">190318_TIL</p>
+        <p class="article-nav-title">191021_TIL(Angular8 GitHub Pages)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -557,7 +509,7 @@ develop branch를 하나 생성한다. (사실 git flow를 활용하여 작은 �
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://progyu.github.io/2019/03/24/Git-fork를-활용하여-협업하기/';
+    var disqus_url = 'http://progyu.github.io/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/';
     
     (function() {
     var dsq = document.createElement('script');
