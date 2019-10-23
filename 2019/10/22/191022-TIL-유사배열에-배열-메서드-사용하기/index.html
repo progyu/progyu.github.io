@@ -6,24 +6,24 @@
     
 
     
-    <title>191022_TIL(유사배열에 배열 메서드 사용하기) | progyu 개발 블로그</title>
+    <title>191022_TIL(유사배열에 배열 메소드 사용하기) | progyu 개발 블로그</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="JavaScript">
     
-    <meta name="description" content="유사배열에 배열 메서드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
+    <meta name="description" content="유사배열에 배열 메소드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메소드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="191022_TIL(유사배열에 배열 메서드 사용하기)">
+<meta property="og:title" content="191022_TIL(유사배열에 배열 메소드 사용하기)">
 <meta property="og:url" content="http://progyu.github.io/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
-<meta property="og:description" content="유사배열에 배열 메서드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
+<meta property="og:description" content="유사배열에 배열 메소드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메소드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-22T16:00:06.302Z">
+<meta property="og:updated_time" content="2019-10-23T14:02:07.315Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="191022_TIL(유사배열에 배열 메서드 사용하기)">
-<meta name="twitter:description" content="유사배열에 배열 메서드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
+<meta name="twitter:title" content="191022_TIL(유사배열에 배열 메소드 사용하기)">
+<meta name="twitter:description" content="유사배열에 배열 메소드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메소드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다. 123const imgList = document.querySelectorAll(&apos;img&apos;);const imgAlt">
     
 
     
@@ -156,7 +156,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        191022_TIL(유사배열에 배열 메서드 사용하기)
+        191022_TIL(유사배열에 배열 메소드 사용하기)
         </h1>
     
 
@@ -183,26 +183,26 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="유사배열에-배열-메서드-사용하기"><a href="#유사배열에-배열-메서드-사용하기" class="headerlink" title="유사배열에 배열 메서드 사용하기"></a>유사배열에 배열 메서드 사용하기</h1><p>포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다.</p>
+            <h1 id="유사배열에-배열-메소드-사용하기"><a href="#유사배열에-배열-메소드-사용하기" class="headerlink" title="유사배열에 배열 메소드 사용하기"></a>유사배열에 배열 메소드 사용하기</h1><p>포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메소드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> imgList = <span class="built_in">document</span>.querySelectorAll(<span class="string">'img'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> imgAlt = imgList.map(<span class="function">(<span class="params">&#123; alt &#125;</span>) =&gt;</span> alt);</span><br></pre></td></tr></table></figure>
 <p>다음과 같은 에러가 발생하였다. </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Uncaught <span class="built_in">TypeError</span>: imgList.map is not a <span class="function"><span class="keyword">function</span></span></span><br></pre></td></tr></table></figure>
 <p>왜 이런 에러가 발생했는지 잠시 생각해보니</p>
 <p>너무나도 당연한 것이었다.</p>
-<p>NodeList는 배열이 아닌 유사 배열 객체이기 때문에 배열 메서드인 map을 사용할 수 없었던 것이다.</p>
+<p>NodeList는 배열이 아닌 유사 배열 객체이기 때문에 배열 메소드인 map을 사용할 수 없었던 것이다.</p>
 <p>그렇다면 배열인지 유사배열인지 어떻게 알 수 있을까?</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> array = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> imgList = <span class="built_in">document</span>.querySelectorAll(<span class="string">'img'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(array)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(imgList)); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(array)); <span class="comment">// object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span>(imgList)); <span class="comment">// object</span></span><br></pre></td></tr></table></figure>
-<p>typeof 메서드를 사용하면 배열과 유사배열 모두 object로 나오기 때문에 구별을 할 수 없다. 하지만 </p>
-<p>Array.isArray 메서드를 사용하면 배열일 때만 true를 return 해주기 때문에 쉽게 구별할 수 있다.</p>
-<p>배열과 유사배열을 구분해야 하는 이유는 위에서 언급했다시피 유사배열에 map같은 배열 메서드를 사용하면 에러가 발생하기 때문이다.</p>
-<p>하지만, 사실 유사배열에도 배열 메서드를 사용할 수 있는 방법이 있다. 내가 아는 방법은 총 3가지이다.</p>
+<p>typeof 메소드를 사용하면 배열과 유사배열 모두 object로 나오기 때문에 구별을 할 수 없다. 하지만 </p>
+<p>Array.isArray 메소드를 사용하면 배열일 때만 true를 return 해주기 때문에 쉽게 구별할 수 있다.</p>
+<p>배열과 유사배열을 구분해야 하는 이유는 위에서 언급했다시피 유사배열에 map같은 배열 메소드를 사용하면 에러가 발생하기 때문이다.</p>
+<p>하지만, 사실 유사배열에도 배열 메소드를 사용할 수 있는 방법이 있다. 내가 아는 방법은 총 3가지이다.</p>
 <ol>
-<li><strong>Array객체의 프로토타입에서 해당 배열 메서드를 빌려서 사용하는 방법(call, apply)</strong></li>
+<li><strong>Array객체의 프로토타입에서 해당 배열 메소드를 빌려서 사용하는 방법(call, apply)</strong></li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.map.call(imgList, img =&gt; <span class="built_in">console</span>.log(img));</span><br><span class="line">[].map.call(imgList, img =&gt; <span class="built_in">console</span>.log(img));</span><br></pre></td></tr></table></figure>
 <ol start="2">
-<li><p><strong>Array.from() 메서드 사용</strong></p>
-<p>Array.from() 메서드는 유사 배열 객체나 반복 가능한 객체(iterable object)를 얕게 복사하여 새로운 Array 객체를 만든다.</p>
+<li><p><strong>Array.from() 메소드 사용</strong></p>
+<p>Array.from() 메소드는 유사 배열 객체나 반복 가능한 객체(iterable object)를 얕게 복사하여 새로운 Array 객체를 만든다.</p>
 </li>
 </ol>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.from(imgList).forEach(<span class="function">(<span class="params">img</span>) =&gt;</span> <span class="built_in">console</span>.log(img));</span><br></pre></td></tr></table></figure>
@@ -219,7 +219,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://progyu.github.io/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/" data-id="ck2217e0c0023mga9has9ioz1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/" data-id="ck23glo0u002y1ka9ynm6rlcf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -289,7 +289,7 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "Lee Gyuha"
         },
-        "headline": "191022_TIL(유사배열에 배열 메서드 사용하기)",
+        "headline": "191022_TIL(유사배열에 배열 메소드 사용하기)",
         "image": "http://progyu.github.io",
         "keywords": "JavaScript",
         "genre": "Web JavaScript",
@@ -297,7 +297,7 @@ ga('send', 'pageview');
         "dateCreated": "2019-10-22",
         "dateModified": "2019-10-23",
         "url": "http://progyu.github.io/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/",
-        "description": "유사배열에 배열 메서드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메서드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다.
+        "description": "유사배열에 배열 메소드 사용하기포트폴리오 프로젝트 코드를 리팩토링 하던 중 document.querySelectorAll 을 사용하여 NodeLIst 객체를 받아서 배열 메소드인 map을 사용해야 할 일이 생겨서 아래와 같이  코드를 짰다.
 123const imgList = document.querySelectorAll('img');const imgAlt "
         "wordCount": 299
     }
@@ -347,6 +347,16 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
+        <a href="/2019/10/23/191023-TIL-프로토타입-메소드-이해하기/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            191023_TIL(프로토타입 메소드 이해하기)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/10/21/191021-TIL-Angular8-GitHub-Pages/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -373,7 +383,16 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/JavaScript/">JavaScript</a></p>
-                            <p class="item-title"><a href="/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/" class="title">191022_TIL(유사배열에 배열 메서드 사용하기)</a></p>
+                            <p class="item-title"><a href="/2019/10/23/191023-TIL-프로토타입-메소드-이해하기/" class="title">191023_TIL(프로토타입 메소드 이해하기)</a></p>
+                            <p class="item-date"><time datetime="2019-10-23T14:01:40.000Z" itemprop="datePublished">2019-10-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/JavaScript/">JavaScript</a></p>
+                            <p class="item-title"><a href="/2019/10/22/191022-TIL-유사배열에-배열-메서드-사용하기/" class="title">191022_TIL(유사배열에 배열 메소드 사용하기)</a></p>
                             <p class="item-date"><time datetime="2019-10-22T14:05:25.000Z" itemprop="datePublished">2019-10-22</time></p>
                         </div>
                     </li>
@@ -405,15 +424,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/JavaScript/">JavaScript</a></p>
-                            <p class="item-title"><a href="/2019/10/18/191018-TIL-Unique-parts-in-JS/" class="title">191018_TIL(Unique parts in JS)</a></p>
-                            <p class="item-date"><time datetime="2019-10-18T13:05:54.000Z" itemprop="datePublished">2019-10-18</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -423,7 +433,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithms/">Algorithms</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Structures/">Data-Structures</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">39</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/JavaScript/">JavaScript</a><span class="category-list-count">4</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithms/">Algorithms</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Structures/">Data-Structures</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">39</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/JavaScript/">JavaScript</a><span class="category-list-count">5</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -433,7 +443,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">10</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">10</span></li></ul>
         </div>
     </div>
 
@@ -443,7 +453,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structures/">Data-Structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hackathon/">Hackathon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms/">algorithms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackertone/">hackertone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structures/">Data-Structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hackathon/">Hackathon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms/">algorithms</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackertone/">hackertone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
         </div>
     </div>
 
