@@ -6,26 +6,26 @@
     
 
     
-    <title>190529_TIL(HTTP Method) | progyu 개발 블로그</title>
+    <title>191024_TIL(유사배열객체 와 반복가능한 객체) | progyu 개발 블로그</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="TIL">
+        <meta name="keywords" content="JavaScript">
     
-    <meta name="description" content="HTTP MethodHTTP Method는 그 종류가 다양하지만 오늘은 가장 많이 쓰이는 5가지 Method에 대해서만 간략하게 정리하려 한다.  GET 모든 / 특정 리소스를 조회 payload가 필요 없다.   POST 리소스를 생성 payload가 필요하다.   PUT 리소스의 전체를 갱신 payload가 필요하다.   PATCH 리소스의 일부를 갱신">
-<meta name="keywords" content="TIL">
+    <meta name="description" content="iterable 유사 배열 객체와 반복 가능한 객체반복 가능한 객체(iterable)의 특징 Symbol.iterator라는 특별한 형태의 메소드가 존재하며 for문 또는 for…of문 등으로 순회가 가능하다. 반복 가능한 객체의 종류  Array Map Set String TypedArray arguments  유사 배열 객체(Array-like-Obje">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="190529_TIL(HTTP Method)">
-<meta property="og:url" content="http://progyu.github.io/2019/05/30/190529-TIL-HTTP-Method/index.html">
+<meta property="og:title" content="191024_TIL(유사배열객체 와 반복가능한 객체)">
+<meta property="og:url" content="http://progyu.github.io/2019/10/24/191024-TIL-유사배열객체-와-반복가능한-객체/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
-<meta property="og:description" content="HTTP MethodHTTP Method는 그 종류가 다양하지만 오늘은 가장 많이 쓰이는 5가지 Method에 대해서만 간략하게 정리하려 한다.  GET 모든 / 특정 리소스를 조회 payload가 필요 없다.   POST 리소스를 생성 payload가 필요하다.   PUT 리소스의 전체를 갱신 payload가 필요하다.   PATCH 리소스의 일부를 갱신">
+<meta property="og:description" content="iterable 유사 배열 객체와 반복 가능한 객체반복 가능한 객체(iterable)의 특징 Symbol.iterator라는 특별한 형태의 메소드가 존재하며 for문 또는 for…of문 등으로 순회가 가능하다. 반복 가능한 객체의 종류  Array Map Set String TypedArray arguments  유사 배열 객체(Array-like-Obje">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://progyu.github.io/images/1-1get.PNG">
-<meta property="og:updated_time" content="2019-05-30T16:44:56.721Z">
+<meta property="og:image" content="http://progyu.github.io/2019/10/24/191024-TIL-유사배열객체-와-반복가능한-객체/images/Array-like-Objects.png">
+<meta property="og:updated_time" content="2019-10-25T07:53:24.370Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="190529_TIL(HTTP Method)">
-<meta name="twitter:description" content="HTTP MethodHTTP Method는 그 종류가 다양하지만 오늘은 가장 많이 쓰이는 5가지 Method에 대해서만 간략하게 정리하려 한다.  GET 모든 / 특정 리소스를 조회 payload가 필요 없다.   POST 리소스를 생성 payload가 필요하다.   PUT 리소스의 전체를 갱신 payload가 필요하다.   PATCH 리소스의 일부를 갱신">
-<meta name="twitter:image" content="http://progyu.github.io/images/1-1get.PNG">
+<meta name="twitter:title" content="191024_TIL(유사배열객체 와 반복가능한 객체)">
+<meta name="twitter:description" content="iterable 유사 배열 객체와 반복 가능한 객체반복 가능한 객체(iterable)의 특징 Symbol.iterator라는 특별한 형태의 메소드가 존재하며 for문 또는 for…of문 등으로 순회가 가능하다. 반복 가능한 객체의 종류  Array Map Set String TypedArray arguments  유사 배열 객체(Array-like-Obje">
+<meta name="twitter:image" content="http://progyu.github.io/2019/10/24/191024-TIL-유사배열객체-와-반복가능한-객체/images/Array-like-Objects.png">
     
 
     
@@ -146,19 +146,19 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <a class="page-title-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Web/JavaScript/">JavaScript</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-190529-TIL-HTTP-Method" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-191024-TIL-유사배열객체-와-반복가능한-객체" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        190529_TIL(HTTP Method)
+        191024_TIL(유사배열객체 와 반복가능한 객체)
         </h1>
     
 
@@ -168,8 +168,8 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/05/30/190529-TIL-HTTP-Method/" class="article-date">
-            <time datetime="2019-05-30T11:54:48.000Z" itemprop="datePublished">2019-05-30</time>
+        <a href="/2019/10/24/191024-TIL-유사배열객체-와-반복가능한-객체/" class="article-date">
+            <time datetime="2019-10-24T11:08:42.000Z" itemprop="datePublished">2019-10-24</time>
         </a>
     </div>
 
@@ -178,65 +178,43 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/TIL/">TIL</a>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="HTTP-Method"><a href="#HTTP-Method" class="headerlink" title="HTTP Method"></a>HTTP Method</h1><p>HTTP Method는 그 종류가 다양하지만 오늘은 가장 많이 쓰이는 5가지 Method에 대해서만 간략하게 정리하려 한다.</p>
+            <p>iterable</p>
+<h1 id="유사-배열-객체와-반복-가능한-객체"><a href="#유사-배열-객체와-반복-가능한-객체" class="headerlink" title="유사 배열 객체와 반복 가능한 객체"></a>유사 배열 객체와 반복 가능한 객체</h1><p><strong>반복 가능한 객체(iterable)의 특징</strong></p>
+<p>Symbol.iterator라는 특별한 형태의 메소드가 존재하며 for문 또는 for…of문 등으로 순회가 가능하다.</p>
+<p><strong>반복 가능한 객체의 종류</strong></p>
 <ul>
-<li>GET<ul>
-<li>모든 / 특정 리소스를 조회</li>
-<li>payload가 필요 없다.</li>
+<li>Array</li>
+<li>Map</li>
+<li>Set</li>
+<li>String</li>
+<li>TypedArray</li>
+<li>arguments</li>
 </ul>
-</li>
-<li>POST<ul>
-<li>리소스를 생성</li>
-<li>payload가 필요하다.</li>
-</ul>
-</li>
-<li>PUT<ul>
-<li>리소스의 전체를 갱신</li>
-<li>payload가 필요하다.</li>
-</ul>
-</li>
-<li>PATCH<ul>
-<li>리소스의 일부를 갱신</li>
-<li>payload가 필요하다.</li>
-</ul>
-</li>
-<li>DELETE<ul>
-<li>리소스를 삭제</li>
-<li>payload가 필요 없다.</li>
-</ul>
-</li>
-</ul>
-<p>위 5가지 Method를 간단한 REST Api 서버와 Postman을 활용하여 테스트를 진행해 보았다. (이미지를 클릭하면 확대 됨)</p>
-<p><strong>GET Method로 모든 리소스를 조회</strong></p>
-<p><img src="/images/1-1get.PNG" width="500px" height="300px"></p>
-<p><strong>GET Method로 특정 리소스를 조회(Id)</strong></p>
-<p><img src="/images/getselect.PNG" width="500px" height="300px"></p>
-<p><strong>POST Method로 새로운 리소스를 생성</strong></p>
-<p><img src="/images/1-2post.PNG" width="500px" height="300px"></p>
-<p><strong>새로운 리소스가 생성되었음을 확인</strong></p>
-<p><img src="/images/1-3get.PNG" width="500px" height="300px"></p>
-<p><strong>DELETE Method로 특정 리소스를 삭제(Id)</strong></p>
+<p><strong>유사 배열 객체(Array-like-Objects)의 조건</strong></p>
+<ol>
+<li>반드시 length 프로퍼티가 필요하다. </li>
+<li>index는 0부터 시작하여 1씩 증가해야 한다.</li>
+</ol>
+<p>유사 배열은 전개 연산자나 for…of와 함께 사용할 수 없다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 유사 배열 객체 만들기</span></span><br><span class="line"><span class="keyword">const</span> arrayLike = &#123; <span class="number">0</span>: <span class="number">1</span>, <span class="number">1</span>: <span class="number">2</span>, <span class="number">2</span>: <span class="number">3</span>, <span class="attr">length</span>: <span class="number">3</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> n <span class="keyword">of</span> arrayLike) &#123; <span class="built_in">console</span>.log(n) &#125;; <span class="comment">// Uncaught TypeError: arrayLike is not iterable</span></span><br></pre></td></tr></table></figure>
+<p>대표적인 유사배열로는 arguments, NodeList 등이 있는데 최신 브라우저 환경에서 iterable이 되었다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span> (<span class="params">...args</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> argument <span class="keyword">of</span> <span class="built_in">arguments</span>) &#123; <span class="built_in">console</span>.log(argument) &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>); <span class="comment">// 1,2,3,4,5</span></span><br></pre></td></tr></table></figure>
+<p>String</p>
 <ul>
-<li>Id 값을 전달하지 않으면 모든 리소스가 삭제 된다.</li>
+<li>String은 유사배열 객체이면서 반복 가능한 객체이다.</li>
 </ul>
-<p><img src="/images/1-4del.PNG" width="500px" height="300px"></p>
-<p><strong>GET Method로 모든 리소스를 조회</strong></p>
-<p><img src="/images/2-1get.PNG" width="500px" height="300px"></p>
-<p><strong>PUT Method로 리소스의 전체를 갱신</strong></p>
-<p><img src="/images/2-2put.PNG" width="500px" height="300px"></p>
-<p><strong>리소스 전체가 갱신되었음을 확인</strong></p>
-<p><img src="/images/2-3get.PNG" width="500px" height="300px"></p>
-<p><strong>PATCH Method로 리소스의 일부를 갱신(Id)</strong></p>
-<p><img src="/images/2-4patch.PNG" width="500px" height="300px"></p>
-<p><strong>리소스의 일부가 갱신되었음을 확인</strong></p>
-<p><img src="/images/2-5get.PNG" width="500px" height="300px"></p>
+<p><img src="./images/Array-like-Objects.png"></p>
+<p><img src="./images/Iterator.png"></p>
+<h2 id="참고-자료"><a href="#참고-자료" class="headerlink" title="참고 자료"></a>참고 자료</h2><p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...of" target="_blank" rel="noopener">MDN_for…of</a></p>
+<p><a href="https://helloworldjavascript.net/pages/260-iteration.html" target="_blank" rel="noopener">Iterable</a></p>
+<p><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Iteration_protocols" target="_blank" rel="noopener">MDN Iteration protocols</a></p>
 
         </div>
         <footer class="article-footer">
@@ -244,7 +222,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://progyu.github.io/2019/05/30/190529-TIL-HTTP-Method/" data-id="ck25ua8lv002epga934vug10s" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/10/24/191024-TIL-유사배열객체-와-반복가능한-객체/" data-id="ck25ua8md002npga9qtutjpsp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -314,34 +292,28 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "Lee Gyuha"
         },
-        "headline": "190529_TIL(HTTP Method)",
-        "image": "http://progyu.github.io/images/1-1get.PNG",
-        "keywords": "TIL",
-        "genre": "",
-        "datePublished": "2019-05-30",
-        "dateCreated": "2019-05-30",
-        "dateModified": "2019-05-31",
-        "url": "http://progyu.github.io/2019/05/30/190529-TIL-HTTP-Method/",
-        "description": "HTTP MethodHTTP Method는 그 종류가 다양하지만 오늘은 가장 많이 쓰이는 5가지 Method에 대해서만 간략하게 정리하려 한다.
+        "headline": "191024_TIL(유사배열객체 와 반복가능한 객체)",
+        "image": "http://progyu.github.io./images/Array-like-Objects.png",
+        "keywords": "JavaScript",
+        "genre": "Web JavaScript",
+        "datePublished": "2019-10-24",
+        "dateCreated": "2019-10-24",
+        "dateModified": "2019-10-25",
+        "url": "http://progyu.github.io/2019/10/24/191024-TIL-유사배열객체-와-반복가능한-객체/",
+        "description": "iterable
+유사 배열 객체와 반복 가능한 객체반복 가능한 객체(iterable)의 특징
+Symbol.iterator라는 특별한 형태의 메소드가 존재하며 for문 또는 for…of문 등으로 순회가 가능하다.
+반복 가능한 객체의 종류
 
-GET
-모든 / 특정 리소스를 조회
-payload가 필요 없다.
+Array
+Map
+Set
+String
+TypedArray
+arguments
 
-
-POST
-리소스를 생성
-payload가 필요하다.
-
-
-PUT
-리소스의 전체를 갱신
-payload가 필요하다.
-
-
-PATCH
-리소스의 일부를 갱신"
-        "wordCount": 127
+유사 배열 객체(Array-like-Obje"
+        "wordCount": 185
     }
 </script>
 
@@ -389,20 +361,10 @@ PATCH
         
 <nav id="article-nav">
     
-        <a href="/2019/07/02/패스트캠퍼스-해커톤-후기-Clone-Trello/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            패스트캠퍼스 해커톤 후기(Clone Trello)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/05/26/190524-TIL-Hackathon/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/10/23/191023-TIL-프로토타입-메소드-이해하기/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">190524_TIL(Hackathon)</p>
+        <p class="article-nav-title">191023_TIL(프로토타입 메소드 이해하기)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -561,7 +523,7 @@ PATCH
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://progyu.github.io/2019/05/30/190529-TIL-HTTP-Method/';
+    var disqus_url = 'http://progyu.github.io/2019/10/24/191024-TIL-유사배열객체-와-반복가능한-객체/';
     
     (function() {
     var dsq = document.createElement('script');
