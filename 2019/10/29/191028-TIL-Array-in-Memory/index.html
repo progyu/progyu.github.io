@@ -6,17 +6,24 @@
     
 
     
-    <title>Tag: Data-Structures | progyu 개발 블로그</title>
+    <title>191028_TIL(Array in Memory) | progyu 개발 블로그</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="progyu 개발 블로그">
-<meta property="og:url" content="http://progyu.github.io/tags/Data-Structures/index.html">
+        <meta name="keywords" content="JavaScript">
+    
+    <meta name="description" content="자바스크립트 메모리 관리v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다. DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다. 123456789101112131415">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="191028_TIL(Array in Memory)">
+<meta property="og:url" content="http://progyu.github.io/2019/10/29/191028-TIL-Array-in-Memory/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
+<meta property="og:description" content="자바스크립트 메모리 관리v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다. DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다. 123456789101112131415">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-29T02:40:56.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="progyu 개발 블로그">
+<meta name="twitter:title" content="191028_TIL(Array in Memory)">
+<meta name="twitter:description" content="자바스크립트 메모리 관리v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다. DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다. 123456789101112131415">
     
 
     
@@ -137,59 +144,153 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>Data-Structures</em>
+    <a class="page-title-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Web/JavaScript/">JavaScript</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-191028-TIL-Array-in-Memory" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Data-Structures/">Data-Structures</a>
-            </div>
-            <div class="date"><time datetime="2019-10-17T09:44:39.000Z" itemprop="datePublished">2019-10-17</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/10/17/191017-TIL-Big-O/">191017_TIL(Big-O)</a>
+        191028_TIL(Array in Memory)
         </h1>
     
 
-        <p class="article-excerpt">
-            빅오 표기법빅오 표기법 기초빅오(Big-O) 표기법 시간 및 알고리즘 공간 복잡도 분석을 위해 등장하였다.
-빅오(Big-O) 표기법을 배우면 시간(실행 시간)과 공간(사용된 메모리)관점에서 알고리즘 구현을 분석하는 법을 이해할 수 있다.
-빅오 표기법에서 n은 입력의 개수를 나타낸다.
-
-O(1) : 상수 시간
-예) 배열에 있는 항목을 인덱스를 사용해 접근하는
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/10/29/191028-TIL-Array-in-Memory/" class="article-date">
+            <time datetime="2019-10-29T02:40:01.000Z" itemprop="datePublished">2019-10-29</time>
+        </a>
     </div>
-</article>
-    
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="자바스크립트-메모리-관리"><a href="#자바스크립트-메모리-관리" class="headerlink" title="자바스크립트 메모리 관리"></a>자바스크립트 메모리 관리</h1><p>v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다.</p>
+<h2 id="DOM-메모리-누수"><a href="#DOM-메모리-누수" class="headerlink" title="DOM 메모리 누수"></a>DOM 메모리 누수</h2><p>DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span>One<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"two"</span>&gt;</span>Two<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> one - <span class="built_in">document</span>.querySelector(.<span class="string">'one'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> two - <span class="built_in">document</span>.querySelector(.<span class="string">'two'</span>);</span></span><br><span class="line"><span class="javascript">    one.addEventListener(<span class="string">'click'</span>, ()=&gt; &#123;</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(two); <span class="comment">// 삭제 이후에도 출력된다.</span></span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="javascript">   	<span class="comment">// 해당 DOM이 HTML에서 사라지더라도 해당 DOM이 이벤트 콜백에서 사용됐다면 참조는 남는다.</span></span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="comment">// 다음과 같은 방법으로 DOM 메모리 누수를 쉽게 수정할 수 있다.</span></span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> one - <span class="built_in">document</span>.querySelector(.<span class="string">'one'</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    one.addEventListener(<span class="string">'click'</span>, ()=&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> two - <span class="built_in">document</span>.querySelector(.<span class="string">'two'</span>);</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="comment">// 이벤트 핸들러를 사용한 뒤 등록해지를 하여도 메모리 누수를 막을 수 있다.</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> one - <span class="built_in">document</span>.querySelector(.<span class="string">'one'</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    one.addEventListener(<span class="string">'click'</span>, ()=&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> two - <span class="built_in">document</span>.querySelector(.<span class="string">'two'</span>);</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="javascript">    one.removeEventListener(<span class="string">'click'</span>);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Window-전역-객체"><a href="#Window-전역-객체" class="headerlink" title="Window 전역 객체"></a>Window 전역 객체</h2><p>전역 변수를 사용하지 않음으로써 메모리를 절약할 수 있다.</p>
+<h2 id="객체-참조-제한하기"><a href="#객체-참조-제한하기" class="headerlink" title="객체 참조 제한하기"></a>객체 참조 제한하기</h2><p>함수의 객체 전체 범위가 아닌 필요한 범위만 전달해야 하며 특히 전체 객체가 아닌 필요한 속성만 전달하도록 해야한다. 객체가 차지하는 메모리 공간이 매우 클 수도 있기 때문이다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> test = &#123;</span><br><span class="line">    prop1: <span class="string">'test'</span>,</span><br><span class="line">    prop2: <span class="string">'hi'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 이런 방식으로 매개변수에 전체 객체를 전달하면 안된다.</span></span><br><span class="line"><span class="comment">// function printProp1(test) &#123;</span></span><br><span class="line"><span class="comment">//    console.log(test.prop1);</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 필요한 속성만 전달해주면 된다.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printProp1</span>(<span class="params">prop1</span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(prop1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">printProp1(test.prop1); <span class="comment">// 'test'</span></span><br></pre></td></tr></table></figure>
         </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://progyu.github.io/2019/10/29/191028-TIL-Array-in-Memory/" data-id="ck2b8vjvm002j3sa97tni4oak" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Lee Gyuha"
+        },
+        "headline": "191028_TIL(Array in Memory)",
+        "image": "http://progyu.github.io",
+        "keywords": "JavaScript",
+        "genre": "Web JavaScript",
+        "datePublished": "2019-10-29",
+        "dateCreated": "2019-10-29",
+        "dateModified": "2019-10-29",
+        "url": "http://progyu.github.io/2019/10/29/191028-TIL-Array-in-Memory/",
+        "description": "자바스크립트 메모리 관리v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다.
+DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다.
+123456789101112131415"
+        "wordCount": 499
+    }
+</script>
+
+</article>
+
+    <section id="comments">
     
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-
-    </div></section>
+    
+    </section>
 
 
 
@@ -219,6 +320,19 @@ O(1) : 상수 시간
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/10/27/191027-TIL-Array-in-JS/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">191027_TIL(Array in JS)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -372,11 +486,13 @@ O(1) : 상수 시간
     var disqus_shortname = 'hexo-theme-hueman';
     
     
+    var disqus_url = 'http://progyu.github.io/2019/10/29/191028-TIL-Array-in-Memory/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
