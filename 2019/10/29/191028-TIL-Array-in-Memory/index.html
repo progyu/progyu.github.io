@@ -6,7 +6,7 @@
     
 
     
-    <title>191028_TIL(JS in Memory) | progyu 개발 블로그</title>
+    <title>191028_TIL(Memory in JS) | progyu 개발 블로그</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
@@ -15,14 +15,14 @@
     <meta name="description" content="자바스크립트 메모리 관리v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다. DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다. 123456789101112131415">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="191028_TIL(JS in Memory)">
+<meta property="og:title" content="191028_TIL(Memory in JS)">
 <meta property="og:url" content="http://progyu.github.io/2019/10/29/191028-TIL-Array-in-Memory/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
 <meta property="og:description" content="자바스크립트 메모리 관리v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다. DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다. 123456789101112131415">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-30T05:16:37.695Z">
+<meta property="og:updated_time" content="2019-10-30T05:22:59.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="191028_TIL(JS in Memory)">
+<meta name="twitter:title" content="191028_TIL(Memory in JS)">
 <meta name="twitter:description" content="자바스크립트 메모리 관리v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다. DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다. 123456789101112131415">
     
 
@@ -156,7 +156,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        191028_TIL(JS in Memory)
+        191028_TIL(Memory in JS)
         </h1>
     
 
@@ -185,7 +185,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <h1 id="자바스크립트-메모리-관리"><a href="#자바스크립트-메모리-관리" class="headerlink" title="자바스크립트 메모리 관리"></a>자바스크립트 메모리 관리</h1><p>v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다.</p>
 <h2 id="DOM-메모리-누수"><a href="#DOM-메모리-누수" class="headerlink" title="DOM 메모리 누수"></a>DOM 메모리 누수</h2><p>DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span>One<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"two"</span>&gt;</span>Two<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> one - <span class="built_in">document</span>.querySelector(.<span class="string">'one'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> two - <span class="built_in">document</span>.querySelector(.<span class="string">'two'</span>);</span></span><br><span class="line"><span class="javascript">    one.addEventListener(<span class="string">'click'</span>, ()=&gt; &#123;</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(two); <span class="comment">// 삭제 이후에도 출력된다.</span></span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="javascript">   	<span class="comment">// 해당 DOM이 HTML에서 사라지더라도 해당 DOM이 이벤트 콜백에서 사용됐다면 참조는 남는다.</span></span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="comment">// 다음과 같은 방법으로 DOM 메모리 누수를 쉽게 수정할 수 있다.</span></span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> one - <span class="built_in">document</span>.querySelector(.<span class="string">'one'</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    one.addEventListener(<span class="string">'click'</span>, ()=&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> two - <span class="built_in">document</span>.querySelector(.<span class="string">'two'</span>);</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="comment">// 이벤트 핸들러를 사용한 뒤 등록해지를 하여도 메모리 누수를 막을 수 있다.</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> one - <span class="built_in">document</span>.querySelector(.<span class="string">'one'</span>);</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    one.addEventListener(<span class="string">'click'</span>, ()=&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> two - <span class="built_in">document</span>.querySelector(.<span class="string">'two'</span>);</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="javascript">    one.removeEventListener(<span class="string">'click'</span>);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span>One<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"two"</span>&gt;</span>Two<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    const one - document.querySelector(.'one');</span></span><br><span class="line"><span class="undefined">    const two - document.querySelector(.'two');</span></span><br><span class="line"><span class="undefined">    one.addEventListener('click', ()=&gt; &#123;</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="undefined">        console.log(two); // 삭제 이후에도 출력된다.</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined">   	// 해당 DOM이 HTML에서 사라지더라도 해당 DOM이 이벤트 콜백에서 사용됐다면 참조는 남는다.</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="undefined">    // 다음과 같은 방법으로 DOM 메모리 누수를 쉽게 수정할 수 있다.</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="undefined">    const one - document.querySelector(.'one');</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    one.addEventListener('click', ()=&gt; &#123;</span></span><br><span class="line"><span class="undefined">        const two - document.querySelector(.'two');</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="undefined">    // 이벤트 핸들러를 사용한 뒤 등록해지를 하여도 메모리 누수를 막을 수 있다.</span></span><br><span class="line"><span class="undefined">      const one - document.querySelector(.'one');</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    one.addEventListener('click', ()=&gt; &#123;</span></span><br><span class="line"><span class="undefined">        const two - document.querySelector(.'two');</span></span><br><span class="line"><span class="undefined">        two.remove();</span></span><br><span class="line"><span class="undefined">    &#125;)</span></span><br><span class="line"><span class="undefined">    one.removeEventListener('click');</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="Window-전역-객체"><a href="#Window-전역-객체" class="headerlink" title="Window 전역 객체"></a>Window 전역 객체</h2><p>전역 변수를 사용하지 않음으로써 메모리를 절약할 수 있다.</p>
 <h2 id="객체-참조-제한하기"><a href="#객체-참조-제한하기" class="headerlink" title="객체 참조 제한하기"></a>객체 참조 제한하기</h2><p>함수의 객체 전체 범위가 아닌 필요한 범위만 전달해야 하며 특히 전체 객체가 아닌 필요한 속성만 전달하도록 해야한다. 객체가 차지하는 메모리 공간이 매우 클 수도 있기 때문이다.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> test = &#123;</span><br><span class="line">    prop1: <span class="string">'test'</span>,</span><br><span class="line">    prop2: <span class="string">'hi'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 이런 방식으로 매개변수에 전체 객체를 전달하면 안된다.</span></span><br><span class="line"><span class="comment">// function printProp1(test) &#123;</span></span><br><span class="line"><span class="comment">//    console.log(test.prop1);</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 필요한 속성만 전달해주면 된다.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printProp1</span>(<span class="params">prop1</span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(prop1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">printProp1(test.prop1); <span class="comment">// 'test'</span></span><br></pre></td></tr></table></figure>
@@ -265,7 +265,7 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "Lee Gyuha"
         },
-        "headline": "191028_TIL(JS in Memory)",
+        "headline": "191028_TIL(Memory in JS)",
         "image": "http://progyu.github.io",
         "keywords": "JavaScript",
         "genre": "Web JavaScript",
@@ -276,7 +276,7 @@ ga('send', 'pageview');
         "description": "자바스크립트 메모리 관리v8 엔진과 같은 최신 자바스크립트 엔진에는 사용하지 않는 변수를 메모리에서 해제하는 가비지 컬렉터(garbage collector)가 있다.
 DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부에 선언된 경우 해당 DOM 항목을 제거하더라도 해당 항목은 여전히 메모리에 남게 된다.
 123456789101112131415"
-        "wordCount": 499
+        "wordCount": 472
     }
 </script>
 
@@ -328,7 +328,7 @@ DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            191029_TIL(JS in Set)
+            191029_TIL(Set in JS)
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
@@ -360,7 +360,7 @@ DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/JavaScript/">JavaScript</a></p>
-                            <p class="item-title"><a href="/2019/10/29/191029-TIL-JS-in-Set/" class="title">191029_TIL(JS in Set)</a></p>
+                            <p class="item-title"><a href="/2019/10/29/191029-TIL-JS-in-Set/" class="title">191029_TIL(Set in JS)</a></p>
                             <p class="item-date"><time datetime="2019-10-29T11:17:02.000Z" itemprop="datePublished">2019-10-29</time></p>
                         </div>
                     </li>
@@ -369,7 +369,7 @@ DOM 메모리 누수DOM 항목을 가리키는 변수가 이벤트 콜백 외부
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/JavaScript/">JavaScript</a></p>
-                            <p class="item-title"><a href="/2019/10/29/191028-TIL-Array-in-Memory/" class="title">191028_TIL(JS in Memory)</a></p>
+                            <p class="item-title"><a href="/2019/10/29/191028-TIL-Array-in-Memory/" class="title">191028_TIL(Memory in JS)</a></p>
                             <p class="item-date"><time datetime="2019-10-29T02:40:01.000Z" itemprop="datePublished">2019-10-29</time></p>
                         </div>
                     </li>
