@@ -6,24 +6,24 @@
     
 
     
-    <title>190429_TIL(JavaScript 와 ECMAScript의 차이, API란?) | progyu 개발 블로그</title>
+    <title>191126_TIL(타입스크립트와 덕타이핑) | progyu 개발 블로그</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="javascript">
+        <meta name="keywords" content="TypeScript">
     
-    <meta name="description" content="JavaScript와 ECMAScript의 차이 JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편화와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  표준화된 자바스크립트에 대한 필요성이 대두되었다.  1997년 비영리 표준화 기구인 ECMA 인터내셔널이 자바스크립트 초판(ECMAScr">
-<meta name="keywords" content="javascript">
+    <meta name="description" content="인터페이스와 클래스인터페이스는 일반적으로 타입 체크를 위해 사용되며 변수, 함수, 클래스에 사용할 수 있다.  인터페이스에 선언된 프로퍼티 또는 메소드의 구현을 강제하여 일관성을 유지할 수 있도록 하는 것이다.  인터페이스는 프로퍼티와 메소드를 가질 수 있다는 점에서 클래스와 유사하나 직접 인스턴스를 생성할 수 없고 모든 메소드는 추상 메소드이다. 클래스">
+<meta name="keywords" content="TypeScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)">
-<meta property="og:url" content="http://progyu.github.io/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/index.html">
+<meta property="og:title" content="191126_TIL(타입스크립트와 덕타이핑)">
+<meta property="og:url" content="http://progyu.github.io/2019/11/26/191126-TIL-타입스크립트와-덕타이핑/index.html">
 <meta property="og:site_name" content="progyu 개발 블로그">
-<meta property="og:description" content="JavaScript와 ECMAScript의 차이 JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편화와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  표준화된 자바스크립트에 대한 필요성이 대두되었다.  1997년 비영리 표준화 기구인 ECMA 인터내셔널이 자바스크립트 초판(ECMAScr">
+<meta property="og:description" content="인터페이스와 클래스인터페이스는 일반적으로 타입 체크를 위해 사용되며 변수, 함수, 클래스에 사용할 수 있다.  인터페이스에 선언된 프로퍼티 또는 메소드의 구현을 강제하여 일관성을 유지할 수 있도록 하는 것이다.  인터페이스는 프로퍼티와 메소드를 가질 수 있다는 점에서 클래스와 유사하나 직접 인스턴스를 생성할 수 없고 모든 메소드는 추상 메소드이다. 클래스">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-07T12:17:30.125Z">
+<meta property="og:updated_time" content="2019-11-26T15:39:11.284Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)">
-<meta name="twitter:description" content="JavaScript와 ECMAScript의 차이 JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편화와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  표준화된 자바스크립트에 대한 필요성이 대두되었다.  1997년 비영리 표준화 기구인 ECMA 인터내셔널이 자바스크립트 초판(ECMAScr">
+<meta name="twitter:title" content="191126_TIL(타입스크립트와 덕타이핑)">
+<meta name="twitter:description" content="인터페이스와 클래스인터페이스는 일반적으로 타입 체크를 위해 사용되며 변수, 함수, 클래스에 사용할 수 있다.  인터페이스에 선언된 프로퍼티 또는 메소드의 구현을 강제하여 일관성을 유지할 수 있도록 하는 것이다.  인터페이스는 프로퍼티와 메소드를 가질 수 있다는 점에서 클래스와 유사하나 직접 인스턴스를 생성할 수 없고 모든 메소드는 추상 메소드이다. 클래스">
     
 
     
@@ -149,14 +149,14 @@ ga('send', 'pageview');
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-190429-TIL-JavaScript-와ECMAScript의-차이-web-API란" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-191126-TIL-타입스크립트와-덕타이핑" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)
+        191126_TIL(타입스크립트와 덕타이핑)
         </h1>
     
 
@@ -166,8 +166,8 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/" class="article-date">
-            <time datetime="2019-04-29T12:32:54.000Z" itemprop="datePublished">2019-04-29</time>
+        <a href="/2019/11/26/191126-TIL-타입스크립트와-덕타이핑/" class="article-date">
+            <time datetime="2019-11-26T14:33:26.000Z" itemprop="datePublished">2019-11-26</time>
         </a>
     </div>
 
@@ -176,59 +176,29 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/javascript/">javascript</a>
+        <a class="tag-link" href="/tags/TypeScript/">TypeScript</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="JavaScript와-ECMAScript의-차이"><a href="#JavaScript와-ECMAScript의-차이" class="headerlink" title="JavaScript와 ECMAScript의 차이"></a>JavaScript와 ECMAScript의 차이</h2><ul>
-<li>JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  <strong>파편화</strong>와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  <strong>표준화된 자바스크립트</strong>에 대한 필요성이 대두되었다.  <code>1997</code>년 비영리 표준화 기구인 <a href="https://www.ecma-international.org/" target="_blank" rel="noopener">ECMA 인터내셔널</a>이 자바스크립트 초판(ECMAScript 1)의 명세(specification)를 완성하여 <strong>ECMAScript</strong>로 명명하였다.</li>
-</ul>
-<ul>
-<li>ECMAScript는 JavaScript를 기반으로 하는 동시에, JavaScript 역시 ECMAScript를 기반으로 한다</li>
-</ul>
-<ul>
-<li>ECMAScript는 스크립트 언어의 표준 명세인 <strong>ECMA-262</strong>를 말하며 프로그래밍 언어의 타입, 값, 객체와 프로퍼티, 함수, 빌트인 객체 등 핵심 문법(core syntax)을 규정한다</li>
-</ul>
-<ul>
-<li>자바스크립트는 일반적으로  <strong>ECMAScript</strong>를 바탕으로 만들어진 프로그래밍 언어로서의 기본뼈대(core)와 브라우저가 별도 지원하는 <strong>클라이언트 사이드 Web API</strong>, 즉 DOM, BOM, Canvas, XMLHttpRequest, Fetch, requestAnimationFrame, SVG, Web Storage, Web Component, Web worker 등을 아우르는 개념이다.</li>
-</ul>
-<ul>
-<li>클라이언트 사이드 Web API는 ECMAScript와는 별도로 <a href="https://www.w3.org/" target="_blank" rel="noopener">World Wide Web Consortium (W3C)</a>에서 별도의 명세로 관리하고 있다. </li>
-</ul>
-<h2 id="API란"><a href="#API란" class="headerlink" title="API란?"></a>API란?</h2><h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><ul>
-<li><strong>API(Application Programming Interface, 응용 프로그래밍 인터페이스)</strong>는 응용프로그램에서 사용할 수 있도록, 운영 체제나 프로그래밍 언어가 제공하는 기능을 제어할 수 있게 만든 <strong>인터페이스</strong>를 뜻합니다.</li>
-</ul>
-<h4 id="※-인터페이스"><a href="#※-인터페이스" class="headerlink" title="※ 인터페이스"></a>※ 인터페이스</h4><ul>
-<li>어떤 기계 장치 간의 정보를 교환하기 위한 수단이나, 방법</li>
-<li>예) TV 와 리모콘은 서로 통신을 하기 위해서 <strong>정의된 규격</strong>에 의해 어떤 신호를 보낼 수 있도록 만들어진 장치이며, 이러한 <strong>신호를 서로 주고 받기 위한 방법</strong>을 인터페이스라고 한다.</li>
-</ul>
-<h4 id="REST"><a href="#REST" class="headerlink" title="REST"></a>REST</h4><ul>
-<li>분산 하이퍼미디어 시스템(예: 웹)을 위한 <strong>아키텍쳐 스타일</strong> </li>
-<li>REST는 REpresentational State Transfer라는 용어의 약자로서 2000년도에 로이 필딩 (Roy Fielding)의 박사학위 논문에서 최초로 소개되었습니다.</li>
-<li>REST의 <strong>uniform interface</strong>를 지원하는 것은 쉽지 않기 때문에, 많은 서비스가 REST에서 바라는 것을 <strong>모두 지원하지 않고 API를 만들게 된다.</strong></li>
-</ul>
-<h4 id="REST-API"><a href="#REST-API" class="headerlink" title="REST API"></a>REST API</h4><ul>
-<li><strong>REST형식</strong>의 API</li>
-<li><strong>핵심 컨텐츠 및 기능을 외부 사이트에서 활용할 수 있도록 제공되는 인터페이스입니다.</strong></li>
-<li><p>HTTP프로토콜로 제공하는 API</p>
-</li>
-<li><p>클라이언트의 종류가 웹 브라우저, 안드로이드 앱, iOS 앱 등 다양해지면서 이러한 클라이언트들에게 정보를 제공하는 방식을 하나로 <strong>일원화시키는 방식 중에 대표적인 방식이 HTTP 프로토콜로 API를 제공하는 것</strong></p>
-</li>
-</ul>
-<h4 id="Web-API"><a href="#Web-API" class="headerlink" title="Web API"></a>Web API</h4><ul>
-<li><p>REST에서 몇가지 규칙을 지키지 않을 경우 Web API 혹은 HTTP API라고 부르기도 한다.</p>
-</li>
-<li><p>web 위에서 동작한다</p>
-</li>
-</ul>
-<h3 id="참고자료"><a href="#참고자료" class="headerlink" title="참고자료"></a>참고자료</h3><p><a href="https://poiemaweb.com/js-introduction" target="_blank" rel="noopener">자바스크립트란?</a></p>
-<p><a href="https://wormwlrm.github.io/2018/10/03/What-is-the-difference-between-javascript-and-ecmascript.html" target="_blank" rel="noopener">JavaScript와 ECMAScript의 차이</a></p>
-<p><a href="https://steemit.com/kr/@yahweh87/it-api" target="_blank" rel="noopener">API란 무엇인가?</a></p>
-<p><a href="https://www.edwith.org/boostcourse-web/lecture/16740" target="_blank" rel="noopener">REST API란?</a></p>
-<p><a href="https://www.youtube.com/watch?v=RP_f5dMoHFc" target="_blank" rel="noopener">그런 Rest API로 괜찮은가?</a></p>
+            <h2 id="인터페이스와-클래스"><a href="#인터페이스와-클래스" class="headerlink" title="인터페이스와 클래스"></a>인터페이스와 클래스</h2><p>인터페이스는 일반적으로 <strong>타입 체크를 위해 사용되며 변수, 함수, 클래스에 사용</strong>할 수 있다.  인터페이스에 선언된 프로퍼티 또는 메소드의 구현을 강제하여 일관성을 유지할 수 있도록 하는 것이다. </p>
+<p>인터페이스는 프로퍼티와 메소드를 가질 수 있다는 점에서 클래스와 유사하나 직접 인스턴스를 생성할 수 없고 <strong>모든 메소드는 추상 메소드이다.</strong></p>
+<p><strong>클래스 선언문의 implements 뒤에 인터페이스를 선언하면 해당 클래스는 지정된 인터페이스를 반드시 구현하여야 한다.</strong> </p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 인터페이스의 정의</span></span><br><span class="line"><span class="keyword">interface</span> UserInfo  &#123;</span><br><span class="line">  username: <span class="built_in">string</span>;</span><br><span class="line">  password: <span class="built_in">string</span>;</span><br><span class="line">  age: <span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// User 클래스는 UserInfo 인터페이스를 구현하여야 한다.</span></span><br><span class="line"><span class="keyword">class</span> User <span class="keyword">implements</span> UserInfo &#123;</span><br><span class="line">  <span class="keyword">constructor</span> (<span class="params"></span></span><br><span class="line"><span class="params">    <span class="keyword">public</span> username: <span class="built_in">string</span>,</span></span><br><span class="line"><span class="params">    <span class="keyword">public</span> password: <span class="built_in">string</span>,</span></span><br><span class="line"><span class="params">    <span class="keyword">public</span> age: <span class="built_in">number</span></span></span><br><span class="line"><span class="params">  </span>) &#123; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user = <span class="keyword">new</span> User(<span class="string">'kim'</span>, <span class="string">'1234'</span>, <span class="number">25</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>인터페이스는 프로퍼티뿐만 아니라 메소드도 포함할 수 있다. 단, 모든 메소드는 추상 메소드이어야 한다.</strong> 인터페이스를 구현하는 클래스는 인터페이스에서 정의한 프로퍼티와 추상 메소드를 반드시 구현하여야 한다.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 인터페이스의 정의</span></span><br><span class="line"><span class="keyword">interface</span> Animal &#123;</span><br><span class="line">  name: <span class="built_in">string</span>;</span><br><span class="line">  crying(): <span class="built_in">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 인터페이스를 구현하는 클래스는 인터페이스에서 정의한 프로퍼티와 추상 메소드를 반드시 구현하여야 한다.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Dog <span class="keyword">implements</span> Animal &#123;</span><br><span class="line">  <span class="comment">// 인터페이스에서 정의한 프로퍼티의 구현</span></span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params"><span class="keyword">public</span> name: <span class="built_in">string</span></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 인터페이스에서 정의한 추상 메소드의 구현</span></span><br><span class="line">  crying() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'bowwow'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cryingSound</span>(<span class="params">dog: Animal</span>): <span class="title">void</span> </span>&#123;</span><br><span class="line">  dog.crying();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myDog = <span class="keyword">new</span> Dog(<span class="string">'Pomeranian'</span>);</span><br><span class="line">cryingSound(myDog); <span class="comment">// bowwow</span></span><br></pre></td></tr></table></figure>
+<h2 id="덕-타이핑"><a href="#덕-타이핑" class="headerlink" title="덕 타이핑"></a>덕 타이핑</h2><p>TypeScript 의 핵심 원리 중 하나는 <strong>값이 가지는 형태 에 초점을 맞추는 타입-체킹</strong>을 한다는 것이다. 이를 “덕 타이핑(duck typing)” 또는 “구조적 하위 유형화(structural subtyping)”라고도 한다.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Duck &#123;</span><br><span class="line">  quack(): <span class="built_in">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> MallardDuck <span class="keyword">implements</span> IDuck &#123;</span><br><span class="line">  quack() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Quack!'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> RedheadDuck &#123;</span><br><span class="line">  quack() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'q~uack!'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeCrying</span>(<span class="params">duck: Duck</span>): <span class="title">void</span> </span>&#123;</span><br><span class="line">  duck.quack();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">makeCrying(<span class="keyword">new</span> MallardDuck()); <span class="comment">// Quack!</span></span><br><span class="line">makeCrying(<span class="keyword">new</span> RedheadDuck()); <span class="comment">// q~uack! // 5</span></span><br></pre></td></tr></table></figure>
+<p>makeCrying함수에 인터페이스 <strong>Duck을 구현하지 않은 클래스 RedheadDuck의 인스턴스를 인자로 전달하여도 에러 없이 처리된다.</strong></p>
+<p><strong>TypeScript는 해당 인터페이스에서 정의한 프로퍼티나 메소드를 가지고 있다면 그 인터페이스를 구현한 것으로 인정한다.</strong> </p>
+<p>인터페이스를 변수에 사용할 경우에도 덕 타이핑은 적용된다.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> LabelledValue &#123;</span><br><span class="line">  label: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">printLabel</span>(<span class="params">labelledObj: LabelledValue</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(labelledObj.label);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myObj = &#123; size: <span class="number">10</span>, label: <span class="string">"Size 10 Object"</span> &#125;;</span><br><span class="line">printLabel(myObj);</span><br></pre></td></tr></table></figure>
+<p>변수 myObj는 인터페이스 LabelledValue과 일치하지는 않는다. 하지만 LabelledValue의 label프로퍼티를 가지고 있으면 인터페이스에 부합하는 것으로 인정된다.</p>
+<p>타입스크립트의 타입 체킹은 프로퍼티가 순서대로 제공될 것을 요구하지 않는다. 다만, 인터페이스에서 요구하는 프로퍼티가 있는지 확인한다.</p>
+<h2 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h2><p><a href="https://www.typescriptlang.org/docs/handbook/interfaces.html" target="_blank" rel="noopener">TypeScript docs</a></p>
+<p><a href="https://poiemaweb.com/typescript-interface" target="_blank" rel="noopener">poiemaweb</a></p>
 
         </div>
         <footer class="article-footer">
@@ -236,7 +206,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://progyu.github.io/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/" data-id="ck3g10byi0013joa9kvv1gzy1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://progyu.github.io/2019/11/26/191126-TIL-타입스크립트와-덕타이핑/" data-id="ck3g10c4x003ljoa9q2rvk2xs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -306,17 +276,18 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "Lee Gyuha"
         },
-        "headline": "190429_TIL(JavaScript 와 ECMAScript의 차이, API란?)",
+        "headline": "191126_TIL(타입스크립트와 덕타이핑)",
         "image": "http://progyu.github.io",
-        "keywords": "javascript",
+        "keywords": "TypeScript",
         "genre": "TIL",
-        "datePublished": "2019-04-29",
-        "dateCreated": "2019-04-29",
-        "dateModified": "2019-05-07",
-        "url": "http://progyu.github.io/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/",
-        "description": "JavaScript와 ECMAScript의 차이
-JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편화와 이로인한 크로스 브라우징 이슈가 발생하면서 이를 개선하고자 모든 브라우저에서 동일하게 동작하는  표준화된 자바스크립트에 대한 필요성이 대두되었다.  1997년 비영리 표준화 기구인 ECMA 인터내셔널이 자바스크립트 초판(ECMAScr"
-        "wordCount": 330
+        "datePublished": "2019-11-26",
+        "dateCreated": "2019-11-26",
+        "dateModified": "2019-11-27",
+        "url": "http://progyu.github.io/2019/11/26/191126-TIL-타입스크립트와-덕타이핑/",
+        "description": "인터페이스와 클래스인터페이스는 일반적으로 타입 체크를 위해 사용되며 변수, 함수, 클래스에 사용할 수 있다.  인터페이스에 선언된 프로퍼티 또는 메소드의 구현을 강제하여 일관성을 유지할 수 있도록 하는 것이다. 
+인터페이스는 프로퍼티와 메소드를 가질 수 있다는 점에서 클래스와 유사하나 직접 인스턴스를 생성할 수 없고 모든 메소드는 추상 메소드이다.
+클래스 "
+        "wordCount": 609
     }
 </script>
 
@@ -364,20 +335,10 @@ JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편�
         
 <nav id="article-nav">
     
-        <a href="/2019/05/01/190430-TIL-Web-browser-동작원리/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            190430_TIL(웹 브라우저의 동작)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/04/28/190428-TIL-재귀코드-읽는-방법-새로운-언어-공부법/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/11/20/191120-TIL-npm-에러와-npmrc/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">190428_TIL(재귀코드 읽는 방법, 새로운 언어 공부법, 기타 내용)</p>
+        <p class="article-nav-title">191120_TIL(npm 에러와 .npmrc)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -536,7 +497,7 @@ JavaScript는 1995년에 탄생되었다. 이후 자바스크립트의  파편�
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://progyu.github.io/2019/04/29/190429-TIL-JavaScript-와ECMAScript의-차이-web-API란/';
+    var disqus_url = 'http://progyu.github.io/2019/11/26/191126-TIL-타입스크립트와-덕타이핑/';
     
     (function() {
     var dsq = document.createElement('script');
