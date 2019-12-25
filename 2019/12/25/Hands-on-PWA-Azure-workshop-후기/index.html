@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Hands on! PWA + Azure workshop 후기 | progyu 개발 블로그</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="PWA, Azure">
+    
+    <meta name="description" content="Hands on! PWA + Azure workshop 후기한국 마이크로소프트 사옥에서 진행한 Hands on! PWA + Azure workshop에 다녀왔다. 마이크로소프트 사옥은 굉장히 전망이 좋다! 첫번째 세션은 조은님의 PWA 세션. 처음에 PWA에 대해 설명을 해주셨는데 예전에 남기신 블로그 글을 토대로 설명해주셨다.(블로그 링크는 아래) pwa">
+<meta name="keywords" content="PWA, Azure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hands on! PWA + Azure workshop 후기">
+<meta property="og:url" content="http://progyu.github.io/2019/12/25/Hands-on-PWA-Azure-workshop-후기/index.html">
+<meta property="og:site_name" content="progyu 개발 블로그">
+<meta property="og:description" content="Hands on! PWA + Azure workshop 후기한국 마이크로소프트 사옥에서 진행한 Hands on! PWA + Azure workshop에 다녀왔다. 마이크로소프트 사옥은 굉장히 전망이 좋다! 첫번째 세션은 조은님의 PWA 세션. 처음에 PWA에 대해 설명을 해주셨는데 예전에 남기신 블로그 글을 토대로 설명해주셨다.(블로그 링크는 아래) pwa">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://progyu.github.io/images/Add_to_Homescreen_twitter.png">
+<meta property="og:updated_time" content="2019-12-25T08:12:35.441Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hands on! PWA + Azure workshop 후기">
+<meta name="twitter:description" content="Hands on! PWA + Azure workshop 후기한국 마이크로소프트 사옥에서 진행한 Hands on! PWA + Azure workshop에 다녀왔다. 마이크로소프트 사옥은 굉장히 전망이 좋다! 첫번째 세션은 조은님의 PWA 세션. 처음에 PWA에 대해 설명을 해주셨는데 예전에 남기신 블로그 글을 토대로 설명해주셨다.(블로그 링크는 아래) pwa">
+<meta name="twitter:image" content="http://progyu.github.io/images/Add_to_Homescreen_twitter.png">
+    
+
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.png">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-139164989-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithms/">Algorithms</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Data-Structures/">Data-Structures</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Git/">Git</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/HEXO/">HEXO</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/TIL/">TIL</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/CSS/">CSS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/JavaScript/">JavaScript</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/TIL/">TIL</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Hands-on-PWA-Azure-workshop-후기" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Hands on! PWA + Azure workshop 후기
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/12/25/Hands-on-PWA-Azure-workshop-후기/" class="article-date">
+            <time datetime="2019-12-25T06:09:13.000Z" itemprop="datePublished">2019-12-25</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/PWA-Azure/">PWA, Azure</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Hands-on-PWA-Azure-workshop-후기"><a href="#Hands-on-PWA-Azure-workshop-후기" class="headerlink" title="Hands on! PWA + Azure workshop 후기"></a>Hands on! PWA + Azure workshop 후기</h1><p>한국 마이크로소프트 사옥에서 진행한 Hands on! PWA + Azure workshop에 다녀왔다. 마이크로소프트 사옥은 굉장히 전망이 좋다!</p>
+<p>첫번째 세션은 조은님의 PWA 세션. 처음에 PWA에 대해 설명을 해주셨는데 예전에 남기신 블로그 글을 토대로 설명해주셨다.(블로그 링크는 아래)</p>
+<p><a href="https://medium.com/@euncho/pwa를-구성하는-기술들-a5be57df5575" target="_blank" rel="noopener">pwa를 구성하는 기술들 </a></p>
+<p>내 나름대로 위 블로그 내용을 요약 해보면 PWA는 딱 정해진 규칙이 없으며 공식적으로 <strong>“이 기술을 반드시 사용하세요”</strong> 라고 하는 것은 현재까지는 존재하지 않는다. PWA는 웹의 사용자의 사용경험을 더 좋게 만들기 위한 기술의 집약체이다. </p>
+<p>전통적으로 PWA에서 중요한 기술은 <strong>Service Worker</strong>와 <strong>Web App Manifest</strong>가 있다. </p>
+<p>먼저 <strong>Service Worker</strong>는 백그라운드에서 동작하는 Worker이며 특정 도메인을 기준으로 설치된다. Service Woker에 대표적인 기능은 <strong>Offline 지원</strong>이다. Offline이 지원은 Offline 상태에서만 좋은 것은 아니며 <strong>서버가 불안정하거나 유저 네트워가 불안정한 상황</strong>에서도 불필요한 서버 리퀘스트를 줄일 수 있기 때문에 사용자에게 더 나은 사용성을 제공할 수 있다.</p>
+<p> 다음으로 <strong>Web App Manifest</strong>는 이 웹 앱의 모양이 어떤 것인 지 보여주기 위한 설정 파일이다. Web App Manifest는  PWA 웹기술 집합의 한 부분이며  <strong>Add to Homescreen</strong> 배너를 노출시키는 것이 가능하여 <strong>사용자가  앱스토어 없이 디바이스 홈화면에 웹사이트 설치를 가능하게 해준다.</strong></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank" rel="noopener">MDN의 Web App Manifest</a></p>
+<p>PWA를 가장 잘 구현한 대표적인 웹앱인 <a href="mobile.twitter.com">mobile.twitter.com</a> 을 예시로 살펴보면 PWA에 대해 좀 더 쉽게 접근할 수 있다.</p>
+<p><strong>Web App Manifest</strong>를 사용하여  <strong>Add to Homescreen</strong> 배너를 노출시킨 모습이다.</p>
+<p><img src="/images/Add_to_Homescreen_twitter.png" width="500px" height="300px"></p>
+<p>설치를 진행하면 바탕화면에 아래 사진과 같이 아이콘이 생성된다.</p>
+<p><img src="/images/twitter_web_app.png" width="96px" height="96px"></p>
+<p> <strong>Service Worker</strong>을 이용하여 Offline을 지원하는 것을 알 수 있다.</p>
+<p><img src="/images/twitter_serviceworker.png" width="500px" height="300px"></p>
+<p><strong>Web App Manifest</strong>에서 어떠한 설정을 하였는지 알 수 있다.</p>
+<p><img src="/images/twitter_manifest.png" width="500px" height="300px"></p>
+<p>참고로 <strong>Service Worker</strong>를 구현할 때 아래와 같은 라이브러리를 사용할 수도 있다.</p>
+<p><a href="https://developers.google.com/web/tools/workbox" target="_blank" rel="noopener">https://developers.google.com/web/tools/workbox</a></p>
+<p>cli로 설치 가능하다.</p>
+<p><strong>Azure</strong>는 정확히는 잘 모르겠다…  주어진 시간이 많지 않았던 것도 있고 워크샵의 목적 자체도 GitHub Actions를 통해 Azure로 배포하는 사이클을 한번 돌려보는 것의 의의가 있었기 때문에 <strong>Azure와 GitHub Actions 자체에 대한 설명은 거의 없었다.</strong> 빠른 시간 안의 사이클을 돌려야 하기 때문에 조금 아쉬운 부분이었다. 실제로 많은 분들이 따라가지 못했고 많은 질문들도 쏟아져 나왔다. 일단 과정 자체를 전부 따라가고 사이클을 한번 돌리는데 성공했다는것에 의의를 두는 것이 맞겠다.</p>
+<p>최종 결과물은 아래 사진과 같이 push 또는 pull request에 반응하여 GitHub Actions에서 CI/CD(빌드 및 테스트 자동화 / 배포 자동화)절차가 진행되고 애저 블롭 저장소로 자동 배포된다.</p>
+<p><img src="/images/GithubActions.png" width="500px" height="300px"></p>
+<p>자세한 사항은 아래 깃허브 레퍼지토리에 docs 폴더를 보는 것이 명확하다.</p>
+<p> <a href="https://github.com/progyu/pwa-workshop" target="_blank" rel="noopener">https://github.com/progyu/pwa-workshop</a></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://progyu.github.io/2019/12/25/Hands-on-PWA-Azure-workshop-후기/" data-id="ck4kwhlcp004f8ctzd3ulmyde" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "Lee Gyuha"
+        },
+        "headline": "Hands on! PWA + Azure workshop 후기",
+        "image": "http://progyu.github.io/images/Add_to_Homescreen_twitter.png",
+        "keywords": "PWA, Azure",
+        "genre": "TIL",
+        "datePublished": "2019-12-25",
+        "dateCreated": "2019-12-25",
+        "dateModified": "2019-12-25",
+        "url": "http://progyu.github.io/2019/12/25/Hands-on-PWA-Azure-workshop-후기/",
+        "description": "Hands on! PWA + Azure workshop 후기한국 마이크로소프트 사옥에서 진행한 Hands on! PWA + Azure workshop에 다녀왔다. 마이크로소프트 사옥은 굉장히 전망이 좋다!
+첫번째 세션은 조은님의 PWA 세션. 처음에 PWA에 대해 설명을 해주셨는데 예전에 남기신 블로그 글을 토대로 설명해주셨다.(블로그 링크는 아래)
+pwa"
+        "wordCount": 372
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/profile.php?id=100023323764147" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/progyu" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/12/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hello World</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a></p>
+                            <p class="item-title"><a href="/2019/12/25/Hands-on-PWA-Azure-workshop-후기/" class="title">Hands on! PWA + Azure workshop 후기</a></p>
+                            <p class="item-date"><time datetime="2019-12-25T06:09:13.000Z" itemprop="datePublished">2019-12-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2019/12/25/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2019-12-25T05:34:08.823Z" itemprop="datePublished">2019-12-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a></p>
+                            <p class="item-title"><a href="/2019/11/26/191126-TIL-타입스크립트와-덕타이핑/" class="title">191126_TIL(타입스크립트와 덕타이핑)</a></p>
+                            <p class="item-date"><time datetime="2019-11-26T14:33:26.000Z" itemprop="datePublished">2019-11-26</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/TIL/">TIL</a></p>
+                            <p class="item-title"><a href="/2019/11/20/191120-TIL-npm-에러와-npmrc/" class="title">191120_TIL(npm 에러와 .npmrc)</a></p>
+                            <p class="item-date"><time datetime="2019-11-20T14:44:37.000Z" itemprop="datePublished">2019-11-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithms/">Algorithms</a></p>
+                            <p class="item-title"><a href="/2019/11/09/kakao-tuple/" class="title">[kakao] tuple</a></p>
+                            <p class="item-date"><time datetime="2019-11-09T10:31:00.000Z" itemprop="datePublished">2019-11-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithms/">Algorithms</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Data-Structures/">Data-Structures</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/TIL/">TIL</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/JavaScript/">JavaScript</a><span class="category-list-count">10</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">21</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">9</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Structures/">Data-Structures</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hackathon/">Hackathon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PWA-Azure/">PWA, Azure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TIL/">TIL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TypeScript/">TypeScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithms/">algorithms</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hackertone/">hackertone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo-theme/">hexo theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/컴퓨터공학기초/">컴퓨터공학기초</a><span class="tag-list-count">7</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/tags/Data-Structures/" style="font-size: 10px;">Data-Structures</a> <a href="/tags/Hackathon/" style="font-size: 10px;">Hackathon</a> <a href="/tags/JavaScript/" style="font-size: 18px;">JavaScript</a> <a href="/tags/PWA-Azure/" style="font-size: 10px;">PWA, Azure</a> <a href="/tags/TIL/" style="font-size: 14px;">TIL</a> <a href="/tags/TypeScript/" style="font-size: 10px;">TypeScript</a> <a href="/tags/algorithms/" style="font-size: 12px;">algorithms</a> <a href="/tags/hackertone/" style="font-size: 10px;">hackertone</a> <a href="/tags/hexo-theme/" style="font-size: 10px;">hexo theme</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/node/" style="font-size: 10px;">node</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/컴퓨터공학기초/" style="font-size: 16px;">컴퓨터공학기초</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2019 Lee Gyuha</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://progyu.github.io/2019/12/25/Hands-on-PWA-Azure-workshop-후기/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
